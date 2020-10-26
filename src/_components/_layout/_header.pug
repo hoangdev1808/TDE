@@ -1,0 +1,91 @@
+header.kv-header
+	.header-top
+		.container
+			ul
+				li
+					a.nav-link(href="") Theo dõi đơn hàng
+				li
+					a.nav-link(href="") Đăng ký
+				li
+					a.nav-link(href="") Đăng nhập
+				li.language.dropdown
+					button#dropdownMenuButton.dropdown-toggle(type='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
+						a(href="")
+							img(src="./assets/icons/vn.png" alt="")
+					.dropdown-menu(aria-labelledby='dropdownMenuButton')
+						a.dropdown-item(href='#')
+							img(src="./assets/icons/vn.png" alt="") 
+						a.dropdown-item(href="")
+							img(src="./assets/icons/vn.png" alt="") 
+	nav.navbar.navbar-expand-lg
+		.container
+			.logo
+				a(href="index.html")
+					img(src="./assets/logo.png", alt="")
+			.main-menu
+				.logo-mobile
+				.icon
+					.search-icon
+						em.material-icons search
+					#search-box
+						.form-group
+							input(type="text" placeholder="Tìm sản phẩm...")
+							button.searchbutton.btn.btn__search
+								em.material-icons search
+					.hotline
+						a(href="")
+							span.material-icons call
+							span.fone +84 1123 1234 45
+					.shoping-cart
+						span.material-icons shopping_cart
+						span.quilt 04
+						.shopping-cart-wrapper.open
+							.head
+								.cart-quantity
+									span.material-icons shopping_cart
+									.cart-number
+										span.item-quantity 4
+								.cart-number
+									p
+										| Tổng cộng: 
+										span đ 6.480.000
+							.body
+								.scroll-wrapper
+									.cart-item
+										.image
+											a(href='')
+												img(src='./assets/index/pro-1.png' alt='')
+										.caption
+											.title
+												a(href='') Viên Uống Hỗ Trợ Não Bộ DHA  ITOH Nhật Bản
+											.bottom
+												.price 1.296.000 đ
+												.quantity
+													| Số lượng: 
+													span.number 1
+							.btn-center
+								a.btn.btn-primary(href='cart.html')
+									span Thanh toán 
+									em.lnr.lnr-arrow-right
+
+				ul.navbar-nav
+					li.nav-item.active
+						a.nav-link(href="gioi-thieu.html") Giới thiệu
+					li.nav-item
+						a.nav-link(href="san-pham.html") danh mục sản phẩm
+					li.nav-item
+						a.nav-link(href="khuyen-mai.html") khuyễn mãi
+					li.nav-item
+						a.nav-link(href="tin-tuc.html") tin tức
+					li.nav-item
+						a.nav-link(href="ho-tro.html") hỗ trợ khách hàng
+					li.nav-item
+						a.nav-link(href="tuyen-dung.html") tuyển dụng
+					li.nav-item
+						a.nav-link(href="lien-he.html") Liên hệ
+
+				.kv-toggle
+					.hamburger-button
+						span
+						span
+						span

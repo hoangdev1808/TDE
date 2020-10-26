@@ -1,0 +1,24 @@
+{
+	"name": "gulp-html",
+	"description": "transpile pug, sass, js(es6) => html, css(w/ added prefix, auto-sorted css, minified), js(babeled, minified)",
+	"main": "gulpfile.babel.js",
+	"authors": [
+		"vdmanh99"
+	],
+	"license": "MIT",
+	"homepage": "https://github.com/voducmanh99/MySource",
+	"ignore": [
+		"**/.*",
+		"node_modules",
+		"bower_components",
+		"test",
+		"tests"
+	],
+	"dependencies": {
+		"fancybox": "^3.5.7",
+		"jquery": "^3.5.1",
+		"bootstrap": "^4.5.0",
+		"swiper": "^4.5.0",
+		"aos": "^2.3.4"
+	}
+}

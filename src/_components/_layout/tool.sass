@@ -1,0 +1,123 @@
+#block__tool
+	position: fixed
+	top: 150px
+	right: 10px
+	z-index: 99
+	transition: all ease-in-out .3s
+	.tool-main
+		padding: 0
+		list-style: none
+		.item 
+			background-color: rgb(0, 106, 167)
+			width: 60px
+			height: 60px
+			line-height: 60px
+			text-align: center
+			margin-bottom: 10px
+			transition: .3s
+			&:last-child
+				margin-bottom: 0
+			a 
+				padding: 18px
+				em
+					font-size: 24px
+					color: #ffffff
+			&.has-sub
+				position: relative
+				transition: .3s
+				a 
+				.sub-left
+					cursor: pointer
+					position: absolute
+					padding: 0 20px
+					height: 100%
+					top: 0
+					right: 100%
+					opacity: 0
+					visibility: hidden
+					transition: all ease-in-out .3s
+					background-image: linear-gradient( 0deg, rgb(29,213,230) 0%, rgb(70,174,247) 100%)
+					span 
+						font-size: 16px
+						color: rgb(255, 255, 255)
+						font-weight: 800
+					.sub-menu
+						position: absolute
+						width: 225px
+						top: -70px
+						right: -58%
+						z-index: 100
+						background-color: rgba($color: #1379d6, $alpha: .9)
+						border-radius: 10px 0 0 10px
+						padding: 0
+						list-style: none
+						opacity: 0
+						visibility: hidden
+						transition: all ease-in-out .3s
+						.sub-item
+							width: 100%
+							height: 45px
+							line-height: 45px
+							cursor: pointer
+							border-bottom: solid 1px rgba($color: #ffffff, $alpha: .5)
+							a
+								padding: 0 18px
+								display: flex
+								align-items: center
+								span
+									display: block
+									font-size: 14px
+									color: rgb(255, 255, 255)
+									font-weight: bold
+								em 
+									padding-right: 20px
+									font-size: 30px
+									color: #ffffff
+							&:last-child
+								border: none
+							&:hover
+								background-color: rgb(0, 173, 239)
+								transition: .3s
+					&:hover
+						.sub-menu
+							opacity: 1
+							visibility: visible
+							transition: all ease-in-out .3s
+			&:hover
+				background-image: linear-gradient( 0deg, rgb(29,213,230) 0%, rgb(70,174,247) 100%)
+				box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.05)
+				transition: .3s
+				&.has-sub
+					.sub-left
+						opacity: 1
+						visibility: visible
+						transition: all ease-in-out .3s
+	.icon-tool
+		position: absolute
+		top: 0
+		left: -105%
+		width: 60px
+		height: 60px
+		background: $main-color
+		line-height: 60px
+		text-align: center
+		.icon
+			width: 100%
+			height: 100%
+			-webkit-animation: rotation 2s infinite linear
+			.ri-settings-2-line 
+				font-size: 30px
+				color: #ffffff
+				-webkit-animation: rotation 2s infinite linear
+			@-webkit-keyframes rotation
+				from 
+					-webkit-transform: rotate(0deg)
+				to 
+					-webkit-transform: rotate(359deg)
+		@media screen and ( min-width: 1024px)
+			display: none
+	@media screen and ( max-width: 1024px)
+		right: -60px
+		&.active
+			right: 10px
+			transition: all ease-in-out .3s

@@ -1,0 +1,94 @@
+button
+	background-color: transparent
+	&:focus
+		outline: none
+		box-shadow: none
+	
+
+.btn 
+	border: 0
+	padding: 0
+	border-radius: 0
+	&:focus
+		outline: none
+		box-shadow: none
+	&__book
+		border-width: 1px
+		border-color: rgb(212, 212, 212)
+		border-style: solid
+		border-radius: 0
+		background-color: #fafafa
+		width: 148px
+		height: 38px
+		display: flex
+		align-items: center
+		font-size: 16px
+		
+		line-height: 1.2
+		text-align: center
+		text-transform: uppercase
+		justify-content: center
+	&__viewmore
+		position: relative
+		border-width: 1px
+		border-color: rgb(212, 212, 212)
+		border-style: solid;
+		background-color: rgb(255, 255, 255)
+		width: 148px
+		height: 50px
+		line-height: 50px
+		border-radius: 0
+		font-size: 18px
+		display: flex
+		align-items: center
+		justify-content: center
+		@media screen and ( max-width: 375px)
+			height: 40px
+			line-height: 40px
+			width: 140px
+		color: rgb(1, 168, 227)
+		.icon
+			position: relative
+			padding-left: 10px
+			margin-top: 5px
+			&::before
+				content: url('../assets/icons/doingu_ct.png')
+				transition: all ease-in-out .3s
+		&:hover
+			background-image: linear-gradient( 25deg, #01a8e3 0%, #7fd3f1 100%)
+			transition: all ease-in-out .3s
+			box-shadow: 0px 5px 20px 0px rgba(1, 168, 227, 0.25)
+			color: #ffffff
+			.icon
+				&::before
+					content: url('../assets/icons/xemthem-while.png')
+					transition: all ease-in-out .3s
+	&.frm-btn-submit
+		display: flex
+		align-items: center
+		justify-content: center
+		border-radius: 0
+		padding-left: 0
+		font-size: 16px
+		color: rgb(255, 255, 255)
+		border: none
+		transition: all ease-in-out .3s
+	&-detail
+		border-width: 1px
+		border-color: rgb(212, 212, 212)
+		border-style: solid
+		background-color: rgb(255, 255, 255)
+		width: 148px
+		height: 44px
+		display: flex
+		align-items: center
+		justify-content: center
+		font-size: 16px
+		color: rgb(153, 153, 153)
+		.material-icons
+			padding-left: 10px
+		&:hover
+			background-image: linear-gradient( 25deg, #01a8e3 0%, #7fd3f1 100%)
+			transition: all ease-in-out .3s
+			color: #ffffff
+			border: none
