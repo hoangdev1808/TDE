@@ -20,6 +20,7 @@
 		"@babel/preset-env": "7.3.1",
 		"@babel/register": "7.0.0",
 		"@fortawesome/fontawesome-free": "^5.15.1",
+		"@mdi/font": "^5.8.55",
 		"autoprefixer": "9.4.3",
 		"bower": "^1.8.8",
 		"browser-sync": "^2.26.12",
