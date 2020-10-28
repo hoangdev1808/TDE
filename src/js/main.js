@@ -333,3 +333,32 @@ document.addEventListener('DOMContentLoaded', () => {
     phantrang();
     quantityNumber();
 });
+
+//Modal
+var btnModal = $(".seemore");
+var contentModal = $(".content-modal");
+//Swiper
+var swiper = new Swiper('.history .swiper-container', {
+    navigation: {
+      nextEl: '.history .swiper-button-next',
+      prevEl: '.history .swiper-button-prev',
+    },
+    slidesPerView: 3,
+    spaceBetween: 20,
+});
+var swiper = new Swiper('.partner .swiper-container', {
+    navigation: {
+      nextEl: '.partner .swiper-button-next',
+      prevEl: '.partner .swiper-button-prev',
+    },
+    slidesPerView: 4,
+    spaceBetween: 20
+});
+var swiper = new Swiper('.steps .swiper-container', {
+    navigation: {
+      nextEl: '.steps .swiper-button-next',
+      prevEl: '.steps .swiper-button-prev',
+    },
+    slidesPerView: 4,
+    spaceBetween: 20
+});
