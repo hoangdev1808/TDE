@@ -1,191 +1,86 @@
 footer
-	.footer-subscribed
+	min-height: 317px
+	padding-top: 42px
+	.footer-container 
+		max-width: 800px
+		margin: 0 auto
 		width: 100%
-		padding: 28px 0
-		background-color: #2e3192
-		.content
-			display: flex
-			align-items: center
-			.img
-				width: 65px
-				height: 60px
-				margin-right: 20px
-				img 
-					width: 100%
-			.caption
-				.title-subscribe
-					font-size: 18px
-					color: rgb(255, 255, 255)
-					font-weight: bold
-					text-transform: uppercase
-				.desc
-					font-size: 14px
-					color: rgb(255, 255, 255)
-		.subscribefrm
-			.form-group
+		padding-right: 15px
+		padding-left: 15px
+	.title-footer 
+		color: #221f1f
+		font-size: 18px
+		font-weight: 700
+		letter-spacing: 0.9px
+		margin-bottom: 17px
+	.wrap-box
+		margin-bottom: 30px
+		.list-info 
+			padding: 0
+			li 
+				list-style: none
 				display: flex
-				align-items: center
-				.subscribeemail
-					width: 440px
-					height: 40px
-					background-color: rgba($color: #000000, $alpha: .15)
-					border: none
-					border-radius: 20px
-					padding-left: 15px
-					margin-right: 20px
-					color: #ffffff
-					&:placeholder
+				max-width: 220px
+				em
+					color: #221f1f
 					font-size: 14px
-					color: rgb(255, 255, 255)
-				.subscribebutton
-					background-color: rgb(255, 255, 255)
-					width: 191px
-					height: 40px
-					border: none
-					border-radius: 20px
-					display: flex
-					align-items: center
-					justify-content: center
-					font-size: 15px
-					color: rgb(237, 28, 36)
-					.material-icons
-						margin-left: 10px
-					&:hover
-						color: $main-color
-		@media screen and ( max-width: 1199px)
-			.content
-				justify-content: center
-				margin-bottom: 20px
-			.subscribefrm
-				.form-group
-					.subscribeemail
-						width: 100%
-	.footer-container
-		padding-top: 40px
-		.footer-card
-			.footer-header
-				text-align: center
-				margin-bottom: 30px
-			.footer-body
-				text-align: center
-				.title
-					font-size: 15px
-					color: rgb(102, 102, 102)
-					font-weight: bold
-					text-transform: uppercase
-					text-align: center
-				.desc
-					font-size: 15px
-					color: #666666
-		@media screen and ( max-width: 991px)
-			.footer-card
-				.footer-header
-					margin-bottom: 20px
-				.footer-body
-					.title
-						font-size: 13px
-					.desc
-						font-size: 12px
-			&:nth-child(3)
-				.col-xl-3
-					&:nth-child(2)
-						border-right: none
-						border-bottom: none
-					&:nth-child(1)
-						border-bottom: none
-		&:nth-child(3)
-			padding-top: 30px
-			.col-xl-3
-				border-top: solid 1px #e1e1e1
-				border-right: solid 1px #e1e1e1
-				border-bottom: solid 1px #e1e1e1
-				.footer-card
-					padding-top: 30px
-					padding-left: 20px
-					padding-bottom: 30px
-					.footer-header
-						.title
-							font-size: 18px
-							color: $color-text
-							font-weight: bold
-							text-align: left
-							text-transform: uppercase
-							@media screen and ( max-width: 991px)
-								font-size: 13px
-					.footer-body
-						text-align: left
-						.desc
-							display: flex
-							align-items: center
-							padding-bottom: 18px
-							.material-icons
-								padding-right: 17px
-								font-size: 16px
-								color: #999999
-						ul
-							list-style: none
-							padding-left: 0
-							li 
-								padding-bottom: 18px
-								a 
-									font-size: 15px
-									color: #666666
-									@media screen and ( max-width: 991px)
-										font-size: 12px
-								&:last-child
-									padding-bottom: 0
-						.social
-							display: flex
-							margin-bottom: 20px
-							li 
-								width: 45px
-								height: 45px
-								border-radius: 50%
-								line-height: 45px
-								text-align: center
-								margin-right: 10px
-								a 
-									em 
-										color: #ffffff
-										font-size: 18px
-								&.face
-									background-color: $face
-								&.youtube
-									background-color: $youtube
-								&.twitter
-									background-color: $twitter
-				&:nth-child(1)
-					.footer-card
-						padding-left: 0
-				&:nth-child(4)
-					border-right: none
-	.coppy-right
-		padding-top: 14px
-		padding-bottom: 30px
-		.coppy,
-		.scurity
-			a 
-				font-size: 14px
-				color: rgb(153, 153, 153)
-				text-align: left
-		.scurity
+					font-weight: 400
+					letter-spacing: 0.7px
+					padding-top: 4px
+					margin-right: 6px
+				p 
+					color: #221f1f
+					font-size: 14 / 16 * 1rem
+					font-weight: 400
+					line-height: 22px
+					letter-spacing: 0.7px
+				&+li 
+					margin-top: 10px
+		.list-menu 
+			padding: 0
+			li 
+				list-style: none
+				a 
+					color: #333333
+					font-size: 14px
+					font-weight: 400
+					letter-spacing: 0.7px
+				&+li 
+					margin-top: 7px
+		.wrap-icon
+			i 
+				color: #111111
+				font-size: 24px
+				font-weight: 400
+			.fa-facebook-square 
+				margin-right: 15px
+		.bocongthuong 
+			margin-top: 29px
+	.footer-copyright 
+		margin-top: 21px
+		text-align: center
+		ul 
+			padding: 0
 			display: flex
-			justify-content: flex-end
-			a 
-				&:first-child
-					padding-right: 10px
-					border-right: solid 1px rgb(153, 153, 153)
-				&:last-child
-					padding-left: 10px
-		@media screen and ( max-width: 991px)
-			.coppy
-				text-align: center
-			.scurity
+			justify-content: center
+			li 
+				list-style: none
+				font-size: 12px
+				color: black
+				font-weight: 500
+				letter-spacing: 0.6px
+				display: flex
 				justify-content: center
-
-
-
-
-
-
+				align-items: center
+				&+li 
+					&::before
+						content: "|"
+						padding: 0 13px
+					@media screen and ( max-width: 768px )
+						padding: 0 6px
+		span 
+			color: #999999
+			font-size: 12px
+			font-weight: 400
+			letter-spacing: 0.6px
 

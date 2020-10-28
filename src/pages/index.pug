@@ -1,0 +1,12 @@
+extends ../_components/_layout/_layout.pug
+
+block var
+	- let title = 'TRANG CHỦ';
+	- let bodyClass = 'index-page';
+	- let titlePosition = ['Trang Chu'];
+block banner,breadcrumb
+block main
+	include ../_components/banner/homebanner.pug
+	include ../_components/index/i-1/index.pug
+	include ../_components/index/i-2/index.pug
+block scripts
