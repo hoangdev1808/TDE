@@ -334,10 +334,8 @@ document.addEventListener('DOMContentLoaded', () => {
     quantityNumber();
 });
 
-//Modal
-var btnModal = $(".seemore");
-var contentModal = $(".content-modal");
-//Swiper
+
+//Swiper Gioi Thieu
 var swiper = new Swiper('.history .swiper-container', {
     navigation: {
       nextEl: '.history .swiper-button-next',
@@ -362,3 +360,15 @@ var swiper = new Swiper('.steps .swiper-container', {
     slidesPerView: 4,
     spaceBetween: 20
 });
+
+//Swiper khuyen mai
+
+var swiper = new Swiper('.khuyenmai .swiper-container', {
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+      renderBullet: function (index, className) {
+        return '<span class="' + className + '">' + (index + 1) + '</span>';
+      },
+    },
+  });
