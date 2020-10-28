@@ -3,10 +3,10 @@
 	"description": "transpile pug, sass, js(es6) => html, css(w/ added prefix, auto-sorted css, minified), js(babeled, minified)",
 	"main": "gulpfile.babel.js",
 	"authors": [
-		"vdmanh99"
+		"hoangdev1808"
 	],
 	"license": "MIT",
-	"homepage": "https://github.com/voducmanh99/MySource",
+	"homepage": "https://github.com/hoangdev1808",
 	"ignore": [
 		"**/.*",
 		"node_modules",
