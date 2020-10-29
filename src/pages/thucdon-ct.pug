@@ -1,0 +1,12 @@
+extends ../_components/_layout/_layout.pug
+
+block var
+	- let title = 'TRANG CHỦ';
+	- let bodyClass = 'bg-thucdon-ct';
+	- let wrapClass = 'wrap-thuc-don-ct';
+	- let titlePosition = ['Trang Chu'];
+block banner,breadcrumb
+	include ../_components/_layout/_breadcrumb2.pug
+block main
+	include ../_components/thucdon-ct/index.pug
+block scripts

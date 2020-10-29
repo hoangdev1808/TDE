@@ -1,21 +1,21 @@
 {
-	"font": [
-		"src/fonts/**"
-	],
-	"js": [
-		"bower_components/jquery/dist/jquery.min.js",
-		"bower_components/bootstrap/dist/js/bootstrap.min.js",
-		"vendors/mapping.js",
+    "font": ["src/fonts/**"],
+    "js": [
+        "bower_components/jquery/dist/jquery.min.js",
+        "bower_components/bootstrap/dist/js/bootstrap.min.js",
+        "vendors/mapping.js",
         "vendors/mapping-listener.js",
-		"bower_components/swiper/dist/js/swiper.min.js",
-		"bower_components/fancybox/dist/jquery.fancybox.min.js",
-		"bower_components/aos/dist/aos.js"
-	],
-	"css": [
-		"bower_components/bootstrap/dist/css/bootstrap.min.css",
-		"bower_components/swiper/dist/css/swiper.min.css",
-		"bower_components/fancybox/dist/jquery.fancybox.min.css",
-		"bower_components/aos/dist/aos.css",
-		"node_modules/@mdi/font/css/materialdesignicons.css"
-	]
+        "bower_components/swiper/dist/js/swiper.min.js",
+        "bower_components/fancybox/dist/jquery.fancybox.min.js",
+        "bower_components/aos/dist/aos.js",
+        "vendors/mapping-listener.js",
+        "vendors/mapping.js"
+    ],
+    "css": [
+        "bower_components/bootstrap/dist/css/bootstrap.min.css",
+        "bower_components/swiper/dist/css/swiper.min.css",
+        "bower_components/fancybox/dist/jquery.fancybox.min.css",
+        "bower_components/aos/dist/aos.css",
+        "node_modules/@mdi/font/css/materialdesignicons.css"
+    ]
 }

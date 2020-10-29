@@ -28,6 +28,21 @@ header
 				width: 100%
 				height: 100%
 				object-fit: contain
+		.wrap-right 
+			display: flex
+			align-items: center
+			.icon-search
+				width: 30px
+				height: 30px
+				border: 1px solid $main-color
+				display: flex
+				align-items: center
+				justify-content: center
+				margin-right: 10px
+				background-color: $main-color
+				em 
+					font-size: 17px
+					color: white
 		.hambuger
 			height: 25px
 			display: flex
@@ -146,6 +161,9 @@ header
 				border-top: 1px solid #eeeeee
 				padding-top: 14px
 				padding-bottom: 7px
+				&.active 
+					a 
+						color: $main-color
 				a 
 					display: flex
 					flex-direction: column
@@ -154,6 +172,7 @@ header
 						margin-bottom: 4px
 				&:last-child
 					border-bottom: 1px solid #eeeeee
+	
 	.wrap-icon
 		display: flex
 		justify-content: flex-start
@@ -182,4 +201,80 @@ header
 		.wrap-right 
 			.vn 
 				margin-right: 5px
-					
+.search-wrap
+	-webkit-transition: all 1s ease
+	-moz-transition: all 1s ease
+	-o-transition: all 1s ease
+	-ms-transition: all 1s ease
+	transition: all 1s ease
+	background: rgba(0, 0, 0, 0.63)
+	position: fixed
+	right: -100%
+	top: 0
+	width: 100%
+	height: 100%
+	display: table
+	z-index: 999
+	.search-middle
+		display: table-cell
+		vertical-align: middle
+		height: 100%
+	.search-t
+		background: transparent
+		color: #fff
+		font-size: 30 / 16 * 1rem
+		border-radius: 0
+		width: 100%
+		margin: 0 auto
+		background-color: transparent
+		border: 0
+		color: white
+		padding: 0
+		border-bottom: 4px solid white
+		transition: ease-in-out all .3s
+		&:focus
+			background-color: transparent
+			border: 0
+			color: white
+			border-bottom: 4px solid $main-color
+			box-shadow: none
+		&::placeholder
+			color: white
+		@media screen and ( max-width: 575px )
+			font-size: 20px
+	.close-btn
+		position: absolute
+		right: 0
+		top: 0
+		cursor: pointer
+		width: 50px
+		height: 50px
+		text-align: center
+		background: white
+		color: #575757
+		font-size: 28/16*1rem
+		border-radius: 37px
+		margin: 20px
+		display: flex
+		align-items: center
+		justify-content: center
+		@media screen and ( max-width:1024px  )
+			font-size: 20/16*1rem
+			width: 40px
+			height: 40px
+	.wrap-button
+		width: 60%
+		margin: 0 auto
+		position: relative
+		@media screen and ( max-width: 575px )
+			width: 80%
+		.button-search
+			position: absolute
+			right: 0
+			outline: none
+			border: 0
+			bottom: 0
+			background-color: transparent
+			color: white
+			span
+				font-size: 40px

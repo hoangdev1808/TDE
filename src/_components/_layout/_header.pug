@@ -1,15 +1,20 @@
 header
 	.menu-mobile
-		.logo 
-			img(src="./assets/logo/logoTDE.png", alt="")
-		.hambuger 
-			span
-			span
-			span
-			span
+		.logo
+			a(href="index.html")
+				img(src="./assets/logo/logoTDE.png", alt="")
+		.wrap-right
+			.icon-search 
+				em.search-icon.material-icons search
+			.hambuger 
+				span
+				span
+				span
+				span
 	.menu-desktop
 		.logo 
-			img(src="./assets/logo/logoTDE.png", alt="")
+			a(href="index.html")
+				img(src="./assets/logo/logoTDE.png", alt="")
 		.wrap-list-menu 
 			ul 
 				li 
@@ -24,7 +29,7 @@ header
 					a(href="") Tokyo Deli Catering
 		.wrap-list-menu-icon
 			ul 
-				li
+				li.active
 					a(href="")
 						img(src="./assets/header/icon1.png", alt="")
 						| Giới thiệu
@@ -57,4 +62,11 @@ header
 					img(src="./assets/header/icon-vn.png", alt="")
 				a.us(href="")
 					img(src="./assets/header/icon-us1.svg", alt="")
-		
+.search-wrap
+	.search-middle
+		.close-btn X
+		.wrap-button
+			input.form-control.search-t(type='text' placeholder='Tìm kiếm...')
+			button.button-search
+				span.material-icons
+					| search	

@@ -12,6 +12,12 @@
 		left: 0
 		object-fit: $fit
 		transition: .3s ease-in-out all
+=rgtext($number)
+	overflow: hidden
+	display: -webkit-box
+	text-overflow: ellipsis
+	-webkit-box-orient: vertical
+	-webkit-line-clamp: $number
 =center-image
 	position: relative
 	display: block

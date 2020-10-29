@@ -3,7 +3,29 @@ button
 	&:focus
 		outline: none
 		box-shadow: none
-	
+.swiper-next
+	position: absolute
+	top: 34%
+	transform: translateY(-50%)
+	left: 100%
+	cursor: pointer
+	margin-left: 15px
+.swipe-button-1 
+	em
+		color: #dddddd
+		font-size: 36px
+		font-weight: 400
+		transition: .3s all  ease-in-out
+	&:hover
+		em 
+			color: $main-color
+.swiper-prev
+	position: absolute
+	top: 34%
+	transform: translateY(-50%)
+	right: 100%
+	cursor: pointer
+	margin-right: 15px
 .button-order
 	width: 160px
 	height: 44px
@@ -20,5 +42,19 @@ button
 	font-family: Nunito
 	text-transform: uppercase
 	letter-spacing: 1.4px
+	transition: .3s all  ease-in-out
+	cursor: pointer
 	margin: 0 auto
 	margin-top: 27px
+a.xemthem 
+	color: $main-color
+	font-size: 14 / 16 * 1rem
+	font-weight: 700
+	text-align: left
+	text-transform: uppercase
+	letter-spacing: 1.4px
+	transition: .3s all  ease-in-out
+	display: inline-block
+	margin-top: 17px
+	&:hover 
+		transform: translateY(-3px)

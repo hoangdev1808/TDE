@@ -1,0 +1,66 @@
+.index-4 
+	.wrap-box
+		display: flex
+		position: relative
+		align-items: center
+	.wrap-box-contact
+		background-image:  url('../assets/index/bg-i5.png')
+		background-repeat: no-repeat
+		background-size: cover
+		background-position: center
+		width: 332px
+		height: 360px
+		margin-left: -107px
+		padding-top: 43px
+		padding-left: 44px
+		padding-right: 40px
+		flex: 0 0 332px
+		@media screen and ( max-width: 768px )
+			margin-left: 0px
+		.title-hotline
+			display: flex
+			align-items: center
+			margin-bottom: 17px
+			p 
+				color: #111111
+				font-size: 24 / 16 * 1rem
+				font-weight: 700
+				font-family: Montserrat
+				margin-left: 15px
+		.text 
+			color: #333333
+			font-size: 1rem
+			font-weight: 400
+			font-family: Nunito
+			line-height: 22px
+			+rgtext(4)
+		.hotline 
+			margin-top: 18px
+			&:last-child
+				margin-top: 8px
+			p 
+				color: #111111
+				font-size: 14 / 16 * 1rem
+				font-weight: 400
+				font-family: Montserrat
+				letter-spacing: 0.7px
+			strong 
+				color: $main-color
+				font-size: 18 / 16 * 1rem
+				font-weight: 700
+				font-family: Montserrat
+				text-align: left
+				letter-spacing: 0.9px
+	.img
+		width: auto
+		height: 360px
+		&-right
+			margin-left: -16px
+			z-index: -1
+		&-left 
+			@media screen and ( max-width: 768px )
+				display: none
+		img
+			width: 100%
+			height: 100%
+			object-fit: cover
