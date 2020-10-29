@@ -1,0 +1,146 @@
+.content-sub
+	color: #999999!important
+	font-size: (14/16)*1rem
+	line-height: (18/16)*1rem
+	font-family: $font-sub
+.f-icon
+	display: inline-flex
+	align-items: center
+	justify-content: center
+	width: 35px
+	height: 35px
+	border-radius: 50%
+	margin-right: 15px
+	&:last-child
+		margin-right: 0
+	i
+		color: white
+		font-size: 1rem
+	&.facebook
+		background-color: $face
+	&.twitter
+		background-color: $twitter
+	&.linked
+		background-color: #bc0007
+.cttintuc
+	display: flex
+	padding: (60/16)*1rem 0 (50/16)*1rem
+	.news-box
+		display: flex
+	.news-detail
+		background-color: white
+		padding: (30/16)*1rem (60/16)*1rem (55/16)*1rem (30/16)*1rem
+		max-width: 990px
+		box-shadow: 0px 3px 15px 5px #eaeaea
+		margin-right: 30px
+		.title *
+			font-size: (24/16)*1rem
+		.social
+			display: flex
+			justify-content: space-between
+			align-items: center
+			padding: (20/16)*1rem 0 (10/16)*1rem
+			border-bottom: 1px solid #d3d3d3
+		.content
+			padding-bottom: (20/16)*1rem
+			&-distance
+				padding-bottom: (25/16)*1rem
+				&:first-child
+					padding: (25/16)*1rem 0
+			*.special
+				color: #e92431
+				font-weight: bold
+				font-size: (18/16)*1rem
+				padding-bottom: (25/16)*1rem
+			img
+				width: 100%
+				max-height: 500px
+				object-fit: cover
+		.news-other
+			&-box
+				text-align: center
+				padding-left: (60/16)*1rem
+				padding-top: (30/16)*1rem
+				.row
+					margin-right: 0
+					margin-left: 0
+			.title *
+				font-size: (30/16)*1rem
+			&-item
+				max-width: 260px
+				background-color: white
+				box-shadow: 0 0 20px 10px #f5f5f5
+				margin-right: (25/16)*1rem
+				&:last-child
+					margin-right: 0
+				span,a 
+					display: block
+				.content
+					padding: (20/16)*1rem
+					&-sub
+						font-size: (12/16)*1rem
+					*
+						color: #111111
+					.pd-t
+						padding-top: (60/16)*1rem
+					>a
+						padding-top: 5px
+						&:hover
+							color: $colorMain
+				.seemore
+					display: inline-block
+					color: #111111
+					border: 1px solid #111111
+					padding: (5/16)*1rem (45/16)*1rem
+					background-color: unset
+					text-transform: none
+					&:hover
+						background-color: $colorMain
+						border: 1px solid $colorMain
+						color: white
+						transition: .2s ease-in-out
+				img
+					width: 100%
+					max-height: 240px
+	.news-new
+		max-width: 290px
+		width: 100%
+		height: 100%
+		box-shadow: 0 0 15px 10px #ededed
+		&-header
+			padding: 15px 0 15px 30px
+			background-color: #e92431
+			.title
+				*
+					font-size: 24px
+					color: white
+		&-body
+			padding: (30/16)*1rem (20/16)*1rem (30/16)*1rem (30/16)*1rem
+			background-color: white
+		&-item
+			display: flex
+			align-items: center
+			padding-bottom: (25/16)*1rem
+			border-bottom: 1px solid #d3d3d3
+			&:not(:first-child)
+				padding-top: (25/16)*1rem
+			&:last-child
+				border-bottom: unset
+				padding-bottom: 0
+			span,a 
+				display: block
+				width: 100%
+			.block-image
+				max-width: 110px
+			img
+				width: 100%
+				max-height: 85px
+			.content
+				padding-left: 10px
+				max-width: 130px
+				&-sub
+					font-size: 14px		
+				>a:hover
+					color: $colorMain
+				.d-webkit
+					display: -webkit-box	
