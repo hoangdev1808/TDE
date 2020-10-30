@@ -1,16 +1,14 @@
 section.gioithieu.total
 	.container
-		.banner
-			img(src="./assets/gioithieu/banner.jpg", alt="tokyodeli")
 		.intro
 			.intro-content
-				img(src="./assets/gioithieu/1.jpg", alt="")
+				img(src="./assets/gioithieu/phone.png", alt="")
 			.intro-content2
 				.title
 					h1 Giới thiệu
 				.content
 					p Tokyo Deli Express là dịch vụ giao hàng kết hợp với các đối tác giao hàng hàng đầu Việt Nam mang đến hương vị Nhật Bản trọn vẹn cho khách hàng. #[br] #[br] Nhằm kết nối  các chuỗi nhà hàng Nhật Bản-Tokyo Deli tại TP.HCM và Việt Nam  đến với tất cả mọi người, Vì  vậy ,Tokyo deli cho ra mắt dịch vụ Tokyo Deli Express kết hợp với các đối tác hàng đầu Việt Nam về lĩnh vực giao hàng để mang đến cho bạn thưởng thức nhanh chóng bảo đảm chuẩn vị Nhật.
-				a.btn(type="button" data-toggle="modal" data-target="#exampleModal" class="seemore") xem thêm
+				a.button-order(data-toggle="modal" data-target="#exampleModal") xem thêm
 				#exampleModal.modal.fade(tabindex='-1' role='dialog' aria-labelledby='exampleModalLabel' aria-hidden='true')
 					.modal-dialog(role='document')
 						.modal-content
@@ -39,20 +37,21 @@ section.gioithieu.total
 		.history
 			.title.text-center
 				h2 Lịch sử hình thành
-			.swiper-container
-				.swiper-wrapper
-					-for(i=0;i<4;i++)	
-						.swiper-slide
-							a(href="#" class="zoom-in")
-								img(src="./assets/gioithieu/2.jpg", alt="")
-							.distance
-								a(href="#")
-									span.title 2007
-									span.content-2 Nhà hàng TOKYO Deli đầu tiên được mở tại Phú Mỹ Hưng. Nhà hàng TOKYO Deli đầu tiên được mở tại Phú Mỹ Hưng. Nhà hàng TOKYO Deli đầu tiên được mở tại Phú Mỹ Hưng.
-			.swiper-button-next
-				span.material-icons.partner-icon keyboard_arrow_right
-			.swiper-button-prev
-				span.material-icons.partner-icon keyboard_arrow_left
+			.wrap-slide
+				.swiper-container
+					.swiper-wrapper
+						-for(i=0;i<4;i++)	
+							.swiper-slide
+								a(href="#" class="zoom-in")
+									img(src="./assets/gioithieu/2.jpg", alt="")
+								.distance
+									a(href="#")
+										span.title 2007
+										span.content-2 Nhà hàng TOKYO Deli đầu tiên được mở tại Phú Mỹ Hưng. Nhà hàng TOKYO Deli đầu tiên được mở tại Phú Mỹ Hưng. Nhà hàng TOKYO Deli đầu tiên được mở tại Phú Mỹ Hưng.
+				.swiper-next
+					span.material-icons.partner-icon keyboard_arrow_right
+				.swiper-prev
+					span.material-icons.partner-icon keyboard_arrow_left
 		.look
 			.title.text-center
 				h3 Tầm nhìn - Sứ mệnh
