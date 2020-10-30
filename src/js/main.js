@@ -57,24 +57,22 @@ const slidePage = () => {
         slidesPerView: 3,
         spaceBetween: 30,
         breakpoints: {
-            640: {
-                slidesPerView: 1,
-                spaceBetween: 10,
+            992: {
+                slidesPerView: 2,
+                spaceBetween: 30,
+                centeredSlides: false,
             },
             768: {
-                slidesPerView: 2,
-                spaceBetween: 20,
-                autoplay: {
-                    delay: 3000,
-                    disableOnInteraction: false,
-                },
+                slidesPerView: 1,
+                spaceBetween: 0,
             },
         },
     });
     new Swiper(".partner .swiper-container", {
+        loop: true,
         navigation: {
-            nextEl: ".partner .swiper-button-next",
-            prevEl: ".partner .swiper-button-prev",
+            nextEl: ".partner .swiper-next",
+            prevEl: ".partner .swiper-prev",
         },
         slidesPerView: 4,
         spaceBetween: 20,
@@ -95,14 +93,15 @@ const slidePage = () => {
     });
     new Swiper(".steps .swiper-container", {
         navigation: {
-            nextEl: ".steps .swiper-button-next",
-            prevEl: ".steps .swiper-button-prev",
+            nextEl: ".steps .swiper-next",
+            prevEl: ".steps .swiper-prev",
         },
         slidesPerView: 4,
-        spaceBetween: 20,
+        spaceBetween: 25,
         breakpoints: {
             576: {
                 slidesPerView: 1,
+                spaceBetween: 0,
             },
             640: {
                 slidesPerView: 2,
