@@ -341,8 +341,26 @@ var swiper = new Swiper('.history .swiper-container', {
       nextEl: '.history .swiper-button-next',
       prevEl: '.history .swiper-button-prev',
     },
+    autoplay: {
+        delay: 9900,
+        disableOnInteraction: false,
+      },
     slidesPerView: 3,
     spaceBetween: 20,
+    breakpoints: {
+        640: {
+          slidesPerView: 1,
+          spaceBetween: 10,
+        },
+        768: {
+          slidesPerView: 2,
+          spaceBetween: 20,
+          autoplay: {
+            delay: 3000,
+            disableOnInteraction: false,
+          },
+        },
+      }
 });
 var swiper = new Swiper('.partner .swiper-container', {
     navigation: {
@@ -350,7 +368,21 @@ var swiper = new Swiper('.partner .swiper-container', {
       prevEl: '.partner .swiper-button-prev',
     },
     slidesPerView: 4,
-    spaceBetween: 20
+    spaceBetween: 20,
+    breakpoints: {
+        640: {
+          slidesPerView: 2,
+          spaceBetween: 10,
+        },
+        768: {
+          slidesPerView: 3,
+          spaceBetween: 20,
+          autoplay: {
+            delay: 3000,
+            disableOnInteraction: false,
+          },
+        },
+    }
 });
 var swiper = new Swiper('.steps .swiper-container', {
     navigation: {
@@ -358,7 +390,24 @@ var swiper = new Swiper('.steps .swiper-container', {
       prevEl: '.steps .swiper-button-prev',
     },
     slidesPerView: 4,
-    spaceBetween: 20
+    spaceBetween: 20,
+    breakpoints: {
+        576: {
+            slidesPerView: 1,
+        },
+        640: {
+          slidesPerView: 2,
+          spaceBetween: 10,
+        },
+        768: {
+          slidesPerView: 3,
+          spaceBetween: 20,
+          autoplay: {
+            delay: 3000,
+            disableOnInteraction: false,
+          },
+        },
+      }
 });
 
 //Swiper khuyen mai

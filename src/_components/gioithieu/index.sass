@@ -118,6 +118,13 @@
 			width: 100%
 	.swiper-container
 		padding-top: (25/16)*1rem
+	.content-2
+		overflow: hidden
+		text-overflow: ellipsis
+		display: -webkit-box
+		-webkit-box-orient: vertical
+		-webkit-line-clamp: 6
+		
 .look
 	padding: 0 (90/16)*1rem
 	a, span
@@ -209,8 +216,81 @@
 			font-family: $font-sub
 			font-size: 1rem
 			color: #333333
-
-
+@media only screen and (max-width: 1366px)
+	.gioithieu
+		.look-area-item
+			width: 100%
+			&:first-child
+				margin-right: 0
+				margin-bottom: 20px
+@media only screen and (max-width: 1200px)
+	.gioithieu
+		.intro-content2
+			padding-top: (30/16)*1rem
+			>.content
+				height: 150px
+				overflow: auto
+				padding-bottom: 0
+			a.seemore
+				margin-top: (20/16)*1rem
+@media only screen and (max-width: 1024px)
+	.gioithieu
+		.look-area-item
+			max-height: 240px
+			.distance
+				height: 240px
+				overflow: auto
+		.utility
+			.content-absoblute
+				.title
+					line-height: 1
+@media only screen and (max-width: 767px)
+	.gioithieu
+		.intro
+			display: block
+			&-content,
+			&-content2
+				width: 100%
+				text-align: center
+				padding-left: 0
+				padding-right: 0
+		.history,.partner
+			padding-left: 0
+			padding-right: 0
+			.swiper-button-next,
+			.swiper-button-prev
+				display: none			
+		.utility
+			&-area
+				display: block
+			.utility-area-item
+				width: 100%
+				display: block
+				margin-bottom: 15px
+				&:last-child
+					margin-bottom: 0
+@media only screen and (max-width: 768px)
+	.gioithieu
+		.look
+			padding: 0 0
+		.utility
+			.content-absoblute
+				max-width: 100%
+@media only screen and (max-width: 576px)
+	.gioithieu
+		.look-area-item
+			flex-direction: column
+			max-height: unset
+			img 
+				object-fit: contain
+		.utility
+			padding: (30/16)*1rem 0
+		.steps-link
+			text-align: center
+		.partner .swiper-container
+			padding-bottom: (30/16)*1rem
+	
+					
 
 
 	
