@@ -118,6 +118,39 @@ const slidePage = () => {
             },
         },
     });
+    new Swiper(".news-other .swiper-container", {
+        slidesPerView: 3,
+        spaceBetween: 30,
+        autoplay: {
+            delay: 9000,
+            disableOnInteraction: false,
+        },
+        breakpoints: {
+            576: {
+                slidesPerView: 1,
+                autoplay: {
+                    delay: 3000,
+                    disableOnInteraction: false,
+                },
+            },
+            640: {
+                slidesPerView: 2,
+                spaceBetween: 10,
+                autoplay: {
+                    delay: 3000,
+                    disableOnInteraction: false,
+                },
+            },
+            768: {
+                slidesPerView: 3,
+                spaceBetween: 20,
+                autoplay: {
+                    delay: 3000,
+                    disableOnInteraction: false,
+                },
+            },
+        },
+    });
     new Swiper(".khuyenmai .swiper-container", {
         pagination: {
             el: ".swiper-pagination",

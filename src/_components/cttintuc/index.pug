@@ -30,16 +30,18 @@ section.cttintuc
 					.title.text-center
 						h2 Tin tức khác
 					.news-other-box
-						.row
-							-for(i=0;i<3;i++)
-								.news-other-item
-									a.zoom-in(href="#")
-										img(src="./assets/cttt/3.png", alt="")
-									.content
-										span.content-sub 01.08.2020
-										a(href="#") Tokyo Deli- Ẩm thực cuối tuần cho gia đình
-										.text-center.pd-t
-											a.seemore(href="#") Xem thêm
+						.swiper-container
+							.swiper-wrapper
+								-for(i=0;i<4;i++)
+									.swiper-slide
+										.news-other-item
+											a.zoom-in(href="#")
+												img(src="./assets/cttt/3.png", alt="")
+											.content
+												span.content-sub 01.08.2020
+												a(href="#") Tokyo Deli- Ẩm thực cuối tuần cho gia đình
+												.text-center.pd-t
+													a.seemore(href="#") Xem thêm
 			.news-new
 				.news-new-header
 					.title
