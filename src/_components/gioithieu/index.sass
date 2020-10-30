@@ -43,9 +43,11 @@
 	.zoom-in 
 		display: block
 		overflow: hidden
+		img 
+			transition: .3s all  ease-in-out
 		&:hover img
-			transform: scale(1.2)
-			transition: .2s ease-in-out
+			transform: scale(1.05)
+			transition: .3s all  ease-in-out
 	.gioithieu
 		padding-bottom: (50/16)*1rem
 		.swiper-button-prev, .swiper-container-rtl .swiper-button-next,.swiper-button-next, .swiper-container-rtl .swiper-button-prev
@@ -110,8 +112,12 @@
 			max-width: 1020px
 			width: 100%
 			background-color: white
+	.swiper-slide-active
+		.distance
+			padding-top: 30 / 16 * 1rem
 	.distance
-		padding: (30/16)*1rem (25/16)*1rem
+		height: 205px
+		padding: 21 / 16 * 1rem 30 / 16 * 1rem 35 / 16 * 1rem 30 / 16 * 1rem
 		.title
 			color: $colorMain
 			font-size: (24/16)*1rem
@@ -120,6 +126,7 @@
 			padding-top: 5px
 	.history
 		position: relative
+		margin-bottom: 56px
 		a, span
 			display: block
 		.wrap-slide 

@@ -48,16 +48,14 @@ const slidePage = () => {
     });
     //Swiper Gioi Thieu
     new Swiper(".history .swiper-container", {
+        loop: true,
         navigation: {
-            nextEl: ".history .swiper-button-next",
-            prevEl: ".history .swiper-button-prev",
+            nextEl: ".history .swiper-next",
+            prevEl: ".history .swiper-prev",
         },
-        autoplay: {
-            delay: 9900,
-            disableOnInteraction: false,
-        },
+        centeredSlides: true,
         slidesPerView: 3,
-        spaceBetween: 20,
+        spaceBetween: 30,
         breakpoints: {
             640: {
                 slidesPerView: 1,
