@@ -58,3 +58,39 @@ a.xemthem
 	margin-top: 17px
 	&:hover 
 		transform: translateY(-3px)
+ul.pagination
+	display: flex
+	justify-content: center
+	align-items: center
+	padding: 0
+	margin-top: 26px
+	li
+		list-style: none
+		&.active
+			a,span
+				background-color: #e92431
+				font-weight: 700
+				color: white
+				border: 1px solid transparent
+		a,span
+			cursor: pointer
+			width: 40px
+			height: 40px
+			border-radius: 50%
+			color: white
+			display: flex
+			align-items: center
+			justify-content: center
+			color: #666666
+			font-size: 18px
+			font-weight: 400
+			font-family: Nunito
+			letter-spacing: 0.45px
+			border: 1px solid #666666
+			&:hover
+				background-color: #e92431
+				font-weight: 700
+				color: white
+				border: 1px solid transparent
+		+ li
+			margin-left: 20px
