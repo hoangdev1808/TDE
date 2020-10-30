@@ -1,0 +1,137 @@
+section.gioithieu.total
+	.container
+		.banner
+			img(src="./assets/gioithieu/banner.jpg", alt="tokyodeli")
+		.intro
+			.intro-content
+				img(src="./assets/gioithieu/1.jpg", alt="")
+			.intro-content2
+				.title
+					h1 Giới thiệu
+				.content
+					p Tokyo Deli Express là dịch vụ giao hàng kết hợp với các đối tác giao hàng hàng đầu Việt Nam mang đến hương vị Nhật Bản trọn vẹn cho khách hàng. #[br] #[br] Nhằm kết nối  các chuỗi nhà hàng Nhật Bản-Tokyo Deli tại TP.HCM và Việt Nam  đến với tất cả mọi người, Vì  vậy ,Tokyo deli cho ra mắt dịch vụ Tokyo Deli Express kết hợp với các đối tác hàng đầu Việt Nam về lĩnh vực giao hàng để mang đến cho bạn thưởng thức nhanh chóng bảo đảm chuẩn vị Nhật.
+				a.btn(type="button" data-toggle="modal" data-target="#exampleModal" class="seemore") xem thêm
+				#exampleModal.modal.fade(tabindex='-1' role='dialog' aria-labelledby='exampleModalLabel' aria-hidden='true')
+					.modal-dialog(role='document')
+						.modal-content
+							.modal-header
+								button.close(type='button' data-dismiss='modal' aria-label='Close')
+									span(aria-hidden='true' class="close-modal") X
+							.modal-body
+								.modal-detail
+									.modal-detail-header
+										img(src="./assets/gioithieu/modal.jpg", alt="")
+										.detail
+											.title
+												h5 Giới thiệu
+											.content
+												p Tokyo Deli Express là dịch vụ giao hàng kết hợp với các đối tác giao hàng hàng đầu Việt Nam mang đến hương vị Nhật Bản trọn vẹn cho khách hàng. #[br] #[br] Nhằm kết nối  các chuỗi nhà hàng Nhật Bản-Tokyo Deli tại TP.HCM và Việt Nam  đến với tất cả mọi người, Vì  vậy ,Tokyo deli cho ra mắt dịch vụ Tokyo Deli Express kết hợp với các đối tác hàng đầu Việt Nam về lĩnh vực giao hàng để mang đến cho bạn thưởng thức nhanh chóng bảo đảm chuẩn vị Nhật.
+									.modal-detail-body
+										-for(i=0;i<3;i++)
+											p.content
+												span.material-icons keyboard_arrow_right
+												span Thực đơn đa dạng: Sở hữu hơn 200 món ăn vô cùng phong phú mang đậm truyền thống ẩm thực Nhật vốn nổi tiếng bậc nhất thế giới bởi sự cầu kỳ trong cách chế biến lẫn bài trí món ăn mang hương vị thanh tao nhẹ nhàng  đến với bạn nhanh chóng và an toàn thông qua Tokyo Deli Express.
+									.modal-detail-body
+										-for(i=0;i<4;i++)
+											p.content
+												span.material-icons done
+												span Bao bì sử dụng đảm bảo vệ sinh an toàn thực phẩm.
+		.history
+			.title.text-center
+				h2 Lịch sử hình thành
+			.swiper-container
+				.swiper-wrapper
+					-for(i=0;i<4;i++)	
+						.swiper-slide
+							a(href="#" class="zoom-in")
+								img(src="./assets/gioithieu/2.jpg", alt="")
+							.distance
+								a(href="#")
+									span.title 2007
+									span.content-2 Nhà hàng TOKYO Deli đầu tiên được mở tại Phú Mỹ Hưng. Nhà hàng TOKYO Deli đầu tiên được mở tại Phú Mỹ Hưng. Nhà hàng TOKYO Deli đầu tiên được mở tại Phú Mỹ Hưng.
+			.swiper-button-next
+				span.material-icons.partner-icon keyboard_arrow_right
+			.swiper-button-prev
+				span.material-icons.partner-icon keyboard_arrow_left
+		.look
+			.title.text-center
+				h3 Tầm nhìn - Sứ mệnh
+			.look-area
+				.look-area-item
+					img(src="./assets/gioithieu/7.jpg", alt="")
+					.distance
+						a(href="#")
+							span.title Tầm nhìn
+							span.content-2 Mang ẩm thực Nhật Bản đến với khách hàng thông qua dịch vụ ăn uống an toàn chất lượng và chuyên nghiệp. #[br]#[br]Tokyo Deli Catering là sự kế thừa và phát huy thế mạnh của Tokyo Deli chuỗi nhà hàng Nhật Bản
+				.look-area-item
+					img(src="./assets/gioithieu/7.jpg", alt="")
+					.distance
+						a(href="#")
+							span.title Sứ mệnh
+							span.content-2 Tokyo Deli Catering là sự tiếp nối và mở rộng thế mạnh của Tokyo Deli chuỗi nhà hàng Nhật Bản hàng đầu tại Việt Nam
+		.utility
+			.title.text-center 
+				h4 Sự tiện lợi của TOKYO DELI EXPRESS
+			.utility-area
+				a(href="#",class="utility-area-item")
+					img(src="./assets/gioithieu/14.jpg", alt="")
+					.content-absoblute
+						span.title Dễ dàng tìm cửa hàng
+						span.content 14 Chi nhánh nhà hàng rộng khắp tại TP.HCM và 4 chi nhánh tại Hà Nội mang đúng vị Nhật Bản đến tận tay bạn mọi lúc, mọi nơi.
+					.utility-overload
+				a(href="#",class="utility-area-item")
+					img(src="./assets/gioithieu/16.jpg", alt="")
+					.utility-overload
+			.utility-area
+				a(href="#",class="utility-area-item")
+					img(src="./assets/gioithieu/17.jpg", alt="")
+					.utility-overload
+				a(href="#",class="utility-area-item")
+					img(src="./assets/gioithieu/18.jpg", alt="")
+					.utility-overload
+		.partner
+			.title.text-center
+				h5 Đối tác
+			.swiper-container
+				.swiper-wrapper
+					.swiper-slide
+						img(src="./assets/gioithieu/6.png", alt="")
+					.swiper-slide
+						img(src="./assets/gioithieu/5.png", alt="")
+					.swiper-slide
+						img(src="./assets/gioithieu/15.png", alt="")
+					.swiper-slide
+						img(src="./assets/gioithieu/9.jpg", alt="")
+					.swiper-slide
+						img(src="./assets/gioithieu/9.jpg", alt="")
+					.swiper-slide
+						img(src="./assets/gioithieu/9.jpg", alt="")
+				.swiper-button-next
+					span.material-icons.partner-icon keyboard_arrow_right
+				.swiper-button-prev
+					span.material-icons.partner-icon keyboard_arrow_left
+		.steps
+			.title.text-center
+				h6 Quy trình
+			.steps-area
+				.swiper-container
+					.swiper-wrapper
+						-for(i=0;i<5;i++)
+							.swiper-slide
+								a(href="#" class="steps-link")
+									img(src="./assets/gioithieu/11.jpg", alt="")
+									.steps-content
+										span.font-weight-bold Bước 1:
+										span.pl-2 Thức ăn sau khi chế biến được đựng trong hộp và đậy nắp bảo quản.
+				.swiper-button-next
+					span.material-icons.partner-icon keyboard_arrow_right
+				.swiper-button-prev
+					span.material-icons.partner-icon keyboard_arrow_left
+
+
+
+
+				
+									
+
+		

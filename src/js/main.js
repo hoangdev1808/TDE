@@ -1,9 +1,9 @@
 const checkLayoutBanner123 = () => {
     window.addEventListener("resize", () => {
-        if ($(window).width() < 1024) {
+        if ($(window).width() <= 1024) {
             const pagesBanner = $("#page-banner");
             const breadcrumb = $(".global-breadcrumb");
-            const heightHeader = $("header").outerHeight();
+            const heightHeader = 80;
             const mainBanner = $("#home-banner");
             if (mainBanner.length < 1 && pagesBanner.length < 1 && breadcrumb.length == 1) {
                 breadcrumb.css("padding-top", heightHeader);
@@ -43,6 +43,89 @@ const slidePage = () => {
             575: {
                 slidesPerView: 1,
                 spaceBetween: 20,
+            },
+        },
+    });
+    //Swiper Gioi Thieu
+    new Swiper(".history .swiper-container", {
+        navigation: {
+            nextEl: ".history .swiper-button-next",
+            prevEl: ".history .swiper-button-prev",
+        },
+        autoplay: {
+            delay: 9900,
+            disableOnInteraction: false,
+        },
+        slidesPerView: 3,
+        spaceBetween: 20,
+        breakpoints: {
+            640: {
+                slidesPerView: 1,
+                spaceBetween: 10,
+            },
+            768: {
+                slidesPerView: 2,
+                spaceBetween: 20,
+                autoplay: {
+                    delay: 3000,
+                    disableOnInteraction: false,
+                },
+            },
+        },
+    });
+    new Swiper(".partner .swiper-container", {
+        navigation: {
+            nextEl: ".partner .swiper-button-next",
+            prevEl: ".partner .swiper-button-prev",
+        },
+        slidesPerView: 4,
+        spaceBetween: 20,
+        breakpoints: {
+            640: {
+                slidesPerView: 2,
+                spaceBetween: 10,
+            },
+            768: {
+                slidesPerView: 3,
+                spaceBetween: 20,
+                autoplay: {
+                    delay: 3000,
+                    disableOnInteraction: false,
+                },
+            },
+        },
+    });
+    new Swiper(".steps .swiper-container", {
+        navigation: {
+            nextEl: ".steps .swiper-button-next",
+            prevEl: ".steps .swiper-button-prev",
+        },
+        slidesPerView: 4,
+        spaceBetween: 20,
+        breakpoints: {
+            576: {
+                slidesPerView: 1,
+            },
+            640: {
+                slidesPerView: 2,
+                spaceBetween: 10,
+            },
+            768: {
+                slidesPerView: 3,
+                spaceBetween: 20,
+                autoplay: {
+                    delay: 3000,
+                    disableOnInteraction: false,
+                },
+            },
+        },
+    });
+    new Swiper(".khuyenmai .swiper-container", {
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+            renderBullet: function (index, className) {
+                return '<span class="' + className + '">' + (index + 1) + "</span>";
             },
         },
     });
