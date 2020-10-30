@@ -1,28 +1,70 @@
-.content-sub
-	color: #999999!important
-	font-size: (14/16)*1rem
-	line-height: (18/16)*1rem
-	font-family: $font-sub
-.f-icon
-	display: inline-flex
-	align-items: center
-	justify-content: center
-	width: 35px
-	height: 35px
-	border-radius: 50%
-	margin-right: 15px
-	&:last-child
-		margin-right: 0
-	i
-		color: white
-		font-size: 1rem
-	&.facebook
-		background-color: $face
-	&.twitter
-		background-color: $twitter
-	&.linked
-		background-color: #bc0007
 .cttintuc
+	.content-sub
+		color: #999999!important
+		font-size: (14/16)*1rem
+		line-height: (18/16)*1rem
+		font-family: $font-sub
+	.f-icon
+		display: inline-flex
+		align-items: center
+		justify-content: center
+		width: 35px
+		height: 35px
+		border-radius: 50%
+		margin-right: 15px
+		&:last-child
+			margin-right: 0
+		i
+			color: white
+			font-size: 1rem
+		&.facebook
+			background-color: $face
+		&.twitter
+			background-color: $twitter
+		&.linked
+			background-color: #bc0007
+	.title
+		*
+			color: #111111
+			font-size: 30 / 16 * 1rem
+			font-weight: 800
+			font-family: "Montserrat"
+	.content
+		*
+		color: #333333
+		font-size: 1rem
+		font-weight: 400
+		font-family: Nunito
+		line-height: 22px
+		&-2
+			font-size: 1rem
+			color:#111111
+			line-height: (22/16)*1rem
+	.seemore
+			display: inline-block
+			text-transform: uppercase
+			font-size: (14/16)*1rem
+			font-weight: bold
+			color: white
+			background-color: $colorMain
+			padding: (10/16)*1rem (30/16)*1rem
+			border: 1px solid $colorMain
+			background-color: $colorMain
+			border-radius: 20px
+			&:hover
+				background-color: white
+				border: 1px solid $colorMain
+				color: $colorMain
+				transition: .2s ease-in-out
+	.zoom-in 
+		display: block
+		overflow: hidden
+		img 
+			transition: .3s all  ease-in-out
+		&:hover img
+			transform: scale(1.05)
+			transition: .3s all  ease-in-out
+	padding: (55/16)*1rem 0
 	display: flex
 	padding: (60/16)*1rem 0 (50/16)*1rem
 	.news-box
@@ -31,8 +73,11 @@
 		background-color: white
 		padding: (30/16)*1rem (60/16)*1rem (55/16)*1rem (30/16)*1rem
 		max-width: 990px
+		width: 100%
 		box-shadow: 0px 3px 15px 5px #eaeaea
 		margin-right: 30px
+		@media screen and ( max-width:1366px  )
+			padding: 20px
 		.title *
 			font-size: (24/16)*1rem
 		.social
@@ -59,30 +104,34 @@
 		.news-other
 			&-box
 				text-align: center
-				padding-left: (60/16)*1rem
 				padding-top: (30/16)*1rem
 				.row
 					margin-right: 0
 					margin-left: 0
+					justify-content: center
 			.title *
 				font-size: (30/16)*1rem
 			&-item
-				max-width: 260px
+				width: 31%
 				background-color: white
 				box-shadow: 0 0 20px 10px #f5f5f5
 				margin-right: (25/16)*1rem
+				@media screen and (max-width: 1366px)
+					max-width: 200px
+					margin-right: 10px
 				&:last-child
 					margin-right: 0
 				span,a 
 					display: block
 				.content
 					padding: (20/16)*1rem
+					text-align: left
 					&-sub
 						font-size: (12/16)*1rem
 					*
 						color: #111111
 					.pd-t
-						padding-top: (60/16)*1rem
+						padding-top: (30/16)*1rem
 					>a
 						padding-top: 5px
 						&:hover

@@ -1,7 +1,10 @@
 extends ../_components/_layout/_layout.pug
 
 block var
-    - let title = 'Tin Tức'
-    - let bodyClass = 'intropages'
+    - let title = 'Tin Tức';
+    - let bodyClass = '';
+    - let titlePosition = ['Lien He'];
+block banner,breadcrumb
+    include ../_components/_layout/_breadcrumb.pug
 block main 
     include ../_components/cttintuc/index.pug

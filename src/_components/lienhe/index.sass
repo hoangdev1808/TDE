@@ -1,5 +1,52 @@
 .lienhe
-	padding: (55/16)*1rem 0
+	padding-top: (55/16)*1rem
+	.content-sub
+		color: #999999!important
+		font-size: (14/16)*1rem
+		line-height: (18/16)*1rem
+		font-family: $font-sub
+	.title
+		*
+			color: #111111
+			font-size: 30 / 16 * 1rem
+			font-weight: 800
+			font-family: "Montserrat"
+	.content
+		*
+		color: #333333
+		font-size: 1rem
+		font-weight: 400
+		font-family: Nunito
+		line-height: 22px
+		&-2
+			font-size: 1rem
+			color:#111111
+			line-height: (22/16)*1rem
+	.seemore
+			display: inline-block
+			text-transform: uppercase
+			font-size: (14/16)*1rem
+			font-weight: bold
+			color: white
+			background-color: $colorMain
+			padding: (10/16)*1rem (30/16)*1rem
+			border: 1px solid $colorMain
+			background-color: $colorMain
+			border-radius: 20px
+			&:hover
+				background-color: white
+				border: 1px solid $colorMain
+				color: $colorMain
+				transition: .2s ease-in-out
+	.zoom-in 
+		display: block
+		overflow: hidden
+		img 
+			transition: .3s all  ease-in-out
+		&:hover img
+			transform: scale(1.05)
+			transition: .3s all  ease-in-out
+		padding: (55/16)*1rem 0
 	.contact
 		display: flex
 		justify-content: center
