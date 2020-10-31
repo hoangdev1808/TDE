@@ -273,6 +273,7 @@
 			@media screen and (max-width: 1520px)
 				display: flex
 				padding: 25px
+				flex-wrap: wrap
 		&-item
 			display: flex
 			align-items: center
@@ -289,10 +290,10 @@
 				margin-right: 0
 				max-width: 100%
 			@media screen and ( max-width: 768px  )
-				max-width: 50%
-			&:not(:nth-child(-n+2))
-				@media screen and (max-width: 768px) 
-					display: none
+				max-width: 48%
+			&:nth-child(odd)
+				@media screen and ( max-width: 768px  )
+					margin-right: 25px!important
 			&:not(:first-child)
 				padding-top: (25/16)*1rem
 				@media screen and (max-width: 576px)
