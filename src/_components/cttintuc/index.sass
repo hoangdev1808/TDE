@@ -183,10 +183,10 @@
 			border-bottom: 1px solid #d3d3d3
 		.content
 			padding-bottom: (20/16)*1rem
-			&-distance
+			&-distance *
 				padding-bottom: (25/16)*1rem
-				&:first-child
-					padding: (25/16)*1rem 0
+			p:first-child
+				padding: (25/16)*1rem 0
 			*.special
 				color: #e92431
 				font-weight: bold
@@ -272,6 +272,7 @@
 			background-color: white
 			@media screen and (max-width: 1520px)
 				display: flex
+				padding: 25px
 		&-item
 			display: flex
 			align-items: center
@@ -284,8 +285,20 @@
 				margin-right: 30px
 				max-width: 250px
 				width: 100%
+			@media screen and (max-width: 576px)
+				margin-right: 0
+				max-width: 100%
+			@media screen and ( max-width: 768px  )
+				max-width: 50%
+			&:not(:nth-child(-n+2))
+				@media screen and (max-width: 768px) 
+					display: none
 			&:not(:first-child)
 				padding-top: (25/16)*1rem
+				@media screen and (max-width: 576px)
+					display: none
+				@media screen and (max-width: 768px)
+					margin-right: 0
 			&:last-child
 				border-bottom: unset
 				padding-bottom: 0

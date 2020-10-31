@@ -71,8 +71,15 @@
 			&-header
 				display: flex
 				@media screen and (max-width: 768px)
+					display: block
+					text-align: center
 					img
-						display: none
+						max-height: 200px
+						object-fit: contain
+					.detail
+						text-align: left
+						.content
+							padding-bottom: 1rem
 			&-body
 				padding-left: 35 / 16 *1rem
 				@media screen and (max-width: 768px)
@@ -85,6 +92,8 @@
 						padding-top: (25/16)*1rem!important
 						@media screen and (max-width: 768px)
 							padding-top: 0!important
+					&:last-child
+						padding-bottom: 15px!important
 				.material-icons
 					font-family: Material Icons !important
 					padding-right: (10/16)*1rem
