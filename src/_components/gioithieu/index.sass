@@ -58,49 +58,54 @@
 		&:hover img
 			transform: scale(1.05)
 			transition: .3s all  ease-in-out
-	.gioithieu
-		padding-bottom: (50/16)*1rem
-		.swiper-button-prev, .swiper-container-rtl .swiper-button-next,.swiper-button-next, .swiper-container-rtl .swiper-button-prev
-			background-image: unset
-		.modal
-			&-content,
+	.modal
+		&-content,
+		&-header
+			border-radius: unset
+			border: unset
+		&-dialog
+			max-width: 1020px
+		&-detail
+			.detail
+				padding: 15 / 16 *1rem
 			&-header
-				border-radius: unset
-				border: unset
-			&-dialog
-				max-width: 1020px
-			&-detail
-				.detail
-					padding-left: 1rem
-				&-header
+				display: flex
+				@media screen and (max-width: 768px)
+					img
+						display: none
+			&-body
+				padding-left: 35 / 16 *1rem
+				@media screen and (max-width: 768px)
+					padding-left: 0
+					padding-right: 15px
+				.content
 					display: flex
-				&-body
-					.content
-						display: flex
-						padding: 0 0 (25/16)*1rem
-						&:first-child
-							padding-top: (25/16)*1rem
-					.material-icons
-						font-family: Material Icons !important
-						padding-right: (10/16)*1rem
-					&:last-child
-						padding-left: (20/16)*1rem
-						.content:first-child
-							padding-top: 0
-		button.close
-			opacity: 1
-			font-size: inherit
-			font-weight: normal
-		.close-modal
-			position: absolute
-			top: 0
-			right: 0
-			background-color: $colorMain
-			color: white
-			font-weight: 200
-			font-size: (30/16)*1rem
-			padding: 5px 10px
-			text-transform: uppercase
+					padding: 0 0 (25/16)*1rem!important
+					&:first-child
+						padding-top: (25/16)*1rem!important
+						@media screen and (max-width: 768px)
+							padding-top: 0!important
+				.material-icons
+					font-family: Material Icons !important
+					padding-right: (10/16)*1rem
+				&:last-child
+					padding-left: (55/16)*1rem
+					.content:first-child
+						padding-top: 0!important
+	button.close
+		opacity: 1
+		font-size: inherit
+		font-weight: normal
+	.close-modal
+		position: absolute
+		top: 0
+		right: 0
+		background-color: $colorMain
+		color: white
+		font-weight: 200
+		font-size: (30/16)*1rem
+		padding: 5px 10px
+		text-transform: uppercase
 	.banner
 		img
 			width: 100%

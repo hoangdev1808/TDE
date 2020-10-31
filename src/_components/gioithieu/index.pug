@@ -9,6 +9,31 @@ section.gioithieu.total
 				.content
 					p Tokyo Deli Express là dịch vụ giao hàng kết hợp với các đối tác giao hàng hàng đầu Việt Nam mang đến hương vị Nhật Bản trọn vẹn cho khách hàng. #[br] #[br] Nhằm kết nối  các chuỗi nhà hàng Nhật Bản-Tokyo Deli tại TP.HCM và Việt Nam  đến với tất cả mọi người, Vì  vậy ,Tokyo deli cho ra mắt dịch vụ Tokyo Deli Express kết hợp với các đối tác hàng đầu Việt Nam về lĩnh vực giao hàng để mang đến cho bạn thưởng thức nhanh chóng bảo đảm chuẩn vị Nhật.
 				a.button-order(data-toggle="modal" data-target="#exampleModal") xem thêm
+				#exampleModal.modal.fade(tabindex='-1' role='dialog' aria-labelledby='exampleModalLabel' aria-hidden='true')
+					.modal-dialog(role='document')
+						.modal-content
+							.modal-header
+								button.close(type='button' data-dismiss='modal' aria-label='Close')
+									span(aria-hidden='true' class="close-modal") X
+							.modal-body
+								.modal-detail
+									.modal-detail-header
+										img(src="./assets/gioithieu/modal.jpg", alt="")
+										.detail
+											.title
+												h5 Giới thiệu
+											.content
+												p Tokyo Deli Express là dịch vụ giao hàng kết hợp với các đối tác giao hàng hàng đầu Việt Nam mang đến hương vị Nhật Bản trọn vẹn cho khách hàng. #[br] #[br] Nhằm kết nối  các chuỗi nhà hàng Nhật Bản-Tokyo Deli tại TP.HCM và Việt Nam  đến với tất cả mọi người, Vì  vậy ,Tokyo deli cho ra mắt dịch vụ Tokyo Deli Express kết hợp với các đối tác hàng đầu Việt Nam về lĩnh vực giao hàng để mang đến cho bạn thưởng thức nhanh chóng bảo đảm chuẩn vị Nhật.
+									.modal-detail-body
+										-for(i=0;i<3;i++)
+											p.content
+												span.material-icons keyboard_arrow_right
+												span Thực đơn đa dạng: Sở hữu hơn 200 món ăn vô cùng phong phú mang đậm truyền thống ẩm thực Nhật vốn nổi tiếng bậc nhất thế giới bởi sự cầu kỳ trong cách chế biến lẫn bài trí món ăn mang hương vị thanh tao nhẹ nhàng  đến với bạn nhanh chóng và an toàn thông qua Tokyo Deli Express.
+									.modal-detail-body
+										-for(i=0;i<4;i++)
+											p.content
+												span.material-icons done
+												span Bao bì sử dụng đảm bảo vệ sinh an toàn thực phẩm.
 		.history
 			.title.text-center
 				h2 Lịch sử hình thành
