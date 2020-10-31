@@ -1,4 +1,11 @@
 .cttintuc
+	display: flex
+	padding-top: 60 / 16 * 1rem
+	@media screen and ( max-width: 992px )
+		padding-top: 30 / 16 * 1rem
+	.container
+		@media screen and ( min-width: 1366px )
+			max-width: 1378px!important
 	.content-sub
 		color: #999999!important
 		font-size: (14/16)*1rem
@@ -36,6 +43,11 @@
 		font-weight: 400
 		font-family: Nunito
 		line-height: 22px
+		a 
+			color: #222222
+			font-size: 1rem
+			font-weight: 400
+			line-height: 1.3
 		&-2
 			font-size: 1rem
 			color:#111111
@@ -64,10 +76,7 @@
 		&:hover img
 			transform: scale(1.05)
 			transition: .3s all  ease-in-out
-	padding-top: (55/16)*1rem
-	display: flex
-	@media screen and (max-width: 1024px)
-		padding-top: 80px
+
 	.news-box
 		display: flex
 		@media screen and (max-width: 1024px)
@@ -98,6 +107,7 @@
 			*.special
 				color: #e92431
 				font-weight: bold
+				font-family: Montserrat
 				font-size: (18/16)*1rem
 				padding-bottom: (25/16)*1rem
 			img
@@ -165,7 +175,10 @@
 			max-width: 100%
 			margin-top: 20px
 		&-header
-			padding: 15px 0 15px 30px
+			height: 50px
+			display: flex
+			align-items: center
+			padding-left: 37px
 			background-color: #e92431
 			.title
 				*
