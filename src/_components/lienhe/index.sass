@@ -104,8 +104,10 @@
 					margin-right: 0
 					margin-left: 0
 				.form-group.content
-					max-width: 360px
+					max-width: 345px
 					width: 100%
+					@media screen and (max-width: 1520px)
+						max-width: 100%
 					input
 						color: #c5c5c5
 						border: unset
@@ -123,6 +125,8 @@
 							padding-top: 1rem
 				.frm-submit
 					padding-top: (20/16)*1rem
+					@media screen and (max-width: 1520px)
+						padding-bottom: 40px
 					.seemore
 						padding: (10/16)*1rem (65/16)*1rem
 	.map
@@ -130,26 +134,26 @@
 		iframe
 			max-width: 1260px
 			height: 500px
-@media only screen and (max-width: 1200px)
-	.lienhe
-		.contact-form .my-form .frm-submit
-			padding-bottom: (20/16)*1rem
-		.contact-form .my-form .form-group.content
-			max-width: 100%
-@media only screen and (max-width: 768px)
-	.lienhe
-		.contact
-			display: block
-			&-info
-				max-width: 100%
-				padding-bottom: 20px
-			&-form
-				margin-left: 0
-				margin-top: 20px
-@media only screen and (max-width: 400px)
-	.lienhe
-		.contact-info
-			padding: (20/16)*1rem (10/16)*1rem
-			.contact-item
-				word-break: break-all
+// @media only screen and (max-width: 1200px)
+// 	.lienhe
+// 		.contact-form .my-form .frm-submit
+// 			padding-bottom: (20/16)*1rem
+// 		.contact-form .my-form .form-group.content
+// 			max-width: 100%
+// @media only screen and (max-width: 768px)
+// 	.lienhe
+// 		.contact
+// 			display: block
+// 			&-info
+// 				max-width: 100%
+// 				padding-bottom: 20px
+// 			&-form
+// 				margin-left: 0
+// 				margin-top: 20px
+// @media only screen and (max-width: 400px)
+// 	.lienhe
+// 		.contact-info
+// 			padding: (20/16)*1rem (10/16)*1rem
+// 			.contact-item
+// 				word-break: break-all
 	    
