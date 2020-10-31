@@ -1,6 +1,7 @@
 .cttintuc
 	display: flex
 	padding-top: 60 / 16 * 1rem
+	flex-wrap: wrap
 	@media screen and ( max-width: 992px )
 		padding-top: 30 / 16 * 1rem
 	.container
@@ -11,14 +12,94 @@
 		font-size: (14/16)*1rem
 		line-height: (18/16)*1rem
 		font-family: $font-sub
+	.other-page 
+		max-width: 900px
+		margin: 0 auto
+		margin-left: 35px
+		@media screen and ( max-width: 1550px )
+			max-width: 100%
+		@media screen and ( max-width: 1366px )
+			margin-left: 0px
+		.title-other 
+			color: #221f1f
+			font-size: 30px
+			font-weight: 700
+			font-family: Montserrat
+			display: block
+			text-align: center
+			margin-bottom: 14px
+		.wrap-slide
+			.swiper-container 
+				padding-bottom: 30px
+				margin-bottom: -30px
+				padding-right: 10px
+				padding-left: 10px
+				margin-right: -10px
+				margin-left: -10px
+				@media screen and ( max-width: 575px )
+					padding-right: 0px
+					padding-left: 0px
+					margin-right: 0px
+					margin-left: 0px
+					
+		.wrap-box 
+			.img 
+				a 
+					+img-ratio(240/265)
+			.wrap-text 
+				box-shadow: 3px 4px 25px rgba(0, 0, 0, 0.08)
+				background-color: #ffffff
+				padding: 13 / 16 * 1rem 20 / 16 * 1rem 25 / 16 * 1rem 20 / 16 * 1rem
+				text-align: left
+				&:hover 
+					.title 
+						color: $main-color
+					.xemthem 
+						background-color: $main-color
+						color: white
+						border: 1px solid $main-color
+				.date 
+					color: #999999
+					font-size: 12 / 16 * 1rem
+					font-weight: 400
+					font-family: Nunito
+					line-height: 24px
+					letter-spacing: 1.2px
+					display: block
+				.title 
+					color: #111111
+					font-size: 16 / 16 * 1rem
+					font-weight: 400
+					font-family: Nunito
+					line-height: 20px
+					transition: .3s all  ease-in-out
+				.xemthem 
+					width: 160px
+					height: 34px
+					display: flex
+					justify-content: center
+					align-items: center
+					border-radius: 17px
+					border: 1px solid #111111
+					background-color: #ffffff
+					color: #111111
+					font-size: 14 / 16 * 1rem
+					font-weight: 400
+					font-family: Nunito
+					margin: 0 auto
+					transition: .3s all  ease-in-out
+					margin-top: 55px
+
+
+
 	.f-icon
 		display: inline-flex
 		align-items: center
 		justify-content: center
-		width: 35px
-		height: 35px
+		width: 30px
+		height: 31px
 		border-radius: 50%
-		margin-right: 15px
+		margin-right: 10px
 		&:last-child
 			margin-right: 0
 		i
@@ -79,8 +160,7 @@
 
 	.news-box
 		display: flex
-		@media screen and (max-width: 1024px)
-			display: block
+		flex-wrap: wrap
 	.news-detail
 		background-color: white
 		padding: (30/16)*1rem (60/16)*1rem (55/16)*1rem (30/16)*1rem
@@ -88,8 +168,11 @@
 		width: 100%
 		box-shadow: 0px 3px 15px 5px #eaeaea
 		margin-right: 30px
-		@media screen and ( max-width:1366px  )
-			padding: 20px
+		@media screen and ( max-width:1366px)
+			padding-right: 30 / 16 * 1rem
+		@media screen and ( max-width: 1550px)
+			flex: 0 0 100%
+			max-width: 100%
 		.title *
 			font-size: (24/16)*1rem
 		.social
@@ -126,7 +209,6 @@
 					padding-bottom: 20px
 					@media screen and (min-width: 1366px)
 						max-width: 820px
-						padding-left: 28px
 						overflow: hidden
 			.title *
 				font-size: (30/16)*1rem
@@ -171,9 +253,10 @@
 		width: 100%
 		height: 100%
 		box-shadow: 0 0 15px 10px #ededed
-		@media screen and (max-width: 1024px)
+		@media screen and (max-width: 1520px)
 			max-width: 100%
 			margin-top: 20px
+			flex: 0 0 100%
 		&-header
 			height: 50px
 			display: flex

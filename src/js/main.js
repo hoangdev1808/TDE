@@ -159,6 +159,20 @@ const slidePage = () => {
             },
         },
     });
+    new Swiper(".other-page  .swiper-container", {
+        slidesPerView: 3,
+        spaceBetween: 30,
+        breakpoints: {
+            576: {
+                slidesPerView: 1,
+                spaceBetween: 10,
+            },
+            768: {
+                slidesPerView: 2,
+                spaceBetween: 10,
+            },
+        },
+    });
 };
 const moveThucDon = () => {
     $(".thucdon .wrap-td-1 .wrap-left-select").mapping({
