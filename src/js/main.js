@@ -1,21 +1,19 @@
 const checkLayoutBanner123 = () => {
-    window.addEventListener("resize", () => {
-        if ($(window).width() <= 1024) {
-            const pagesBanner = $("#page-banner");
-            const breadcrumb = $(".global-breadcrumb");
-            const heightHeader = 80;
-            const mainBanner = $("#home-banner");
-            if (mainBanner.length < 1 && pagesBanner.length < 1 && breadcrumb.length == 1) {
-                breadcrumb.css("padding-top", heightHeader);
-            } else if (mainBanner.length < 1 && pagesBanner.length < 1 && breadcrumb.length < 1) {
-                $("main").css("padding-top", heightHeader);
-            } else if (pagesBanner.length < 1) {
-                mainBanner.css("padding-top", heightHeader);
-            } else if (mainBanner.length < 1) {
-                pagesBanner.css("padding-top", heightHeader);
-            }
+    if ($(window).width() <= 1024) {
+        const pagesBanner = $("#page-banner");
+        const breadcrumb = $(".global-breadcrumb");
+        const heightHeader = 80;
+        const mainBanner = $("#home-banner");
+        if (mainBanner.length < 1 && pagesBanner.length < 1 && breadcrumb.length == 1) {
+            breadcrumb.css("padding-top", heightHeader);
+        } else if (mainBanner.length < 1 && pagesBanner.length < 1 && breadcrumb.length < 1) {
+            $("main").css("padding-top", heightHeader);
+        } else if (pagesBanner.length < 1) {
+            mainBanner.css("padding-top", heightHeader);
+        } else if (mainBanner.length < 1) {
+            pagesBanner.css("padding-top", heightHeader);
         }
-    });
+    }
 };
 const slidePage = () => {
     new Swiper(".banner-home .swiper-container", {
