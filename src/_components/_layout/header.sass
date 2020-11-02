@@ -1,12 +1,11 @@
 main 
-	width: calc( 100% - 185px )
-	margin-left: 185px
+	width: 100%
+	padding-left: 185px
 	min-height: 100vh
-	float: right
 	@media screen and ( max-width: 1024px )
 		width: 100%
-		margin-left: 0px
-header 
+		padding-left: 0px
+header
 	display: flex
 	flex-direction: column
 	background-color: #fff
@@ -18,6 +17,10 @@ header
 	width: 185px
 	float: left
 	transition: .3s all  ease-in-out
+	.wrap-header 
+		width: 100%
+		height: 100%
+		box-shadow: 1px 1px 6px #00000012
 	.menu-mobile
 		width: 100%
 		display: none
