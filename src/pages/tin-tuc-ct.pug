@@ -1,0 +1,11 @@
+extends ../_components/_layout/_layout.pug
+
+block var
+    - let title = 'Tin Tức';
+    - let bodyClass = 'bg-tintucct';
+    - let wrapClass = '';
+    - let titlePosition = ['Lien He'];
+block banner,breadcrumb
+    include ../_components/_layout/_breadcrumb2.pug
+block main 
+    include ../_components/cttintuc/index.pug

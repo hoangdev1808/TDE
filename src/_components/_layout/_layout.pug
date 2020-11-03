@@ -13,25 +13,20 @@ html(lang="en")
 		link(rel='stylesheet' href='https://cdn.linearicons.com/free/1.0.0/icon-font.min.css')
 		script(src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js")
 		script(type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js")
+		link(rel='shortcut icon' href='./favicon.ico')
 
-	body
+	body(class=bodyClass)
 		form(action="")
-			#wrapper.ov-h
+			#wrapper.ov-h(class=wrapClass)
 				block header
 					include _header.pug
-				block banner,breadcrumb
 				main
-					block main
-					#js-page-verify(class=bodyClass hidden)
-				block footer
-					include _footer.pug
-			#overlay
-			#phone-call
-				a(href="tel:0931771893")
-					.phone-fixed.is-animating
-
-		#back-to-top
-			em.lnr.lnr-arrow-up
+					block banner,breadcrumb
+					.wrap-main
+						block main
+						block footer
+							include _footer.pug
+				#overlay
 		script(type="text/javascript" src="./js/core.min.js")
 		script(type="text/javascript" src="./js/main.min.js")
 		block scripts
