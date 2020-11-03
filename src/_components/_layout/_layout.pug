@@ -22,10 +22,9 @@ html(lang="en")
 					include _header.pug
 				main
 					block banner,breadcrumb
-					.wrap-main
-						block main
-						block footer
-							include _footer.pug
+					block main
+				block footer
+					include _footer.pug
 				#overlay
 		script(type="text/javascript" src="./js/core.min.js")
 		script(type="text/javascript" src="./js/main.min.js")

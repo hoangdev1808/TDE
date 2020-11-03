@@ -68,24 +68,24 @@ const slidePage = () => {
     });
     new Swiper(".partner .swiper-container", {
         loop: true,
+        autoplay: {
+            delay: 3000,
+            disableOnInteraction: false,
+        },
         navigation: {
             nextEl: ".partner .swiper-next",
             prevEl: ".partner .swiper-prev",
         },
         slidesPerView: 4,
-        spaceBetween: 20,
+        spaceBetween: 0,
         breakpoints: {
             640: {
                 slidesPerView: 2,
-                spaceBetween: 10,
+                spaceBetween: 0,
             },
             768: {
                 slidesPerView: 3,
-                spaceBetween: 20,
-                autoplay: {
-                    delay: 3000,
-                    disableOnInteraction: false,
-                },
+                spaceBetween: 0,
             },
         },
     });

@@ -1,0 +1,32 @@
+.about-1
+	.section-title
+		margin-bottom: 0
+		text-align: left
+		* 
+			text-align: left
+			margin-bottom: 0
+	.intro 
+		display: flex
+		padding-bottom: (40/16)*1rem
+		padding-top: 56 / 16 * 1rem
+		flex-wrap: wrap
+		&-content 
+			@media screen and ( max-width: 1200px )
+				flex: 0 0 100%
+				display: flex
+				justify-content: center
+				align-items: center
+		&-content,
+		&-content2
+			width: 50%
+		&-content2
+			padding-top: 19px
+			padding-left: 60px
+			@media screen and ( max-width: 1200px )
+				flex: 0 0 100%
+				padding-left: 0
+				padding-right: 0
+			.button-order 
+				margin: 0!important
+			.content
+				padding: (20/16)*1rem 0 37 / 16 * 1rem

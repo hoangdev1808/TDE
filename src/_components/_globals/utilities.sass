@@ -63,7 +63,11 @@ body
 
 	@media (min-width: 1438px)
 		padding: 60px 0
-
+.section-gt
+	&+&
+		padding-top: 55 / 16 * 1rem
+		@media screen and ( max-width: 992px )
+			padding-top: 30 / 16 * 1rem
 .section-title
 	color: #111111
 	font-size: 30 / 16 * 1rem
@@ -72,6 +76,14 @@ body
 	display: block
 	text-align: center
 	margin-bottom: 23px
+	* 
+		color: #111111
+		font-size: 30 / 16 * 1rem
+		font-weight: 800
+		font-family: "Montserrat"
+		display: block
+		text-align: center
+		margin-bottom: 23px
 .section-title-2 
 	color: #333333
 	font-size: 24 / 16 * 1rem

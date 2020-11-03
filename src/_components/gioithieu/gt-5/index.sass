@@ -1,0 +1,25 @@
+.about-5 
+	.wrap-slide 
+		position: relative
+		.swiper-slide 
+			display: flex
+			align-items: center
+			justify-content: center
+		.img 
+			width: 160px
+			height: 160px
+			img 
+				width: 100%
+				height: 100%
+				object-fit: cover
+		.swiper-prev,.swiper-next 
+			top: 50%
+			z-index: 99
+		.swiper-prev
+			margin-right: -40px
+			@media screen and ( max-width: 1500px )
+				margin-right: 15px
+		.swiper-next
+			margin-left: -40px
+			@media screen and ( max-width: 1500px )
+				margin-left: 15px
