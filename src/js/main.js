@@ -172,6 +172,15 @@ const slidePage = () => {
         },
     });
 };
+const moveLogo = () => {
+    $("header .menu-desktop .logo").mapping({
+        mobileWrapper: "header .menu-mobile",
+        mobileMethod: "prependTo",
+        desktopWrapper: "header .menu-desktop",
+        desktopMethod: "prependTo",
+        breakpoint: 1024,
+    });
+};
 const moveThucDon = () => {
     $(".thucdon .wrap-td-1 .wrap-left-select").mapping({
         mobileWrapper: ".thucdon .wrap-td-0",
@@ -263,6 +272,7 @@ document.addEventListener("DOMContentLoaded", () => {
     moveThucDon();
     clickBuy();
     tabAcordition();
+    moveLogo();
     window.addEventListener("resize", () => {
         if ($(window).width() <= 1024) {
             $("header").addClass("active");
