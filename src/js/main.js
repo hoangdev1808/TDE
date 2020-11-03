@@ -90,6 +90,7 @@ const slidePage = () => {
         },
     });
     new Swiper(".steps .swiper-container", {
+        loop: true,
         navigation: {
             nextEl: ".steps .swiper-next",
             prevEl: ".steps .swiper-prev",
