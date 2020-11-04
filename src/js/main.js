@@ -89,6 +89,18 @@ const slidePage = () => {
             },
         },
     });
+    new Swiper(".thucdon .swiper-container", {
+        loop: true,
+        navigation: {
+            prevEl: ".thucdon .button-next",
+            nextEl: ".thucdon .button-next",
+        },
+        slidesPerView: 7,
+        spaceBetween: 0,
+        centeredSlides: true,
+        slidesPerView: 6,
+        spaceBetween: 12,
+    });
     new Swiper(".steps .swiper-container", {
         navigation: {
             nextEl: ".steps .swiper-next",
@@ -267,9 +279,9 @@ function moveNewsSpecial() {
     $(".news-new").appendTo(".news-detail-page #news-new");
     $(".site5 .news-new").css("display", "none");
 }
-function checkFullpage(){
-    if(($('.full-page').length>=1) && ($(window).width() >= 1280)){
-        $('footer').appendTo('.index-4 ');
+function checkFullpage() {
+    if ($(".full-page").length >= 1 && $(window).width() >= 1280) {
+        $("footer").appendTo(".index-4 ");
     }
 }
 document.addEventListener("DOMContentLoaded", () => {
