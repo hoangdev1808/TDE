@@ -1,7 +1,6 @@
 section.thucdon.section
 	.container
 		h2.section-title Thực đơn
-		.wrap-td-0
 		.wrap-td-1
 			.wrap-left-select
 				label(for="") Khu vực
@@ -9,33 +8,27 @@ section.thucdon.section
 					option(value="") TP.HCM
 					option(value="") HÀ NỘI
 			.wrap-right
-				.swiper-container#myTab.nav(role='tablist')
+				
+				.swiper-container#myTab(role='tablist')
 					.swiper-wrapper
-						.swiper-slide.nav-item
+						.swiper-slide
 							a#monmoi-tab.nav-link(data-toggle='tab' href='#monmoi' role='tab' aria-controls='monmoi' aria-selected='false') Món mới
-						.swiper-slide.nav-item
+						.swiper-slide
 							a#comvanphong-tab.nav-link(data-toggle='tab' href='#comvanphong' role='tab' aria-controls='comvanphong' aria-selected='false') Cơm văn phòng
-						.swiper-slide.nav-item
+						.swiper-slide
 							a#comvanphong-tab.nav-link(data-toggle='tab' href='#comvanphong' role='tab' aria-controls='comvanphong' aria-selected='false') Combo
-						.swiper-slide.nav-item
+						.swiper-slide
 							a#comvanphong-tab.nav-link(data-toggle='tab' href='#comvanphong' role='tab' aria-controls='comvanphong' aria-selected='false') Set
-						.swiper-slide.nav-item
+						.swiper-slide
 							a#comvanphong-tab.nav-link(data-toggle='tab' href='#comvanphong' role='tab' aria-controls='comvanphong' aria-selected='false') Bento box
-						.swiper-slide.nav-item
-							a#comvanphong-tab.nav-link(data-toggle='tab' href='#comvanphong' role='tab' aria-controls='comvanphong' aria-selected='false') Party set
-				//- ul#myTab.nav(role='tablist')
-				//- 	li.nav-item
-				//- 		a#monmoi-tab.nav-link(data-toggle='tab' href='#monmoi' role='tab' aria-controls='monmoi' aria-selected='false') Món mới
-				//- 	li.nav-item
-				//- 		a#comvanphong-tab.nav-link(data-toggle='tab' href='#comvanphong' role='tab' aria-controls='comvanphong' aria-selected='false') Cơm văn phòng
-				//- 	li 
-				//- 		a(href="#combo") Combo
-				//- 	li 
-				//- 		a(href="#set") Set
-				//- 	li 
-				//- 		a(href="#bentobox") Bento box
-				//- 	li 
-				//- 		a(href="#party") Party set
+						.swiper-slide
+							a#comvanphong-tab.nav-link(data-toggle='tab' href='#comvanphong' role='tab' aria-controls='comvanphong' aria-selected='false') Party set 1
+						.swiper-slide
+							a#comvanphong-tab.nav-link(data-toggle='tab' href='#comvanphong' role='tab' aria-controls='comvanphong' aria-selected='false') Party set 2
+						.swiper-slide
+							a#comvanphong-tab.nav-link(data-toggle='tab' href='#comvanphong' role='tab' aria-controls='comvanphong' aria-selected='false') Party set 3
+						.swiper-slide
+							a#comvanphong-tab.nav-link(data-toggle='tab' href='#comvanphong' role='tab' aria-controls='comvanphong' aria-selected='false') Party set 4
 				.button-next
 					a(href="")
 						em.material-icons arrow_forward
@@ -82,3 +75,4 @@ section.thucdon.section
 								.price 
 									del 61.000 VND
 									span 54.900 VNĐ
+	

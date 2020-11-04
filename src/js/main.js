@@ -67,13 +67,11 @@ const slidePage = () => {
         },
     });
     new Swiper(".thucdon .swiper-container", {
-        loop: true,
         navigation: {
-            prevEl: ".thucdon .button-next",
+            nextEl: ".thucdon .button-next",
         },
-        slidesPerView: 7,
-        spaceBetween: 0,
-        centeredSlides: true,
+        slidesPerView: 6,
+        spaceBetween: 12,
     });
     new Swiper(".partner .swiper-container", {
         loop: true,
@@ -272,13 +270,6 @@ const tabAcordition = () => {
                 .removeClass("active")
                 .slideUp();
         }
-    });
-};
-const deptrai = () => {
-    $(".class-dep ").slick({
-        infinite: true,
-        slidesToShow: 3,
-        slidesToScroll: 3,
     });
 };
 document.addEventListener("DOMContentLoaded", () => {
