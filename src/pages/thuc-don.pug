@@ -8,5 +8,8 @@ block banner,breadcrumb
 	include ../_components/banner/pages-banner.pug
 	include ../_components/_layout/_breadcrumb.pug
 block main
+	link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css")
 	include ../_components/thucdon/index.pug
-block scripts
+block scripts'
+	script(src="//code.jquery.com/jquery-migrate-1.2.1.min.js")
+	script(src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js")

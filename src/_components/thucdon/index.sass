@@ -64,7 +64,11 @@
 			align-items: center
 			justify-content: flex-end
 			overflow: auto
-			ul 
+			max-width: 60%
+			// .swiper-slide 
+			// 	width: auto!important
+			#comvanphong-tab 
+			#mytab
 				padding: 0
 				display: flex
 				align-items: center
@@ -78,28 +82,27 @@
 					padding-top: 10px
 				&::-webkit-scrollbar-thumb 
 					background: $main-color
-
-				li 
-					list-style: none
-					&.active
-						a 
-							color: $main-color
-							font-family: "Montserrat"
-							font-weight: 700
-					&+li 
-						margin-left: 38px
+			.nav-item
+				color: red
+				&.active
 					a 
-						color: #111111
-						font-size: 14px
-						font-weight: 400
-						text-transform: uppercase
+						color: $main-color
 						font-family: "Montserrat"
-						font-weight: 400
-						transition: .1s all  ease-in-out
-						white-space: nowrap
-						&:hover 
-							color: $main-color
-							font-weight: 700
+						font-weight: 700
+				&+.nav-item
+					// margin-left: 38px
+				.nav-link 
+					color: #111111
+					font-size: 14px
+					font-weight: 400
+					text-transform: uppercase
+					font-family: "Montserrat"
+					font-weight: 400
+					transition: .1s all  ease-in-out
+					white-space: nowrap
+					&:hover 
+						color: $main-color
+						font-weight: 700
 			.button-next
 				margin-left: 25px
 				em 
@@ -120,13 +123,15 @@
 			height: 40px
 			padding: 0 20px
 		ul 
-			display: flex
+			&.show
+				display: flex
 			padding: 0
 			@media screen and ( max-width: 768px )
 				overflow-x: auto
 				overflow-y: hidden
 			li 
 				list-style: none
+				display: inline-block
 				&.active
 					a 
 						color: #111111

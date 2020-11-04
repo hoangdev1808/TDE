@@ -9,24 +9,38 @@ section.thucdon.section
 					option(value="") TP.HCM
 					option(value="") HÀ NỘI
 			.wrap-right
-				ul 
-					li 
-						a(href="") Món mới
-					li.active 
-						a(href="") Cơm văn phòng
-					li 
-						a(href="") Combo
-					li 
-						a(href="") Set
-					li 
-						a(href="") Bento box
-					li 
-						a(href="") Party set
+				.swiper-container#myTab.nav(role='tablist')
+					.swiper-wrapper
+						.swiper-slide.nav-item
+							a#monmoi-tab.nav-link(data-toggle='tab' href='#monmoi' role='tab' aria-controls='monmoi' aria-selected='false') Món mới
+						.swiper-slide.nav-item
+							a#comvanphong-tab.nav-link(data-toggle='tab' href='#comvanphong' role='tab' aria-controls='comvanphong' aria-selected='false') Cơm văn phòng
+						.swiper-slide.nav-item
+							a#comvanphong-tab.nav-link(data-toggle='tab' href='#comvanphong' role='tab' aria-controls='comvanphong' aria-selected='false') Combo
+						.swiper-slide.nav-item
+							a#comvanphong-tab.nav-link(data-toggle='tab' href='#comvanphong' role='tab' aria-controls='comvanphong' aria-selected='false') Set
+						.swiper-slide.nav-item
+							a#comvanphong-tab.nav-link(data-toggle='tab' href='#comvanphong' role='tab' aria-controls='comvanphong' aria-selected='false') Bento box
+						.swiper-slide.nav-item
+							a#comvanphong-tab.nav-link(data-toggle='tab' href='#comvanphong' role='tab' aria-controls='comvanphong' aria-selected='false') Party set
+				//- ul#myTab.nav(role='tablist')
+				//- 	li.nav-item
+				//- 		a#monmoi-tab.nav-link(data-toggle='tab' href='#monmoi' role='tab' aria-controls='monmoi' aria-selected='false') Món mới
+				//- 	li.nav-item
+				//- 		a#comvanphong-tab.nav-link(data-toggle='tab' href='#comvanphong' role='tab' aria-controls='comvanphong' aria-selected='false') Cơm văn phòng
+				//- 	li 
+				//- 		a(href="#combo") Combo
+				//- 	li 
+				//- 		a(href="#set") Set
+				//- 	li 
+				//- 		a(href="#bentobox") Bento box
+				//- 	li 
+				//- 		a(href="#party") Party set
 				.button-next
 					a(href="")
 						em.material-icons arrow_forward
-		.wrap-sub-menu
-			ul
+		.wrap-sub-menu.tab-content#myTabContent
+			ul#monmoi.tab-pane.fade.show.active(role='tabpanel' aria-labelledby='monmoi-tab')
 				li.active
 					a(href="") Tất cả 
 				li 
@@ -49,6 +63,13 @@ section.thucdon.section
 					a(href="") Hako 
 				li 
 					a(href="") Teppan
+			ul.tab-pane.fade#comvanphong(role='tabpanel' aria-labelledby='profile-tab')
+				li.active
+					a(href="") Tất cả 
+				li 
+					a(href="") Sushi
+				li 
+					a(href="") Sashimi
 		.wrap-list-product 
 			.row
 				-for(i=0;i<12;i++)

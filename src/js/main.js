@@ -66,6 +66,15 @@ const slidePage = () => {
             },
         },
     });
+    new Swiper(".thucdon .swiper-container", {
+        loop: true,
+        navigation: {
+            prevEl: ".thucdon .button-next",
+        },
+        slidesPerView: 7,
+        spaceBetween: 0,
+        centeredSlides: true,
+    });
     new Swiper(".partner .swiper-container", {
         loop: true,
         autoplay: {
@@ -265,6 +274,13 @@ const tabAcordition = () => {
         }
     });
 };
+const deptrai = () => {
+    $(".class-dep ").slick({
+        infinite: true,
+        slidesToShow: 3,
+        slidesToScroll: 3,
+    });
+};
 document.addEventListener("DOMContentLoaded", () => {
     checkLayoutBanner123();
     checkMenuLayout();
@@ -274,6 +290,7 @@ document.addEventListener("DOMContentLoaded", () => {
     clickBuy();
     tabAcordition();
     moveLogo();
+    deptrai();
     window.addEventListener("resize", () => {
         if ($(window).width() <= 1024) {
             $("header").addClass("active");
