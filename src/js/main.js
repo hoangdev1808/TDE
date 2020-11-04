@@ -95,7 +95,6 @@ const slidePage = () => {
             prevEl: ".thucdon .button-next",
             nextEl: ".thucdon .button-next",
         },
-        centeredSlides: true,
         slidesPerView: 6,
         spaceBetween: 12,
     });
