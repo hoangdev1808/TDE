@@ -1,29 +1,30 @@
+
 const checkLayoutBanner123 = () => {
-    if ($(window).width() <= 1024) {
-        const pagesBanner = $("#page-banner");
-        const breadcrumb = $(".global-breadcrumb");
-        const heightHeader = 80;
-        const mainBanner = $("#home-banner");
-        if (mainBanner.length < 1 && pagesBanner.length < 1 && breadcrumb.length == 1) {
-            breadcrumb.css("padding-top", heightHeader);
-        } else if (mainBanner.length < 1 && pagesBanner.length < 1 && breadcrumb.length < 1) {
-            $("main").css("padding-top", heightHeader);
-        } else if (pagesBanner.length < 1) {
-            mainBanner.css("padding-top", heightHeader);
-        } else if (mainBanner.length < 1) {
-            pagesBanner.css("padding-top", heightHeader);
+    const pagesBanner = $('#page-banner');
+    const widthHeader = $('header').outerWidth();
+    const mainBanner = $('#home-banner');
+    if ($(window).width() > 1280) {
+        if (mainBanner.length >= 1) {
+            $('section').css('padding-left', widthHeader);
+        } else if (pagesBanner.length >= 1) {
+            $('section').css('padding-left', widthHeader);
+            $('footer').css('padding-left', widthHeader);
+        } else {
+            $('section').css('padding-left', widthHeader);
+            $('footer').css('padding-left', widthHeader);
         }
     }
 };
 const slidePage = () => {
     new Swiper(".banner-home .swiper-container", {
+        slidesPerView: 1,
         pagination: {
             el: ".swiper-pagination",
         },
-        autoplay: {
-            delay: 4500,
-            disableOnInteraction: false,
-        },
+        // autoplay: {
+        //     delay: 4500,
+        //     disableOnInteraction: false,
+        // },
     });
     new Swiper(".thuc-don-ct-2 .swiper-container", {
         slidesPerView: 3,
@@ -66,38 +67,30 @@ const slidePage = () => {
             },
         },
     });
-    new Swiper(".thucdon .swiper-container", {
-        navigation: {
-            nextEl: ".thucdon .button-next",
-        },
-        slidesPerView: 6,
-        spaceBetween: 12,
-    });
     new Swiper(".partner .swiper-container", {
         loop: true,
-        autoplay: {
-            delay: 3000,
-            disableOnInteraction: false,
-        },
         navigation: {
             nextEl: ".partner .swiper-next",
             prevEl: ".partner .swiper-prev",
         },
         slidesPerView: 4,
-        spaceBetween: 0,
+        spaceBetween: 20,
         breakpoints: {
             640: {
                 slidesPerView: 2,
-                spaceBetween: 0,
+                spaceBetween: 10,
             },
             768: {
                 slidesPerView: 3,
-                spaceBetween: 0,
+                spaceBetween: 20,
+                autoplay: {
+                    delay: 3000,
+                    disableOnInteraction: false,
+                },
             },
         },
     });
     new Swiper(".steps .swiper-container", {
-        loop: true,
         navigation: {
             nextEl: ".steps .swiper-next",
             prevEl: ".steps .swiper-prev",
@@ -180,15 +173,6 @@ const slidePage = () => {
         },
     });
 };
-const moveLogo = () => {
-    $("header .menu-desktop .logo").mapping({
-        mobileWrapper: "header .menu-mobile",
-        mobileMethod: "prependTo",
-        desktopWrapper: "header .menu-desktop",
-        desktopMethod: "prependTo",
-        breakpoint: 1024,
-    });
-};
 const moveThucDon = () => {
     $(".thucdon .wrap-td-1 .wrap-left-select").mapping({
         mobileWrapper: ".thucdon .wrap-td-0",
@@ -196,6 +180,13 @@ const moveThucDon = () => {
         desktopWrapper: ".thucdon .wrap-td-1",
         desktopMethod: "prependTo",
         breakpoint: 768,
+    });
+    $("header .menu-desktop .logo").mapping({
+        mobileWrapper: "header .menu-mobile",
+        mobileMethod: "prependTo",
+        desktopWrapper: "header .menu-desktop",
+        desktopMethod: "prependTo",
+        breakpoint: 1024,
     });
 };
 const clickBuy = () => {
@@ -237,11 +228,11 @@ const checkMenuLayout = () => {
         $(".menu-desktop").removeClass("active");
         $("#overlay").removeClass("active");
     });
-    if ($(window).width() <= 1024) {
-        $("header").addClass("active");
-    } else {
-        $("header").removeClass("active");
-    }
+    // if ($(window).width() <= 1280) {
+    //     $("header").addClass("active");
+    // } else {
+    //     $("header").removeClass("active");
+    // }
 };
 const mainSearch = () => {
     $(".search-icon").click(function () {
@@ -272,7 +263,18 @@ const tabAcordition = () => {
         }
     });
 };
+function moveNewsSpecial(){
+    $('.news-new').appendTo('.news-detail-page #news-new');
+    $('.site5 .news-new').css('display', 'none');
+}
+function checkFullpage(){
+    if(($('.full-page').length>=1) && ($(window).width() <= 1280)){
+        $('body').css('overflow', 'hidden');
+        $('footer').appendTo('.index-4 ');
+    }
+}
 document.addEventListener("DOMContentLoaded", () => {
+    checkFullpage();
     checkLayoutBanner123();
     checkMenuLayout();
     mainSearch();
@@ -280,8 +282,8 @@ document.addEventListener("DOMContentLoaded", () => {
     moveThucDon();
     clickBuy();
     tabAcordition();
-    moveLogo();
-    deptrai();
+    moveNewsSpecial();
+    
     window.addEventListener("resize", () => {
         if ($(window).width() <= 1024) {
             $("header").addClass("active");

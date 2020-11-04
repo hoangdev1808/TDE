@@ -1,8 +1,20 @@
-section.index-1 
-	h2 
-		| Tokyo 
-		span Deli 
-		| Express
-	strong Dịch vụ kết nối các chuỗi nhà hàng Nhật Bản - Tokyo Deli tại TP.HCM và Việt Nam  đến với tất cả mọi người
-	p Tokyo Deli Express kết hợp với các đối tác hàng đầu Việt Nam về lĩnh vực giao hàng: Grab, Now, Baemin, Goviet để mang đến cho bạn thưởng thức nhanh chóng bảo đảm chuẩn vị Nhật.
-	a(href="").button-order Đặt ngay!
+section.banner-home#home-banner
+	.swiper-container
+		.swiper-wrapper
+			-for(i=0;i<5;i++)
+				.swiper-slide
+					.wrap-img
+						.img
+							img(src="./assets/header/banner3_02.jpg", alt="")
+						.text 
+							.title-banner Đặt và giao món nhanh chóng, tiện lợi thông qua các ứng dụng Grab, Now, Baemin, GoViet
+		.swiper-pagination
+	.index-1.animation-bottom
+		.container
+			h2 
+				| Tokyo 
+				span Deli 
+				| Express
+			strong Dịch vụ kết nối các chuỗi nhà hàng Nhật Bản - Tokyo Deli tại TP.HCM và Việt Nam  đến với tất cả mọi người
+			p Tokyo Deli Express kết hợp với các đối tác hàng đầu Việt Nam về lĩnh vực giao hàng: Grab, Now, Baemin, Goviet để mang đến cho bạn thưởng thức nhanh chóng bảo đảm chuẩn vị Nhật.
+			a(href="").button-order Đặt ngay!
