@@ -268,8 +268,7 @@ function moveNewsSpecial(){
     $('.site5 .news-new').css('display', 'none');
 }
 function checkFullpage(){
-    if(($('.full-page').length>=1) && ($(window).width() <= 1280)){
-        $('body').css('overflow', 'hidden');
+    if(($('.full-page').length>=1) && ($(window).width() >= 1280)){
         $('footer').appendTo('.index-4 ');
     }
 }
