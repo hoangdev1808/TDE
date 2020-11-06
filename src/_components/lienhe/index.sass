@@ -22,22 +22,6 @@
 			font-size: 1rem
 			color:#111111
 			line-height: (22/16)*1rem
-	.seemore
-			display: inline-block
-			text-transform: uppercase
-			font-size: (14/16)*1rem
-			font-weight: bold
-			color: white
-			background-color: $colorMain
-			padding: (10/16)*1rem (30/16)*1rem
-			border: 1px solid $colorMain
-			background-color: $colorMain
-			border-radius: 20px
-			&:hover
-				background-color: white
-				border: 1px solid $colorMain
-				color: $colorMain
-				transition: .2s ease-in-out
 	.zoom-in 
 		display: block
 		overflow: hidden
@@ -108,12 +92,24 @@
 					width: 100%
 					@media screen and (max-width: 1520px)
 						max-width: 100%
+					textarea 
+						color: #c5c5c5
+						border: unset
+						border-bottom: 1px solid #ebebeb
+						padding-left: 0
+						font-weight: 200
+						padding-bottom: 5px
+						width: 100%
+						background-color: transparent
+						height: 35px
 					input
 						color: #c5c5c5
 						border: unset
-						border-bottom: 2px solid #ebebeb
+						border-bottom: 1px solid #ebebeb
 						padding-left: 0
+						padding-bottom: 5px
 						font-weight: 200
+						width: 100%
 					.form-control
 						border-radius: unset
 						background: unset
@@ -123,12 +119,28 @@
 						max-width: 100%
 						&:last-child
 							padding-top: 1rem
-				.frm-submit
-					padding-top: (20/16)*1rem
-					@media screen and (max-width: 1520px)
-						padding-bottom: 40px
-					.seemore
-						padding: (10/16)*1rem (65/16)*1rem
+			.frm-btnwrap
+				display: flex
+				justify-content: flex-end
+				padding-top: 20px
+				.frm-btn
+					input
+						display: inline-block
+						text-transform: uppercase
+						font-size: (14/16)*1rem
+						font-weight: bold
+						color: white
+						background-color: $colorMain
+						padding: (10/16)*1rem (30/16)*1rem
+						border: 1px solid $colorMain!important
+						background-color: $colorMain
+						border-radius: 20px
+						width: 160px
+						&:hover
+							background-color: white
+							border: 1px solid $colorMain
+							color: $colorMain
+							transition: .2s ease-in-out
 	.map
 		padding-top: (30/16)*1rem
 		iframe
@@ -146,12 +158,12 @@
 				max-width: 100%
 				padding-bottom: 20px
 			&-form
+				padding-bottom: 20px
 				margin-left: 0
-				margin-top: 20px
+				margin-top: 21px
 @media only screen and (max-width: 400px)
 	.lienhe
 		.contact-info
 			padding: (20/16)*1rem (10/16)*1rem
 			.contact-item
 				word-break: break-all
-	    

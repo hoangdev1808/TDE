@@ -10,7 +10,8 @@
         "bower_components/fancybox/dist/jquery.fancybox.min.js",
         "bower_components/aos/dist/aos.js",
         "vendors/mapping-listener.js",
-        "vendors/mapping.js"
+        "vendors/mapping.js",
+        "bower_components/underscore/underscore.js"
     ],
     "css": [
         "bower_components/bootstrap/dist/css/bootstrap.min.css",

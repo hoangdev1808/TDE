@@ -1,6 +1,7 @@
 section.thucdon.section
 	.container
 		h2.section-title Thực đơn
+		.wrap-td-0
 		.wrap-td-1
 			.wrap-left-select
 				label(for="") Khu vực
@@ -8,27 +9,36 @@ section.thucdon.section
 					option(value="") TP.HCM
 					option(value="") HÀ NỘI
 			.wrap-right
-				
+				.button-prev
+					a(href="")
+						em.material-icons arrow_back
 				.swiper-container#myTab(role='tablist')
 					.swiper-wrapper
 						.swiper-slide
-							a#monmoi-tab.nav-link(data-toggle='tab' href='#monmoi' role='tab' aria-controls='monmoi' aria-selected='false') Món mới
+							a#monmoi-tab(data-toggle='tab' href='#monmoi' role='tab' aria-controls='monmoi' aria-selected='false') Món mới
 						.swiper-slide
-							a#comvanphong-tab.nav-link(data-toggle='tab' href='#comvanphong' role='tab' aria-controls='comvanphong' aria-selected='false') Cơm văn phòng
+							a#comvanphong-tab(data-toggle='tab' href='#comvanphong' role='tab' aria-controls='comvanphong' aria-selected='false') Cơm văn phòng
 						.swiper-slide
-							a#comvanphong-tab.nav-link(data-toggle='tab' href='#comvanphong' role='tab' aria-controls='comvanphong' aria-selected='false') Combo
+							a#comvanphong-tab(data-toggle='tab' href='#comvanphong' role='tab' aria-controls='comvanphong' aria-selected='false') Combo
+						
 						.swiper-slide
-							a#comvanphong-tab.nav-link(data-toggle='tab' href='#comvanphong' role='tab' aria-controls='comvanphong' aria-selected='false') Set
+							a#comvanphong-tab(data-toggle='tab' href='#comvanphong' role='tab' aria-controls='comvanphong' aria-selected='false') Bento box
 						.swiper-slide
-							a#comvanphong-tab.nav-link(data-toggle='tab' href='#comvanphong' role='tab' aria-controls='comvanphong' aria-selected='false') Bento box
+							a#comvanphong-tab(data-toggle='tab' href='#comvanphong' role='tab' aria-controls='comvanphong' aria-selected='false') Party set 1
 						.swiper-slide
-							a#comvanphong-tab.nav-link(data-toggle='tab' href='#comvanphong' role='tab' aria-controls='comvanphong' aria-selected='false') Party set 1
+							a#comvanphong-tab(data-toggle='tab' href='#comvanphong' role='tab' aria-controls='comvanphong' aria-selected='false') Party set 2
 						.swiper-slide
-							a#comvanphong-tab.nav-link(data-toggle='tab' href='#comvanphong' role='tab' aria-controls='comvanphong' aria-selected='false') Party set 2
+							a#comvanphong-tab(data-toggle='tab' href='#comvanphong' role='tab' aria-controls='comvanphong' aria-selected='false') Party set 3
 						.swiper-slide
-							a#comvanphong-tab.nav-link(data-toggle='tab' href='#comvanphong' role='tab' aria-controls='comvanphong' aria-selected='false') Party set 3
+							a#comvanphong-tab(data-toggle='tab' href='#comvanphong' role='tab' aria-controls='comvanphong' aria-selected='false') Party set 4
 						.swiper-slide
-							a#comvanphong-tab.nav-link(data-toggle='tab' href='#comvanphong' role='tab' aria-controls='comvanphong' aria-selected='false') Party set 4
+							a#comvanphong-tab(data-toggle='tab' href='#comvanphong' role='tab' aria-controls='comvanphong' aria-selected='false') Party set 4
+						.swiper-slide
+							a#comvanphong-tab(data-toggle='tab' href='#comvanphong' role='tab' aria-controls='comvanphong' aria-selected='false') Party set 4
+						.swiper-slide
+							a#comvanphong-tab(data-toggle='tab' href='#comvanphong' role='tab' aria-controls='comvanphong' aria-selected='false') Party set 4
+						.swiper-slide
+							a#comvanphong-tab(data-toggle='tab' href='#comvanphong' role='tab' aria-controls='comvanphong' aria-selected='false') Set
 				.button-next
 					a(href="")
 						em.material-icons arrow_forward

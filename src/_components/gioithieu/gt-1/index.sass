@@ -40,19 +40,78 @@
 		&-detail
 			.detail
 				padding: 15 / 16 *1rem
+			ul 
+				padding: 0
+				li 
+					list-style: none
+					color: #333333
+					font-family: Nunito
+					font-size: 16px
+					font-weight: 400
+					line-height: 22px
+					display: flex
+					&+li 
+						margin-top: 25 / 16 * 1rem
+					&:last-child
+						margin-bottom: 10 / 16 * 1rem
+					&::before
+						content: 'keyboard_arrow_right'
+						font-family: 'Material Icons'
+						color: #333333
+						padding-right: 10px
+						font-size: 1rem
+						font-weight: 400
 			&-header
 				display: flex
+				img 
+					height: 300px
+					display: block
+					width: auto
+					@media screen and ( max-width: 768px )
+						height: auto
+						flex: 0 0 100%
+						display: flex
+						justify-content: center
+				.detail 
+					.title *
+						color: #111111
+						font-family: "Montserrat"
+						font-size: 30 / 16 * 1rem
+						font-weight: 800
+						margin-bottom: 15px
+					.content 
+						*
+							color: #333333
+							font-family: Nunito
+							font-size: 16px
+							font-weight: 400
+							line-height: 22px
+						p+p 
+							margin-top: 25 / 16 * 1rem
 				@media screen and (max-width: 768px)
 					display: block
 					text-align: center
-					img
-						max-height: 200px
-						object-fit: contain
 					.detail
 						text-align: left
 						.content
 							padding-bottom: 1rem
 			&-body
+				p 
+					color: #333333
+					font-family: Nunito
+					font-size: 1rem 
+					font-weight: 400
+					display: flex
+					padding-left: 22px
+					&::before
+						content: 'done'
+						font-family: 'Material Icons'
+						color: #333333
+						padding-right: 10px
+						font-size: 1rem
+						font-weight: 400
+					&+p 
+						margin-top: 16 / 16 * 1rem
 				padding-left: 35 / 16 *1rem
 				@media screen and (max-width: 768px)
 					padding-left: 0
@@ -70,7 +129,7 @@
 					font-family: Material Icons !important
 					padding-right: (10/16)*1rem
 				&:last-child
-					padding-left: (55/16)*1rem
+					padding-left: (36/16)*1rem
 					.content:first-child
 						padding-top: 0!important
 	button.close

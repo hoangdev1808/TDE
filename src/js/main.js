@@ -1,8 +1,8 @@
 const checkLayoutBanner123 = () => {
     const pagesBanner = $("#page-banner");
-    const widthHeader = $("header").outerWidth();
     const mainBanner = $("#home-banner");
     if ($(window).width() > 1280) {
+        const widthHeader = $("header").outerWidth();
         if (mainBanner.length >= 1) {
             $("section").css("padding-left", widthHeader);
         } else if (pagesBanner.length >= 1) {
@@ -13,6 +13,16 @@ const checkLayoutBanner123 = () => {
             $("footer").css("padding-left", widthHeader);
         }
     }
+    if ($(window).width() <= 1280) {
+        const heightHeader = 80;
+        if (mainBanner.length >= 1) {
+            $("main").css("padding-top", heightHeader);
+        } else if (pagesBanner.length >= 1) {
+            $("main").css("padding-top", heightHeader);
+        } else {
+            $("main").css("padding-top", heightHeader);
+        }
+    }
 };
 const slidePage = () => {
     new Swiper(".banner-home .swiper-container", {
@@ -20,10 +30,6 @@ const slidePage = () => {
         pagination: {
             el: ".swiper-pagination",
         },
-        // autoplay: {
-        //     delay: 4500,
-        //     disableOnInteraction: false,
-        // },
     });
     new Swiper(".thuc-don-ct-2 .swiper-container", {
         slidesPerView: 3,
@@ -90,13 +96,26 @@ const slidePage = () => {
         },
     });
     new Swiper(".thucdon .swiper-container", {
-        loop: true,
         navigation: {
-            prevEl: ".thucdon .button-next",
             nextEl: ".thucdon .button-next",
+            prevEl: ".thucdon .button-prev",
         },
-        slidesPerView: 6,
-        spaceBetween: 12,
+        slidesPerView: 4,
+        spaceBetween: 20,
+        breakpoints: {
+            1300: {
+                slidesPerView: 4,
+                spaceBetween: 0,
+            },
+            768: {
+                slidesPerView: 2,
+                spaceBetween: 0,
+            },
+            400: {
+                slidesPerView: 1,
+                spaceBetween: 0,
+            },
+        },
     });
     new Swiper(".steps .swiper-container", {
         navigation: {
@@ -187,7 +206,7 @@ const moveThucDon = () => {
         mobileMethod: "appendTo",
         desktopWrapper: ".thucdon .wrap-td-1",
         desktopMethod: "prependTo",
-        breakpoint: 768,
+        breakpoint: 992,
     });
     $("header .menu-desktop .logo").mapping({
         mobileWrapper: "header .menu-mobile",
@@ -202,28 +221,6 @@ const clickBuy = () => {
         $(".wrap-list-buy ").slideToggle();
     });
 };
-// function tabs() {
-//     $(".tabs > li").on("click", function () {
-//         var $panel = $(this).closest(".tab-panels");
-//         $panel.find("li.active").removeClass("active");
-//         $(this).addClass("active");
-//         var panelToShow = $(this).attr("rel");
-//         $panel.find(".panel.active").fadeOut(300, showNextPanel);
-
-//         function showNextPanel() {
-//             $(this).removeClass("active");
-//             $("#" + panelToShow).fadeIn(300, function () {
-//                 $(this).addClass("active").fadeIn(300);
-//             });
-//         }
-//     });
-//     if ($(window).width() < 992 && ".category-nav".length >= 1) {
-//         $(".category-nav").on("click", function () {
-//             $(this).find(".material-icons").toggleClass("active");
-//             $(this).siblings(".tabs, .filter-content").slideToggle("slow");
-//         });
-//     }
-// }
 
 const checkMenuLayout = () => {
     $(".hambuger").click(function () {
@@ -281,13 +278,25 @@ function checkFullpage() {
         $("footer").appendTo(".index-4 ");
     }
 }
+const moveQuyTrinh = () => {
+    if ($(window).width() <= 575) {
+        $(".about-6 .wrap-button-slide").mapping({
+            mobileWrapper: ".about-6 .wrap-slide",
+            mobileMethod: "appendTo",
+            desktopWrapper: ".about-6 .wrap-slide",
+            desktopMethod: "prependTo",
+            breakpoint: 575,
+        });
+    }
+};
 document.addEventListener("DOMContentLoaded", () => {
+    moveThucDon();
+    moveQuyTrinh();
     checkFullpage();
     checkLayoutBanner123();
     checkMenuLayout();
     mainSearch();
     slidePage();
-    moveThucDon();
     clickBuy();
     tabAcordition();
     moveNewsSpecial();
