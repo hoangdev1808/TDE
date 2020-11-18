@@ -104,7 +104,7 @@ const slidePage = () => {
         spaceBetween: 20,
         breakpoints: {
             1300: {
-                slidesPerView: 4,
+                slidesPerView: 3,
                 spaceBetween: 0,
             },
             768: {
@@ -193,7 +193,7 @@ const slidePage = () => {
                 slidesPerView: 1,
                 spaceBetween: 10,
             },
-            768: {
+            992: {
                 slidesPerView: 2,
                 spaceBetween: 10,
             },

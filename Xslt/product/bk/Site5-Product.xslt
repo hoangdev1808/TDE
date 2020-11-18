@@ -7,7 +7,6 @@
         <h2 class="section-title">
             <xsl:value-of select="Title" disable-output-escaping="yes"></xsl:value-of>
         </h2>
-        <div class="wrap-td-0"></div>
         <div class="wrap-td-1">
             <div class="wrap-left-select">
                 <label for="">Khu vực</label>
