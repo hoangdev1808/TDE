@@ -102,6 +102,8 @@ const slidePage = () => {
         },
         slidesPerView: 4,
         spaceBetween: 20,
+        observer: true,
+        observeParents: true,
         breakpoints: {
             1300: {
                 slidesPerView: 3,
@@ -290,6 +292,18 @@ const moveQuyTrinh = () => {
         });
     }
 };
+const selectOption = () => {
+    let elements = $(".thucdon").find('select');
+    let getValue = $(".ajxsort option:selected").val()
+    $("#" + getValue).addClass("active")
+    var checkValue = function () {
+        let getValue = $(".ajxsort option:selected").val()
+        console.log(getValue)
+        $("#" + getValue).addClass("active").siblings("").removeClass("active")
+    }
+    elements.on("change keyup", checkValue);
+
+};
 document.addEventListener("DOMContentLoaded", () => {
     moveThucDon();
     moveQuyTrinh();
@@ -301,6 +315,7 @@ document.addEventListener("DOMContentLoaded", () => {
     clickBuy();
     tabAcordition();
     moveNewsSpecial();
+    selectOption()
     window.addEventListener("resize", () => {
         if ($(window).width() <= 1280) {
             $("header").addClass("active");
@@ -309,4 +324,5 @@ document.addEventListener("DOMContentLoaded", () => {
             $(".menu-desktop").removeClass("active");
         }
     });
+
 });
