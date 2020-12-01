@@ -269,6 +269,7 @@ const tabAcordition = () => {
         }
     });
 };
+
 function moveNewsSpecial() {
     $(".news-new").appendTo(".news-detail-page #news-new");
     $(".site5 .news-new").css("display", "none");
