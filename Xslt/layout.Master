@@ -1,0 +1,240 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="~/App_MasterPages/layout.Master.cs" Inherits="CanhCam.Web.layout" %>
+
+<!DOCTYPE html>
+<html id="Html1" runat="server">
+
+<head id="Head1" runat="server">
+	<title></title>
+	<portal:MetaContent ID="MetaContent" runat="server" />
+	<meta name="viewport"
+		content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<portal:StyleSheetCombiner ID="StyleSheetCombiner" runat="server" IncludejQueryUI="false"
+		JQueryUIThemeName="smoothness" />
+	<portal:Favicon ID="Favicon1" runat="server" />
+	<portal:ScriptLoader ID="ScriptLoader1" runat="server" IncludejQueryUICore="true" IncludeFancyBox="true" />
+	<portal:GoogleAnalyticsScript ID="GoogleAnalyticsScript1" runat="server" />
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css">
+	<link
+		href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800;900&amp;display=swap"
+		rel="stylesheet">
+	<link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+</head>
+
+<body id="Body" runat="server" class="canhcam">
+	<portal:FacebookSdk ID="fbsdk" runat="server" />
+	<portal:LayoutDisplaySettings ID="LayoutDisplaySettings1" runat="server" />
+	<form id="frmMain" runat="server">
+		<asp:SiteMapDataSource ID="SiteMapData" runat="server" ShowStartingNode="false" />
+		<asp:SiteMapDataSource ID="PageMapDataSource" runat="server" ShowStartingNode="false" />
+		<asp:SiteMapDataSource ID="ChildPageSiteMapData" runat="server" ShowStartingNode="false" />
+		<asp:ScriptManager ID="ScriptManager1" EnablePageMethods="true" runat="server" />
+		<div class="ov-h" id="wrapper">
+			<header>
+				<div class="wrap-header">
+					<div class="menu-mobile">
+						<div class="logo">
+							<a href="index.html">
+								<img src="./assets/logo/logoTDE.png" alt="">
+							</a>
+						</div>
+						<div class="wrap-right">
+							<div class="icon-search"> <em class="search-icon material-icons">search</em></div>
+							<div class="hambuger"> <span></span><span></span><span></span><span></span></div>
+						</div>
+					</div>
+					<div class="menu-desktop">
+						<div class="logo"> <a href="index.html"><img src="./assets/logo/logoTDE.png" alt=""></a></div>
+						<div class="wrap-list-menu">
+							<ul>
+								<li> <a href="">TVN</a></li>
+								<li> <a href="">Tokyo Deli Sushi</a></li>
+								<li> <a href="">Tokyo Deli Home</a></li>
+								<li class="active"><a href="">Tokyo Deli Express</a></li>
+								<li> <a href="">Tokyo Deli Catering</a></li>
+							</ul>
+						</div>
+						<div class="wrap-list-menu-icon">
+							<ul>
+								<li class="active"><a href="gioi-thieu.html"><img src="./assets/header/icon1.png"
+											alt="">Giới thiệu</a></li>
+								<li><a href="thuc-don.html"><img src="./assets/header/icon2.png" alt="">Thực đơn</a>
+								</li>
+								<li><a href="khuyen-mai.html"><img src="./assets/header/icon3.png" alt="">Khuyễn mãi</a>
+								</li>
+								<li><a href="ho-tro-khach-hang.html"><img src="./assets/header/icon4.png" alt="">Hỗ trợ
+										khách hàng</a></li>
+								<li><a href="lien-he.html"><img src="./assets/header/icon5.png" alt="">Liên hệ</a></li>
+							</ul>
+						</div>
+						<div class="wrap-icon">
+							<div class="wrap-left"> <em class="search-icon material-icons">search</em><a href=""><i
+										class="fab fa-facebook-square"></i></a><a href=""><i
+										class="fab fa-youtube"></i></a></div>
+							<div class="dive"></div>
+							<div class="wrap-right"><a class="vn" href=""><img src="./assets/header/icon-vn.png"
+										alt=""></a><a class="us" href=""><img src="./assets/header/icon-us1.svg"
+										alt=""></a></div>
+						</div>
+					</div>
+				</div>
+				<div class="search-wrap">
+					<div class="search-middle">
+						<div class="close-btn">X</div>
+						<div class="wrap-button">
+							<input class="form-control search-t" type="text" placeholder="Tìm kiếm...">
+							<button class="button-search"><span class="material-icons">search </span></button>
+						</div>
+					</div>
+				</div>
+			</header>
+			<main>
+				<asp:Panel ID="divAlt1" runat="server" CssClass="altcontent1">
+					<asp:ContentPlaceHolder ID="altContent1" runat="server">
+					</asp:ContentPlaceHolder>
+				</asp:Panel>
+				<asp:Panel ID="divLeft" runat="server" CssClass="leftside" Visible="True" SkinID="pnlPlain">
+					<asp:ContentPlaceHolder ID="leftContent" runat="server">
+					</asp:ContentPlaceHolder>
+				</asp:Panel>
+				<asp:Panel ID="divCenter" runat="server" Visible="True" CssClass="center-rightandleftmargins"
+					SkinID="pnlPlain">
+					<asp:ContentPlaceHolder ID="mainContent" runat="server">
+					</asp:ContentPlaceHolder>
+				</asp:Panel>
+				<asp:Panel ID="divRight" runat="server" Visible="True" CssClass="rightside" SkinID="pnlPlain">
+					<asp:ContentPlaceHolder ID="rightContent" runat="server">
+					</asp:ContentPlaceHolder>
+				</asp:Panel>
+				<asp:Panel ID="divAltContent2" runat="server" CssClass="altcontent2">
+					<asp:ContentPlaceHolder ID="altContent2" runat="server"></asp:ContentPlaceHolder>
+				</asp:Panel>
+			</main>
+			<footer>
+				<div class="footer-container">
+					<div class="row">
+						<div class="col-lg-5 col-md-4 col-sm-6">
+							<div class="wrap-box">
+								<div class="title-footer">Trụ sở chính</div>
+								<ul class="list-info">
+									<li> <em class="material-icons">place</em>
+										<p>26 C - D - E Lê Quốc Hưng, Phường 12, Quận 4, TP.HCM</p>
+									</li>
+									<li> <em class="material-icons">call</em>
+										<p>(84-24)3826 5888</p>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="col-lg-4 col-md-4 col-sm-6">
+							<div class="wrap-box">
+								<div class="title-footer">Liên kết nhanh</div>
+								<ul class="list-menu">
+									<li> <a href="">Tuyển dụng</a></li>
+									<li> <a href="">Điều khoản sử dụng</a></li>
+									<li> <a href="">Chính sách bảo mật</a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="col-lg-3 col-md-4 col-sm-6">
+							<div class="wrap-box">
+								<div class="title-footer">Mạng xã hội</div>
+								<div class="wrap-icon"> <a href=""><i class="fab fa-facebook-square"></i></a><a
+										href=""><i class="fab fa-youtube"></i></a></div>
+								<div class="img"><img class="bocongthuong" src="./assets/logo/bocongthuong.png" alt="">
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="footer-copyright">
+						<ul>
+							<li>Mã số thuế: 0306340691</li>
+							<li>Ngày cấp: 17/12/2008</li>
+							<li>Nơi cấp: Chi Cục Thuế Quận 1</li>
+						</ul><span>Copyright © 2020 Tokyo Deli Express. Thiết kế website bởi Cánh Cam.</span>
+					</div>
+				</div>
+			</footer>
+		</div>
+		<portal:AutoHidePanel ID="ah1" CssClass="cmsadminpanel" runat="server">
+			<div class="row">
+				<div class="col-lg-12">
+					<nav>
+						<ul class="nav navbar-nav listmenu">
+							<portal:AdminMenuLink ID="lnkDashboard" IconCssClass="fa fa-key" RenderAsListItem="true"
+								runat="server" />
+							<portal:FileManagerLink ID="lnkFileManager" IconCssClass="fa fa-folder-open"
+								RenderAsListItem="true" runat="server" />
+							<portal:PageEditFeaturesLink ID="lnkPageContent" IconCssClass="fa fa-cog"
+								RenderAsListItem="true" runat="server" />
+							<portal:PageEditSettingsLink ID="lnkPageSettings" IconCssClass="fa fa-edit"
+								RenderAsListItem="true" runat="server" />
+							<portal:NewZoneLink ID="lnkNewZone" IconCssClass="fa fa-file" RenderAsListItem="true"
+								runat="server" />
+							<portal:ZoneEditSettingsLink ID="lnkZoneSettings" IconCssClass="fa fa-edit"
+								RenderAsListItem="true" runat="server" />
+							<li>
+								<div class="form-inline">
+									<div class="form-group">
+										<label class="sr-only">Mode</label>
+									</div>
+									<div class="form-group">
+										<asp:ContentPlaceHolder ID="pageEditContent" runat="server">
+										</asp:ContentPlaceHolder>
+									</div>
+								</div>
+							</li>
+						</ul>
+						<ul class="nav">
+							<li><a href="#" id="pullmenucms"><i class="fa fa-chevron-circle-right"></i></a></li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+			<script type="text/javascript">
+				$(document).ready(function () {
+					$("#pullmenucms").click(function (e) {
+						e.preventDefault();
+						if ($(this).parents('.cmsadminpanel').hasClass('toggled')) {
+							ShowToolbar();
+							Set_Cookie('toolbarOpenState', 'open');
+						} else {
+							HideToolbar();
+							Set_Cookie('toolbarOpenState', 'closed');
+						}
+					});
+					var openState = Get_Cookie('toolbarOpenState');
+					if (openState != null) {
+						if (openState == 'closed') {
+							HideToolbar();
+						}
+						if (openState == 'open') {
+							ShowToolbar();
+						}
+					}
+				});
+
+				function HideToolbar() {
+					$('.cmsadminpanel').addClass("toggled");
+					$('.fa-chevron-circle-right').addClass('fa-rotate-180');
+				}
+
+				function ShowToolbar() {
+					$('.cmsadminpanel').removeClass("toggled");
+					$('.fa-chevron-circle-right').removeClass('fa-rotate-180');
+				}
+			</script>
+		</portal:AutoHidePanel>
+		<portal:Woopra ID="woopra11" runat="server" />
+		<div id="overlay"></div>
+	</form>
+	<script src="/Data/Sites/1/skins/default/js/core.min.js"></script>
+	<script src="/Data/Sites/1/skins/default/js/main.min.js"></script>
+	<div id="fb-root"></div>
+	<script async defer crossorigin="anonymous"
+		src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v8.0&appId=592601277979782&autoLogAppEvents=1"
+		nonce="yYDpCdmf"></script>
+</body>
+
+</html>

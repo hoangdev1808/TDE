@@ -1,394 +1,291 @@
-.kv-header
-	position: fixed
+main 
 	width: 100%
-	z-index: 1000
-	border-bottom: solid 2px #ed1c24
-	background-color: #ffffff
-	box-shadow: 0 0 6px rgba($color: #000000, $alpha: .3)
-	transition: all .3s ease-in-out
-	.header-top
+header
+	display: flex
+	flex-direction: column
+	background-color: #fff
+	align-items: center
+	position: fixed
+	top: 0 
+	bottom: 0 
+	z-index: 999
+	width: 185px
+	float: left
+	transition: .3s all  ease-in-out
+	.wrap-header 
 		width: 100%
-		padding: 7px 0
-		background-color: #ebebeb
-		ul
-			width: 100%
-			display: flex
-			align-items: center
-			justify-content: flex-end
-			list-style: none
-			padding-left: 0
-			padding-right: 20px
-			li 
-				.nav-link
-					font-size: 14px
-					color: $color-text
-					line-height: 2.143
-			.language
-				button
-					border: none
-					position: relative
-					&::after
-						position: absolute
-						top: 50%
-						transform: translateY(-50%)
-						border: none
-						content: 'keyboard_arrow_down'
-						font-family: Material Icons
-						font-size: 24px
-						color: rgb(153, 153, 153)
-				.dropdown-menu
-					min-width: max-content
-					right: 0
-					left: unset !important
-					border-radius: 0
-	.navbar
+		height: 100%
+		box-shadow: 1px 1px 6px #00000012
+	.menu-mobile
 		width: 100%
-		padding: 0
-		.logo
-			width: 18%
-			height: 53px
+		display: none
+		height: 100%
+		padding: 0 15px
+		.logo 
+			height: 70px
+			*
+				height: 100%
 			img 
 				width: 100%
 				height: 100%
-		.main-menu
-			width: calc( 100% -  18%)
-			padding-top: 17px
-			.logo-mobile
-				@media screen and ( min-width: 992px)
-					display: none
-			.icon
-				display: flex
-				align-items: flex-start
-				justify-content: flex-end
-				.search-icon
-					display: none
-				#search-box
-					.form-group
-						position: relative
-						display: flex
-						align-items: center
-						margin-bottom: 0
-						input
-							border-width: 1px
-							border-color: rgb(225, 225, 225)
-							border-style: solid
-							background-color: rgb(241, 241, 241)
-							width: 547px
-							height: 38px
-							border-radius: 20px
-							padding-left: 15px
-						button
-							position: absolute
-							right: 23px
-							height: 38px
-							.material-icons
-								font-size: 24px
-								color: rgb(46, 49, 146)
-								line-height: 38px
-				.hotline
-					margin-left: 20px
-					height: 38px
-					padding-right: 15px
-					border-right: #e1e1e1 solid 1px
-					a 
-						line-height: 38px
-						display: flex
-						align-items: center
-						.material-icons
-							font-size: 20px
-							color: rgb(153, 153, 153)
-							margin-right: 7px
-
-						.fone
-							font-size: 16px
-							color: rgb(46, 49, 146)
-							font-weight: bold
-				.shoping-cart
-					position: relative
-					margin-left: 10px
-					height: 38px
-					display: flex
-					align-items: center
-					.material-icons
-						font-size: 20px
-						color: rgb(46, 49, 146)
-					.quilt
-						margin-left: 7px
-						width: 28px
-						height: 28px
-						line-height: 28px
-						text-align: center
-						color: #ffffff
-						font-size: 12px
-						border-radius: 50%
-						background-color: #ed1c24
-					.shopping-cart-wrapper
-						display: flex
-						position: absolute
-						top: 100%
-						right: 0
-						flex-direction: column
-						align-items: center
-						justify-content: space-between
-						opacity: 0
-						z-index: 50
-						z-index: 0
-						transition: all .3s ease-in-out
-						box-shadow: 0 5px 10px 0 rgba(0,0,0,.05)
-						background-color: #fff
-						padding: 1.25rem
-						width: 370px
-						pointer-events: none
-						@media screen and ( max-width: 375px)
-							right: -130%
-						.head
-							display: flex
-							align-items: center
-							justify-content: space-between
-							border-bottom: 3px solid #ebebeb
-							padding-bottom: .75rem
-							width: 100%
-							.cart-quantity
-								display: flex
-								.cart-number
-									display: flex
-									align-items: center
-									justify-content: center
-									margin-left: .25rem
-									border-radius: 9999px
-									background-color: #ec1f27
-									padding: .25rem
-									width: 18px
-									height: 18px
-									color: #fff
-									font-size: .75rem
-							.cart-number
-								p 
-									margin-bottom: 0
-									color: #333
-									font-size: 1rem
-									font-weight: 500
-									span
-										color: #ec1f27
-						.body
-							padding-top: 1.5rem
-							padding-bottom: 2rem
-							width: 100%
-							.scroll-wrapper
-								padding-right: 15px
-								height: 330px
-								overflow-y: auto
-								line-height: 1.625
-								text-align: justify
-								.cart-item
-									display: flex
-									align-items: center
-									justify-content: space-between
-									border-bottom: 1px solid #ebebeb
-									background-color: #fff
-									padding-top: .5rem
-									padding-bottom: .5rem
-									height: 110px
-									&:first-child 
-										padding-top: 0
-									.image
-										a 
-											display: block
-											width: 85px
-											height: 85px
-											img 
-												width: 100%
-												height: 100%
-												object-fit: scale-down
-									.caption
-										padding-left: .5rem
-										.title
-											a
-											-webkit-line-clamp: 2
-											-webkit-box-orient: vertical
-											display: -webkit-box
-											transition: all .3s ease-in-out
-											margin-bottom: 0
-											overflow: hidden
-											color: #333
-											font-size: .9rem
-											font-weight: 500
-										.bottom
-											display: flex
-											align-items: center
-											justify-content: space-between
-											margin-top: .75rem
-											.price
-												margin-bottom: 0
-												color: #333
-												font-size: .875rem
-												font-weight: 700
-											.quantity
-												color: #999
-												font-size: .875rem
-												font-weight: 500
-												.number
-													color: #999
-													font-size: .875rem
-													font-weight: 500
-						.btn-center
-							width: 100%
-							.btn-primary
-								display: flex
-								align-items: center
-								justify-content: center
-								background-color: #ec1f27
-								width: 100%
-								padding: .5rem 0
-							&:hover
-								.btn-primary
-									background-color: $main-color
-					&:hover
-						.shopping-cart-wrapper
-							opacity: 1
-							pointer-events: auto
-							transition: all .3s
-			.navbar-nav
-				width: 100%
-				justify-content: flex-end
-				.nav-item
-					margin-left: 2rem
-					.nav-link
-						padding: .5rem 0
-						font-size: 14px
-						color: $color-text
-						font-weight: bold
-						text-transform: uppercase
-					&:hover
-						.nav-link
-							color: $red
-					&.active
-						.nav-link
-							color: $red
-			.kv-toggle
-				cursor: pointer
-				position: relative
-				padding: 0
+				object-fit: contain
+		.wrap-right 
+			display: flex
+			align-items: center
+			.icon-search
+				width: 30px
+				height: 30px
+				border: 1px solid $main-color
 				display: flex
 				align-items: center
 				justify-content: center
-				transition: .3s all linear
-				.hamburger-button
-					position: relative
-					width: 26px
-					transition: .3s all linear
-					span
-						position: absolute
-						left: 50%
-						transform: translate(-50%, -50%)
-						width: 26px
-						height: 2px
-						background-color: $main-color
-						content: ""
-						transition: .3s all linear
-						&:first-child
-							top: -5px
-
-						&:last-child
-							top: 5px
-				&.active
-					transition: .3s all linear
-					.hamburger-button
-						span
-							top: 50%
-							left: 50%
-							&:first-child
-								transform: translate(-50%, -50%) rotate(45deg)
-							&:nth-child(2)
-								visibility: hidden
-								opacyti: 0
-								transition: .2s all linear
-							&:last-child
-								transform: translate(-50%, -50%) rotate(-45deg)
-				@media screen and ( min-width: 992px)
-					display: none
-				@media(max-width: 576px)
-					width: 40px
-					.hamburger-button
-					+ span
-						display: none
-	@media screen and ( max-width: 1365.98px)
-		.navbar
-			.logo
-				width: auto
-				height: auto
-				max-width: 100%
-				max-height: 100%
-			.main-menu
-				width: calc( 100% -  13%)
-				.icon
-					#search-box
-						.form-group
-							input 
-								width: 100%
-				.navbar-nav
-					.nav-item
-						margin-left: auto
-	@media screen and ( max-width: 1199px)
-		.navbar
-			.logo
-				width: 13%
-	@media screen and ( max-width: 991px)
-		.navbar
+				margin-right: 10px
+				background-color: $main-color
+				em 
+					font-size: 17px
+					color: white
+		.hambuger
+			height: 25px
+			display: flex
+			align-items: center
+			justify-content: center
+			width: 35px
 			position: relative
-			.container
-				padding: 0 15px
-			.main-menu
+			transition: .3s all  ease-in-out
+			&.active 
+				span 
+					&:first-child
+						top: 18px
+						left: 50%
+						width: 0px
+					&:nth-child(2)
+						transform: rotate(45deg)
+						background: $main-color
+					&:nth-child(3)
+						transform: rotate(-45deg)
+						background: $main-color
+					&:nth-child(4)
+						top: 18px
+						left: 50%
+						width: 0px
+			span 
+				display: block
+				position: absolute
+				left: 0
+				transform: rotate(0deg)
+				opacity: 1
+				transition: .5s ease-in-out
+				border-radius: 9px
+				background: black
 				width: 100%
-				padding-bottom: 17px
-				display: flex
-				align-items: center
-				.logo-mobile
-					width: 20%
-				.icon
-					align-items: center
-					margin-left: auto
-					.search-icon
-						display: block
-					#search-box
-						display: none
-				.navbar-nav
-					position: absolute
-					top: calc( 100% + 2px)
-					right: -100%
-					width: 50vw
-					height: auto
+				height: 5px
+				&:first-child
+					top: 0
+				&:nth-child(2), &:nth-child(3)
+					top: 10px
+				&:nth-child(4)
+					top: 20px
+		@media screen and ( max-width: 1280px )
+			display: flex
+			justify-content: space-between
+			align-items: center
+	&.active 
+		transition: .3s all  ease-in-out
+		width: 100%
+		height: 80px
+		bottom: auto
+		right: 0 
+		left: 0
+		z-index: 999
+	.menu-desktop
+		z-index: 999
+		display: flex
+		flex-direction: column
+		background-color: #fff
+		align-items: center
+		padding-top: 10px
+		transition: .6s all  ease-in-out
+		width: 100%
+		&.active 
+			transition: .6s all  ease-in-out
+			right: 0
+		@media screen and ( max-width: 1280px )
+			right: -100%
+			width: 230px
+			top: 80px
+			bottom: 0
+			position: fixed
+			.logo 
+				display: none
+		
+	.wrap-list-menu 
+		margin-top: 20px
+		@media screen and ( max-width: 1280px )
+			margin-top: 0px
+		ul 
+			padding: 0
+			li 
+				list-style: none
+				&.active 
+					a
+						color: white
+						background-color: $main-color
+						border: 1px solid $main-color
+				a 
+					color: #333333
+					font-size: 12 / 16 * 1rem
+					font-weight: 700
+					width: 130px
+					height: 24px
+					border-radius: 12px
+					border: 1px solid #999999
 					background-color: #ffffff
-					z-index: 1000
-					justify-content: flex-start
-					transition: all .3s
-					box-shadow: 0 0 6px 0 rgba($color: #000000, $alpha: .5)
-					.nav-item
-						margin-left: 0
-						padding: 1rem
-						border-bottom: solid 1px $red
-						&:last-child
-							border: none
-					&.active
-						right: 0
-						transition: all .3s
-				.kv-toggle
-					margin-left: 20px
-	@media screen and ( max-width: 458px)
-		.header-top
-			ul
-				li 
-					margin-right: .5rem
-					.nav-link
-						padding: .5rem 0
-						font-size: 12px
-		.navbar
-			.main-menu
-				.icon
-					.hotline
-						a 
-							height: 38px
-						.fone
-							display: none
-				.navbar-nav
-					width: 70vw
+					display: block
+					display: flex
+					align-items: center
+					justify-content: center
+					transition: .3s all  ease-in-out
+					&:hover 
+						color: white
+						background-color: $main-color
+						border: 1px solid $main-color
+				&+li 
+					margin-top: 6px
+				&:last-child
+					margin-bottom: 6px
+	.wrap-list-menu-icon 
+		width: 100%
+		margin-top: 4px
+		ul 
+			padding: 0
+			li 
+				list-style: none
+				border-top: 1px solid #eeeeee
+				padding-top: 14px
+				padding-bottom: 7px
+				&.active 
+					background-color: $main-color
+					a 
+						color: white
+					img 
+						filter: brightness(0) invert(1)
+				&:hover
+					background-color: $main-color
+					a 
+						color: white
+					img 
+						filter: brightness(0) invert(1)
+				a 
+					display: flex
+					flex-direction: column
+					align-items: center
+					img 
+						margin-bottom: 4px
+				&:last-child
+					border-bottom: 1px solid #eeeeee
+	
+	.wrap-icon
+		display: flex
+		justify-content: flex-start
+		width: 100%
+		padding: 0 14px
+		margin-top: 16px
+		align-items: center
+		.dive 
+			width: 1px
+			height: 16px
+			background-color: #eeeeee
+			margin-right: 14px
+		.wrap-left 
+			display: flex
+			align-items: center
+			.search-icon
+				color: #666666
+				font-size: 18 / 16 * 1rem
+				font-weight: 400
+				margin-right: 12px
+				cursor: pointer
+			i 
+				color: #111111
+				font-size: 18 / 16 * 1rem
+				margin-right: 14px
+		.wrap-right 
+			.vn 
+				margin-right: 5px
+.search-wrap
+	-webkit-transition: all 1s ease
+	-moz-transition: all 1s ease
+	-o-transition: all 1s ease
+	-ms-transition: all 1s ease
+	transition: all 1s ease
+	background: rgba(0, 0, 0, 0.63)
+	position: fixed
+	right: -100%
+	top: 0
+	width: 100%
+	height: 100%
+	display: table
+	z-index: 999
+	.search-middle
+		display: table-cell
+		vertical-align: middle
+		height: 100%
+	.search-t
+		background: transparent
+		color: #fff
+		font-size: 30 / 16 * 1rem
+		border-radius: 0
+		width: 100%
+		margin: 0 auto
+		background-color: transparent
+		border: 0
+		color: white
+		padding: 0
+		border-bottom: 4px solid white
+		transition: ease-in-out all .3s
+		&:focus
+			background-color: transparent
+			border: 0
+			color: white
+			border-bottom: 4px solid $main-color
+			box-shadow: none
+		&::placeholder
+			color: white
+		@media screen and ( max-width: 575px )
+			font-size: 20px
+	.close-btn
+		position: absolute
+		right: 0
+		top: 0
+		cursor: pointer
+		width: 50px
+		height: 50px
+		text-align: center
+		background: white
+		color: #575757
+		font-size: 28/16*1rem
+		border-radius: 37px
+		margin: 20px
+		display: flex
+		align-items: center
+		justify-content: center
+		@media screen and ( max-width:1024px  )
+			font-size: 20/16*1rem
+			width: 40px
+			height: 40px
+	.wrap-button
+		width: 60%
+		margin: 0 auto
+		position: relative
+		@media screen and ( max-width: 575px )
+			width: 80%
+		.button-search
+			position: absolute
+			right: 0
+			outline: none
+			border: 0
+			bottom: 0
+			background-color: transparent
+			color: white
+			span
+				font-size: 40px

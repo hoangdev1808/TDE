@@ -1,335 +1,340 @@
-function initMapping() {
-    $('header .navbar .logo a ').mapping({
-        mobileWrapper: 'header  .navbar .main-menu .logo-mobile',
-        mobileMethod: 'appendTo',
-        desktopWrapper: 'header .navbar .main-menu .logo',
-        desktopMethod: 'insertAfter',
-        breakpoint: 991
-    })
-}
-const toggleMenuMobile = () => {
-    $('.kv-toggle').on('click', function () {
-        $(this).toggleClass('active');
-        $(this).siblings('.navbar-nav').toggleClass('active')
-        $('#overlay').toggleClass('active')
-    });
-    $('#overlay').on('click', function () {
-        $(this).removeClass('active');
-        $('.kv-toggle').removeClass('active')
-        $('.navbar-nav').removeClass('active')
-    })
-}
-const NikenkoSlide = () => {
-    var myswiper = new Swiper('.list-banner .swiper-container', {
-        loop: true,
-        speed: 1000,
-        watchSlidesProgress: true,
-        mousewheelControl: true,
-        keyboardControl: true,
-        effect: 'fade',
-        autoplay: {
-            delay: 3500,
-            disableOnInteraction: false
-        },
-        pagination: {
-            el: '.swiper-pagination',
-            type: 'bullets',
-            clickable: true,
-        },
-    });
-    $(".single-swiper .swiper-container").each(function (index, element) {
-        var $this = $(this);
-        $this.addClass("instance-" + index);
-        $this.parent().find(".swiper-button-prev").addClass("swiper-button-prev-" + index);
-        $this.parent().find(".swiper-button-next").addClass("swiper-button-next-" + index);
-        var swiper = new Swiper(".instance-" + index, {
-            speed: 750,
-            observer: true,
-            observeParents: true,
-            lazy: true,
-            breakpointsInverse: true,
-            spaceBetween: 30,
-            slidesPerView: 7,
-            loop: true,
-            navigation: {
-                nextEl: ".swiper-button-next-" + index,
-                prevEl: ".swiper-button-prev-" + index
-            },
-            breakpoints: {
-                1366: {
-                    slidesPerView: 7,
-                    spaceBetween: 20,
-                },
-                1280: {
-                    slidesPerView: 6,
-                    spaceBetween: 10,
-                },
-                767: {
-                    slidesPerView: 3,
-                    spaceBetween: 10,
-                },
-                575: {
-                    slidesPerView: 3,
-                    spaceBetween: 10,
-                },
-                400: {
-                    slidesPerView: 2,
-                    spaceBetween: 10,
-                },
-                375: {
-                    slidesPerView: 2,
-                    spaceBetween: 10,
-                },
-            },
-        });
-    });
-    var swiper = new Swiper(".slide-colum .swiper-container", {
-        spaceBetween: 30,
-        slidesPerView: 3,
-        loop: true,
-        loopedSlides: 3,
-        slidesPerColumn: 2,
-        observer: true,
-        observeParents: true,
-        navigation: {
-            nextEl: ".slide-colum .swiper-button-next",
-            prevEl: ".slide-colum .swiper-button-prev",
-            clickable: true,
-        },
-        breakpoints: {
-            1280: {
-                slidesPerView: 3,
-                spaceBetween: 20,
-            },
-            1024: {
-                slidesPerView: 3,
-                spaceBetween: 10,
-            },
-            991: {
-                slidesPerView: 2,
-                spaceBetween: 10,
-            },
-            767: {
-                slidesPerView: 2,
-                spaceBetween: 10,
-            },
-            575: {
-                slidesPerView: 2,
-                spaceBetween: 10,
-            },
-            480: {
-                slidesPerView: 1,
-                spaceBetween: 10,
-            },
-        },
-    });
-    var swiper = new Swiper(".kv-slide .swiper-container", {
-        speed: 750,
-        observer: true,
-        observeParents: true,
-        lazy: true,
-        breakpointsInverse: true,
-        spaceBetween: 30,
-        slidesPerView: 6,
-        loop: true,
-        navigation: {
-            nextEl: ".kv-slide .swiper-button-next",
-            prevEl: ".kv-slide .swiper-button-prev"
-        },
-        breakpoints: {
-            1366: {
-                slidesPerView: 6,
-                spaceBetween: 20,
-            },
-            1280: {
-                slidesPerView: 6,
-                spaceBetween: 10,
-            },
-            767: {
-                slidesPerView: 4,
-                spaceBetween: 10,
-            },
-            575: {
-                slidesPerView: 3,
-                spaceBetween: 10,
-            },
-            400: {
-                slidesPerView: 2,
-                spaceBetween: 10,
-            },
-            375: {
-                slidesPerView: 2,
-                spaceBetween: 10,
-            },
-        },
-    });
-    var swiper = new Swiper(".other-slide .swiper-container", {
-        speed: 750,
-        observer: true,
-        observeParents: true,
-        lazy: true,
-        breakpointsInverse: true,
-        spaceBetween: 30,
-        slidesPerView: 4,
-        loop: true,
-        navigation: {
-            nextEl: ".other-slide .swiper-button-next",
-            prevEl: ".other-slide .swiper-button-prev"
-        },
-        breakpoints: {
-            1366: {
-                slidesPerView: 4,
-                spaceBetween: 20,
-            },
-            1280: {
-                slidesPerView: 4,
-                spaceBetween: 10,
-            },
-            767: {
-                slidesPerView: 2,
-                spaceBetween: 10,
-            },
-            375: {
-                slidesPerView: 1,
-                spaceBetween: 10,
-            },
-        },
-    });
-    var galleryThumbs = new Swiper('.pro-slider .gallery-thumbs', {
-        direction: 'vertical',
-        spaceBetween: 10,
-        slidesPerView: 5,
-        centeredSlides: true,
-        loop: true,
-        slideToClickedSlide: true,
-        navigation: {
-            nextEl: ".pro-slider .swiper-button-next",
-            prevEl: ".pro-slider .swiper-button-prev"
-        },
-        breakpoints: {
-            1280: {
-                slidesPerView: 5,
-                spaceBetween: 10,
-            },
-            991: {
-                slidesPerView: 5,
-                spaceBetween: 10,
-                direction: 'horizontal',
-            },
-            767: {
-                slidesPerView: 3,
-                spaceBetween: 10,
-                direction: 'horizontal',
-            },
-            575: {
-                direction: 'horizontal',
-                slidesPerView: 3,
-                spaceBetween: 10,
-            },
-        },
-    });
-    var galleryTop = new Swiper('.pro-slider .gallery-top', {
-        spaceBetween: 30,
-        loop: true,
-        slideToClickedSlide: true,
-        thumbs: {
-            swiper: galleryThumbs,
-        },
-    });
-    // galleryTop.params.control = galleryThumbs
-    // galleryThumbs.params.control = galleryTop
-}
-const checkLayoutBanner = () => {
-    const pagesBanner = $("#page-banner");
-    const heightHeader = $("header").outerHeight();
-    const mainBanner = $("#home-banner");
-    if (mainBanner.length >= 1) {
-        $('main').css('padding-top', heightHeader);
-    } else if (pagesBanner.length >= 1) {
-        $('main').css('padding-top', heightHeader);
-    } else {
-        $('main').css('padding-top', heightHeader);
-    }
+const checkLayoutBanner123 = () => {
+	const pagesBanner = $("#page-banner");
+	const mainBanner = $("#home-banner");
+	if ($(window).width() > 1280) {
+		const widthHeader = $("header").outerWidth();
+		if (mainBanner.length >= 1) {
+			$("section").css("padding-left", widthHeader);
+		} else if (pagesBanner.length >= 1) {
+			$("section").css("padding-left", widthHeader);
+			$("footer").css("padding-left", widthHeader);
+		} else {
+			$("section").css("padding-left", widthHeader);
+			$("footer").css("padding-left", widthHeader);
+		}
+	}
+	if ($(window).width() <= 1280) {
+		const heightHeader = 80;
+		if (mainBanner.length >= 1) {
+			$("main").css("padding-top", heightHeader);
+		} else if (pagesBanner.length >= 1) {
+			$("main").css("padding-top", heightHeader);
+		} else {
+			$("main").css("padding-top", heightHeader);
+		}
+	}
+};
+const slidePage = () => {
+	new Swiper(".banner-home .swiper-container", {
+		slidesPerView: 1,
+		pagination: {
+			el: ".swiper-pagination",
+		},
+	});
+	new Swiper(".thuc-don-ct-2 .swiper-container", {
+		slidesPerView: 3,
+		spaceBetween: 30,
+		loop: true,
+		navigation: {
+			nextEl: ".swiper-next",
+			prevEl: ".swiper-prev",
+		},
+		breakpoints: {
+			768: {
+				slidesPerView: 2,
+				spaceBetween: 20,
+			},
+			575: {
+				slidesPerView: 1,
+				spaceBetween: 20,
+			},
+		},
+	});
+	//Swiper Gioi Thieu
+	new Swiper(".history .swiper-container", {
+		loop: true,
+		navigation: {
+			nextEl: ".history .swiper-next",
+			prevEl: ".history .swiper-prev",
+		},
+		centeredSlides: true,
+		slidesPerView: 3,
+		spaceBetween: 30,
+		breakpoints: {
+			992: {
+				slidesPerView: 2,
+				spaceBetween: 30,
+				centeredSlides: false,
+			},
+			768: {
+				slidesPerView: 1,
+				spaceBetween: 0,
+			},
+		},
+	});
+	new Swiper(".partner .swiper-container", {
+		loop: true,
+		navigation: {
+			nextEl: ".partner .swiper-next",
+			prevEl: ".partner .swiper-prev",
+		},
+		slidesPerView: 4,
+		spaceBetween: 20,
+		breakpoints: {
+			640: {
+				slidesPerView: 2,
+				spaceBetween: 10,
+			},
+			768: {
+				slidesPerView: 3,
+				spaceBetween: 20,
+				autoplay: {
+					delay: 3000,
+					disableOnInteraction: false,
+				},
+			},
+		},
+	});
+	new Swiper(".thucdon .swiper-container", {
+		navigation: {
+			nextEl: ".thucdon .button-next",
+			prevEl: ".thucdon .button-prev",
+		},
+		slidesPerView: 4,
+		spaceBetween: 20,
+		observer: true,
+		observeParents: true,
+		breakpoints: {
+			1300: {
+				slidesPerView: 3,
+				spaceBetween: 0,
+			},
+			768: {
+				slidesPerView: 2,
+				spaceBetween: 0,
+			},
+			400: {
+				slidesPerView: 1,
+				spaceBetween: 0,
+			},
+		},
+	});
+	new Swiper(".steps .swiper-container", {
+		navigation: {
+			nextEl: ".steps .swiper-next",
+			prevEl: ".steps .swiper-prev",
+		},
+		slidesPerView: 4,
+		spaceBetween: 25,
+		breakpoints: {
+			576: {
+				slidesPerView: 1,
+				spaceBetween: 0,
+			},
+			640: {
+				slidesPerView: 2,
+				spaceBetween: 10,
+			},
+			768: {
+				slidesPerView: 3,
+				spaceBetween: 20,
+				autoplay: {
+					delay: 3000,
+					disableOnInteraction: false,
+				},
+			},
+		},
+	});
+	new Swiper(".news-other .swiper-container", {
+		slidesPerView: 3,
+		spaceBetween: 30,
+		autoplay: {
+			delay: 9000,
+			disableOnInteraction: false,
+		},
+		breakpoints: {
+			576: {
+				slidesPerView: 1,
+				autoplay: {
+					delay: 3000,
+					disableOnInteraction: false,
+				},
+			},
+			640: {
+				slidesPerView: 2,
+				spaceBetween: 10,
+				autoplay: {
+					delay: 3000,
+					disableOnInteraction: false,
+				},
+			},
+			768: {
+				slidesPerView: 3,
+				spaceBetween: 20,
+				autoplay: {
+					delay: 3000,
+					disableOnInteraction: false,
+				},
+			},
+		},
+	});
+	new Swiper(".khuyenmai .swiper-container", {
+		pagination: {
+			el: ".swiper-pagination",
+			clickable: true,
+			renderBullet: function (index, className) {
+				return (
+					'<span class="' + className + '">' + (index + 1) + "</span>"
+				);
+			},
+		},
+	});
+	new Swiper(".other-page  .swiper-container", {
+		slidesPerView: 3,
+		spaceBetween: 30,
+		breakpoints: {
+			576: {
+				slidesPerView: 1,
+				spaceBetween: 10,
+			},
+			992: {
+				slidesPerView: 2,
+				spaceBetween: 10,
+			},
+		},
+	});
+};
+const moveThucDon = () => {
+	$(".thucdon .wrap-td-1 .wrap-left-select").mapping({
+		mobileWrapper: ".thucdon .wrap-td-0",
+		mobileMethod: "appendTo",
+		desktopWrapper: ".thucdon .wrap-td-1",
+		desktopMethod: "prependTo",
+		breakpoint: 992,
+	});
+	$("header .menu-desktop .logo").mapping({
+		mobileWrapper: "header .menu-mobile",
+		mobileMethod: "prependTo",
+		desktopWrapper: "header .menu-desktop",
+		desktopMethod: "prependTo",
+		breakpoint: 1280,
+	});
+};
+const clickBuy = () => {
+	$(".button-order").click(function () {
+		$(".wrap-list-buy ").slideToggle();
+	});
 };
 
-function DataBG() {
-    $('[data-bg]').each(function () {
-        $(this).addClass('data-bg lazyload')
-    })
-}
+const checkMenuLayout = () => {
+	$(".hambuger").click(function () {
+		$(this).toggleClass("active");
+		$(".menu-desktop").toggleClass("active");
+		$("#overlay").toggleClass("active");
+	});
+	$("#overlay").click(function () {
+		$(".hambuger").removeClass("active");
+		$(".menu-desktop").removeClass("active");
+		$("#overlay").removeClass("active");
+	});
+	if ($(window).width() <= 1280) {
+		$("header").addClass("active");
+	} else {
+		$("header").removeClass("active");
+		$(".menu-desktop").removeClass("active");
+	}
+};
+const mainSearch = () => {
+	$(".search-icon").click(function () {
+		$(".search-wrap").css("right", "0");
+		$("body").addClass("disabled");
+	});
+	$(".close-btn").click(function () {
+		$(".search-wrap").css("right", "-100%");
+		$("body").removeClass("disabled");
+	});
+};
+const tabAcordition = () => {
+	$(".title-acr").click(function () {
+		$(this).addClass("active").siblings(".title-acr").removeClass("active");
+		var check = $(this).next().is(".active");
+		var checkTitle = $(this).is(".active");
+		if (check && checkTitle) {
+			$(this).next().removeClass("active").slideUp();
+			$(this).removeClass("active");
+		} else {
+			$(this)
+				.next()
+				.addClass("active")
+				.slideDown()
+				.siblings(".content-acr")
+				.removeClass("active")
+				.slideUp();
+		}
+	});
+};
 
-function setBackground() {
-    $("[setBackground]").each(function () {
-        var background = $(this).attr("setBackground");
-        $(this).css({
-            "background-image": "url(" + background + ")",
-            "background-size": "cover",
-            "background-position": "center",
-            "background-repeat": "no-repeat",
-        });
-    });
-    $("[setBackgroundRepeat]").each(function () {
-        var background = $(this).attr("setBackgroundRepeat");
-        $(this).css({
-            "background-image": "url(" + background + ")",
-            "background-repeat": "no-repeat",
-        });
-    });
+function moveNewsSpecial() {
+	$(".news-new").appendTo(".news-detail-page #news-new");
+	$(".site5 .news-new").css("display", "none");
 }
-
-function tabs() {
-    $('.tabs > li').on('click', function () {
-        var $panel = $(this).closest('.tab-panels');
-        $panel.find('li.active').removeClass('active');
-        $(this).addClass('active');
-        var panelToShow = $(this).attr('rel');
-        $panel.find('.panel.active').fadeOut(300, showNextPanel);
-
-        function showNextPanel() {
-            $(this).removeClass('active');
-            $('#' + panelToShow).fadeIn(300, function () {
-                $(this).addClass('active').fadeIn(300);
-            });
-        };
-    });
-    if ($(window).width() < 992 && '.category-nav'.length >= 1) {
-        $('.category-nav').on('click', function () {
-            $(this).find('.material-icons').toggleClass('active');
-            $(this).siblings('.tabs, .filter-content').slideToggle('slow')
-        })
-    }
+function checkFullpage() {
+	if ($(".full-page").length >= 1 && $(window).width() >= 1280) {
+		$("footer").appendTo(".index-4 ");
+	}
 }
-
-function phantrang() {
-    $('.modulepager').find('.pagination').find('li>a.NextPage, li>a.LastPage, li>a.BackPage, li>a.FirstPage').parent().hide()
-}
-
-function quantityNumber() {
-    $(".qty-minus").click(function () {
-        let minus = $(this).parents('.input-group').find('input').val();
-        console.log('top')
-        console.log(minus)
-        if (minus > 0) {
-            $(this).parents('.input-group').find('input').val(minus - 1);
-        } else {
-            $(this).parents('.input-group').find('input').val(0);
-        }
-    });
-    $(".qty-plus").on("click", function () {
-        let plus = Number($(this).parents('.input-group').find('input').val());
-        console.log('bottom')
-        console.log(plus)
-        $(this).parents('.input-group').find('input').val(plus + 1);
-    });
-}
-document.addEventListener('DOMContentLoaded', () => {
-    initMapping();
-    toggleMenuMobile();
-    DataBG();
-    setBackground();
-    NikenkoSlide();
-    checkLayoutBanner();
-    tabs();
-    phantrang();
-    quantityNumber();
+const moveQuyTrinh = () => {
+	if ($(window).width() <= 575) {
+		$(".about-6 .wrap-button-slide").mapping({
+			mobileWrapper: ".about-6 .wrap-slide",
+			mobileMethod: "appendTo",
+			desktopWrapper: ".about-6 .wrap-slide",
+			desktopMethod: "prependTo",
+			breakpoint: 575,
+		});
+	}
+};
+const selectOption = () => {
+	let elements = $(".thucdon").find("select");
+	let getValue = $(".ajxsort option:selected").val();
+	$("#" + getValue).addClass("active");
+	var checkValue = function () {
+		let getValue = $(".ajxsort option:selected").val();
+		console.log(getValue);
+		$("#" + getValue)
+			.addClass("active")
+			.siblings("")
+			.removeClass("active");
+	};
+	elements.on("change keyup", checkValue);
+};
+const CheckActivePage = () => {
+	var path = window.location.href; // because the 'href' property of the DOM element is the absolute path
+	$(".thucdon .wrap-right a").each(function () {
+		if (this.href === path) {
+			$(this).addClass("active");
+		}
+	});
+};
+document.addEventListener("DOMContentLoaded", () => {
+	moveThucDon();
+	moveQuyTrinh();
+	checkFullpage();
+	checkLayoutBanner123();
+	checkMenuLayout();
+	mainSearch();
+	slidePage();
+	clickBuy();
+	tabAcordition();
+	moveNewsSpecial();
+	selectOption();
+	window.addEventListener("resize", () => {
+		if ($(window).width() <= 1280) {
+			$("header").addClass("active");
+		} else {
+			$("header").removeClass("active");
+			$(".menu-desktop").removeClass("active");
+		}
+	});
+	CheckActivePage();
 });

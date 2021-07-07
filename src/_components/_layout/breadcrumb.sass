@@ -1,7 +1,10 @@
 .global-breadcrumb
+	display: flex
+	align-items: center
 	width: 100%
-	background-color: #fefefe
-	border-bottom: solid 1px #e1e1e1
+	height: 40px
+	background-color: rgba(0,0,0,0.5)
+	margin-top: -40px
 	.breadcrumb
 		display: flex
 		align-items: center
@@ -12,32 +15,38 @@
 		margin-bottom: 0
 		li
 			position: relative
-			padding: 0 10px
+			padding: 0 11px
 			display: flex
 			align-items: center
 			a
-				font-size: 16px
-				color: rgb(102, 102, 102)
+				text-decoration: none
+				color: #f8f8f8
+				font-family: "Montserrat"
+				font-size: 14 / 16 * 1rem
+				font-weight: 400
 				@media(max-width: 991.98px)
-					font-size: 10px
-				// &.active
-				// 	color: $red
+					font-size: 14 / 16 * 1rem
+				@media screen and ( max-width: 575px )
+					font-size: 12 / 16 * 1rem
+			&.active
+				a 
+					color: $main-color
 			&:hover
 				a
 					color: $main-color
 			&:first-child
 				padding-left: 0
-
 		li+li
 			&::before
 				position: absolute
 				top: 50%
-				left: -7px
+				left: -4px
 				transform: translateY(-50%)
-				font-family: 'remixicon'
 				font-size: 18px
-				content: "\EA6E"
-				color: #666666
+				content: "/"
+				color: white
+				font-size: 14px
+				font-weight: 400
 
 	@media(min-width: 768.98px)
 		margin-bottom: 0

@@ -1,0 +1,88 @@
+section.thucdon.section
+	.container
+		h2.section-title Thực đơn
+		.wrap-td-0
+		.wrap-td-1
+			.wrap-left-select
+				label(for="") Khu vực
+				select(name="")
+					option(value="") TP.HCM
+					option(value="") HÀ NỘI
+			.wrap-right
+				.button-prev
+					a(href="")
+						em.material-icons arrow_back
+				.swiper-container#myTab(role='tablist')
+					.swiper-wrapper
+						.swiper-slide
+							a#monmoi-tab(data-toggle='tab' href='#monmoi' role='tab' aria-controls='monmoi' aria-selected='false') Món mới
+						.swiper-slide
+							a#comvanphong-tab(data-toggle='tab' href='#comvanphong' role='tab' aria-controls='comvanphong' aria-selected='false') Cơm văn phòng
+						.swiper-slide
+							a#comvanphong-tab(data-toggle='tab' href='#comvanphong' role='tab' aria-controls='comvanphong' aria-selected='false') Combo
+						
+						.swiper-slide
+							a#comvanphong-tab(data-toggle='tab' href='#comvanphong' role='tab' aria-controls='comvanphong' aria-selected='false') Bento box
+						.swiper-slide
+							a#comvanphong-tab(data-toggle='tab' href='#comvanphong' role='tab' aria-controls='comvanphong' aria-selected='false') Party set 1
+						.swiper-slide
+							a#comvanphong-tab(data-toggle='tab' href='#comvanphong' role='tab' aria-controls='comvanphong' aria-selected='false') Party set 2
+						.swiper-slide
+							a#comvanphong-tab(data-toggle='tab' href='#comvanphong' role='tab' aria-controls='comvanphong' aria-selected='false') Party set 3
+						.swiper-slide
+							a#comvanphong-tab(data-toggle='tab' href='#comvanphong' role='tab' aria-controls='comvanphong' aria-selected='false') Party set 4
+						.swiper-slide
+							a#comvanphong-tab(data-toggle='tab' href='#comvanphong' role='tab' aria-controls='comvanphong' aria-selected='false') Party set 4
+						.swiper-slide
+							a#comvanphong-tab(data-toggle='tab' href='#comvanphong' role='tab' aria-controls='comvanphong' aria-selected='false') Party set 4
+						.swiper-slide
+							a#comvanphong-tab(data-toggle='tab' href='#comvanphong' role='tab' aria-controls='comvanphong' aria-selected='false') Party set 4
+						.swiper-slide
+							a#comvanphong-tab(data-toggle='tab' href='#comvanphong' role='tab' aria-controls='comvanphong' aria-selected='false') Set
+				.button-next
+					a(href="")
+						em.material-icons arrow_forward
+		.wrap-sub-menu.tab-content#myTabContent
+			ul#monmoi.tab-pane.fade.show.active(role='tabpanel' aria-labelledby='monmoi-tab')
+				li.active
+					a(href="") Tất cả 
+				li 
+					a(href="") Sushi
+				li 
+					a(href="") Sashimi
+				li 
+					a(href="") Hotpot 
+				li 
+					a(href="") Yaki 
+				li 
+					a(href="") Maki 
+				li 
+					a(href="") Salad
+				li 
+					a(href="") Gunkan
+				li 
+					a(href="") Nigiri
+				li 
+					a(href="") Hako 
+				li 
+					a(href="") Teppan
+			ul.tab-pane.fade#comvanphong(role='tabpanel' aria-labelledby='profile-tab')
+				li.active
+					a(href="") Tất cả 
+				li 
+					a(href="") Sushi
+				li 
+					a(href="") Sashimi
+		.wrap-list-product 
+			.row
+				-for(i=0;i<12;i++)
+					.col-xl-3.col-md-6
+						a(href="").wrap-product 
+							.img
+								img(src="./assets/thucdon/sp-1.png", alt="")
+							.wrap-text 
+								strong Tô cơm thịt heo xào kim chi
+								.price 
+									del 61.000 VND
+									span 54.900 VNĐ
+	

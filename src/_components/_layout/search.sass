@@ -1,0 +1,87 @@
+.search-page
+	padding: 60px 0
+
+	.search-page-top
+		.page-header
+			h1
+				font-size: 36px
+				font-weight: 500
+				color: #333333
+
+				@media(max-width: 1025px)
+					font-size: 26px
+
+		.searchcontrols
+			padding: 30px 0
+
+			.form-inline
+				.form-group
+					width: 100%
+					position: relative
+					.form-control
+						border: solid 1px #a1a1a1
+						width: 100%
+						height: 40px
+						border-radius: 0
+						&:focus
+							box-shadow: none
+
+					.seachpage-btn
+						display: none
+
+	.searchresults
+		.modulepager
+			display: flex
+			align-items: center
+			padding-bottom: 30px
+			&:nth-child(1)
+				display: none
+
+			.pagination
+				padding: 0
+				list-style: none
+
+				li
+					background-color: rgb(255, 255, 255)
+					width: 38px
+					height: 38px
+					margin-right: 20px
+					display: flex
+					align-items: center
+					justify-content: center
+					cursor: pointer
+					transition: ease-in-out all .3s
+
+					a
+						font-size: 18px
+						color: $main-color
+						text-decoration: none
+						width: 100%
+						height: 100%
+						text-align: center
+						line-height: 38px
+
+					&:hover
+						background-color: $main-color
+
+						a
+							color: #fff
+
+					&.active
+						span
+							color: #fff
+							width: 100%
+							height: 100%
+							text-align: center
+							line-height: 38px
+							background-color: $main-color
+	.searchresultlist
+		.searchresult
+			.NeatHtml
+				h3
+					font-size: 18px
+					a
+						font-size: 20px
+						font-weight: 500
+						color: $main-color
+						text-decoration: none

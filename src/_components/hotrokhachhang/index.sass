@@ -1,0 +1,150 @@
+.hotrokhachhang
+	.container
+		@media screen and ( min-width: 1366px )
+			max-width: 1143px!important
+	.section-title 
+		color: #333333
+		font-size: 24px
+		font-weight: 700
+		font-family: Montserrat
+	.wrap-list
+		display: flex
+		justify-content: center
+		margin-bottom: 30 / 16 * 1rem		
+		ul 
+			display: flex
+			padding: 2px 0px
+			@media screen and ( max-width: 992px )
+				overflow: auto
+				height: 50px
+				padding-top: 10px
+				&::-webkit-scrollbar 
+					height: 2px
+					border-radius: 5px
+					padding-top: 10px
+				&::-webkit-scrollbar-thumb 
+					background: $main-color
+			li 
+				list-style: none
+				&.active
+					a
+						background-color: $main-color
+						color: white
+				a 
+					height: 30px
+					min-width: 124px
+					box-shadow: 0 0 2px rgba(0, 0, 0, 0.28)
+					border-radius: 15px
+					background-color: #ffffff
+					color: #333333
+					font-size: 12px
+					font-weight: 400
+					font-family: Nunito
+					overflow: hidden
+					padding: 0 28px
+					display: flex
+					white-space: nowrap
+					align-items: center
+					justify-content: center
+					&:hover 
+						background-color: $main-color
+						color: white
+				&+li 
+					margin-left: 12px
+	.wrap-acr 
+		.title-acr 
+			display: flex
+			align-items: center
+			justify-content: space-between
+			padding: 15px 30px
+			min-height: 50px
+			padding-right: 28px
+			background-color: #ffffff
+			transition: .3s all  ease-in-out
+			cursor: pointer
+			margin-bottom: 10px
+			@media screen and ( max-width: 575px )
+				padding-right: 8px
+			&.active 
+				background-color: $main-color
+				em
+					color: white
+				p 
+					color: white
+				&::after
+					content: 'expand_less'
+					color: white
+			&::after
+				content: 'expand_more'
+				color: #333333
+				font-size: 30 / 16 * 1rem
+				font-weight: 400
+				font-family: Material Icons
+				transition: .3s all  ease-in-out
+			p 
+				color: #333333
+				font-size: 18 / 16 * 1rem
+				font-weight: 500
+				font-family: Montserrat
+				span 
+					margin-right: 5px
+					&::after
+						content: '.'
+		.content-acr 
+			padding-left: 28 / 16 * 1rem
+			padding-right: 54 / 16 * 1rem
+			padding-top: 24 / 16 * 1rem
+			padding-bottom: 24 / 16 * 1rem
+			display: none
+			p 
+				text-align: justify
+				color: #333333
+				font-size: 18 / 16 * 1rem
+				font-weight: 400
+				font-family: Nunito
+				line-height: 24px
+	.wrap-form-lh
+		margin-top: 53px
+		.form-row 
+			margin-left: -15px
+			margin-right: -15px
+			.col-sm
+				padding: 0 15px
+		.form-group
+			margin-bottom: 30px
+			input 
+				width: 100%
+				height: 50px
+				background-color: #ffffff
+				border: 0
+				outline: 0
+				padding-left: 20px
+				&::placeholder 
+					color: #999999
+					font-size: 18px
+					font-weight: 400
+					font-family: Nunito
+			.frm-btn 
+				input
+					width: 224px
+					height: 36px
+					background-color: $main-color
+					color: #ffffff
+					font-size: 14px
+					font-weight: 700
+					font-family: Nunito
+					padding-left: 0px
+					text-transform: uppercase
+			textarea 
+				width: 100%
+				outline: none
+				border: 0
+				height: 253px
+				background-color: #ffffff
+				padding-top: 20px
+				padding-left: 20px
+				&::placeholder 
+					color: #999999
+					font-size: 18px
+					font-weight: 400
+					font-family: Nunito

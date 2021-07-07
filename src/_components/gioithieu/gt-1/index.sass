@@ -1,0 +1,148 @@
+.about-1
+	.section-title
+		margin-bottom: 0
+		text-align: left
+		* 
+			text-align: left
+			margin-bottom: 0
+	.intro 
+		display: flex
+		padding-bottom: (40/16)*1rem
+		padding-top: 56 / 16 * 1rem
+		flex-wrap: wrap
+		&-content 
+			@media screen and ( max-width: 1200px )
+				flex: 0 0 100%
+				display: flex
+				justify-content: center
+				align-items: center
+		&-content,
+		&-content2
+			width: 50%
+		&-content2
+			padding-top: 19px
+			padding-left: 60px
+			@media screen and ( max-width: 1200px )
+				flex: 0 0 100%
+				padding-left: 0
+				padding-right: 0
+			.button-order 
+				margin: 0!important
+			.content
+				padding: (20/16)*1rem 0 37 / 16 * 1rem
+	.modal
+		&-content,
+		&-header
+			border-radius: unset
+			border: unset
+		&-dialog
+			max-width: 1020px
+		&-detail
+			.detail
+				padding: 15 / 16 *1rem
+			ul 
+				padding: 0
+				li 
+					list-style: none
+					color: #333333
+					font-family: Nunito
+					font-size: 16px
+					font-weight: 400
+					line-height: 22px
+					display: flex
+					&+li 
+						margin-top: 25 / 16 * 1rem
+					&:last-child
+						margin-bottom: 10 / 16 * 1rem
+					&::before
+						content: 'keyboard_arrow_right'
+						font-family: 'Material Icons'
+						color: #333333
+						padding-right: 10px
+						font-size: 1rem
+						font-weight: 400
+			&-header
+				display: flex
+				img 
+					height: 300px
+					display: block
+					width: auto
+					@media screen and ( max-width: 768px )
+						height: auto
+						flex: 0 0 100%
+						display: flex
+						justify-content: center
+				.detail 
+					.title *
+						color: #111111
+						font-family: "Montserrat"
+						font-size: 30 / 16 * 1rem
+						font-weight: 800
+						margin-bottom: 15px
+					.content 
+						*
+							color: #333333
+							font-family: Nunito
+							font-size: 16px
+							font-weight: 400
+							line-height: 22px
+						p+p 
+							margin-top: 25 / 16 * 1rem
+				@media screen and (max-width: 768px)
+					display: block
+					text-align: center
+					.detail
+						text-align: left
+						.content
+							padding-bottom: 1rem
+			&-body
+				p 
+					color: #333333
+					font-family: Nunito
+					font-size: 1rem 
+					font-weight: 400
+					display: flex
+					padding-left: 22px
+					&::before
+						content: 'done'
+						font-family: 'Material Icons'
+						color: #333333
+						padding-right: 10px
+						font-size: 1rem
+						font-weight: 400
+					&+p 
+						margin-top: 16 / 16 * 1rem
+				padding-left: 35 / 16 *1rem
+				@media screen and (max-width: 768px)
+					padding-left: 0
+					padding-right: 15px
+				.content
+					display: flex
+					padding: 0 0 (25/16)*1rem!important
+					&:first-child
+						padding-top: (25/16)*1rem!important
+						@media screen and (max-width: 768px)
+							padding-top: 0!important
+					&:last-child
+						padding-bottom: 15px!important
+				.material-icons
+					font-family: Material Icons !important
+					padding-right: (10/16)*1rem
+				&:last-child
+					padding-left: (36/16)*1rem
+					.content:first-child
+						padding-top: 0!important
+	button.close
+		opacity: 1
+		font-size: inherit
+		font-weight: normal
+	.close-modal
+		position: absolute
+		top: 0
+		right: 0
+		background-color: $colorMain
+		color: white
+		font-weight: 200
+		font-size: (30/16)*1rem
+		padding: 5px 10px
+		text-transform: uppercase
