@@ -1,16 +1,28 @@
-section.thuc-don-ct 
+section.thuc-don-ct
 	.container
 		.thuc-don-ct-1
 			.row
 				.col-lg-7
 					.img
 						a(href="./assets/thucdon-ct/tdct-1.png", data-fancybox)
-							img(src="./assets/thucdon-ct/tdct-1.png", alt="")
+							img(src="./assets/thucdon-ct/tdct-1.png" alt="")
 				.col-lg-5
-					.wrap-text 
+					.wrap-text
 						h2 Tô cơm thịt heo xào kim chi
 						.price 54.900 VNĐ
-						.wrap-des 
+						.wrap-buy
+							.button-order Mua ngay
+							.wrap-list-buy
+								.wrap-icon
+									a(href="")
+										img(src="./assets/thucdon-ct/gf.png" alt="")
+									a(href="")
+										img(src="./assets/thucdon-ct/now.png" alt="")
+									a(href="")
+										img(src="./assets/thucdon-ct/bae.png" alt="")
+									a(href="")
+										img(src="./assets/thucdon-ct/goj.png" alt="")
+						.wrap-des
 							.wrap-left
 								span Bao gồm
 							.wrap-right
@@ -21,32 +33,21 @@ section.thuc-don-ct
 										a(href="")
 											i.fab.fa-twitter
 						.line
-						.wrap-buy 
-							.button-order Mua ngay
-							.wrap-list-buy 
-								.wrap-icon
-									a(href="")
-										img(src="./assets/thucdon-ct/gf.png", alt="")
-									a(href="")
-										img(src="./assets/thucdon-ct/now.png", alt="")
-									a(href="")
-										img(src="./assets/thucdon-ct/bae.png", alt="")
-									a(href="")
-										img(src="./assets/thucdon-ct/goj.png", alt="")
+
 	.thuc-don-ct-2.section
 		.container
-			.section-title Món ăn khác 
-			.wrap-slide 
+			.section-title Món ăn khác
+			.wrap-slide
 				.swiper-container
 					.swiper-wrapper
 						-for(i=0;i<6;i++)
-							.swiper-slide 
-								a(href="").wrap-product 
+							.swiper-slide
+								a(href="").wrap-product
 									.img
-										img(src="./assets/thucdon-ct/sp1.png", alt="")
-									.wrap-text 
+										img(src="./assets/thucdon-ct/sp1.png" alt="")
+									.wrap-text
 										strong Tô cơm cá hồi
-										.price 
+										.price
 											del 61.000 VND
 											span 54.900 VNĐ
 				.wrap-button-slide
@@ -54,4 +55,4 @@ section.thuc-don-ct
 						em.material-icons arrow_back
 					.swiper-next.swipe-button-1
 						em.material-icons arrow_forward
-					
+

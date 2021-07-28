@@ -1,16 +1,20 @@
 const checkLayoutBanner123 = () => {
 	const pagesBanner = $("#page-banner");
 	const mainBanner = $("#home-banner");
+	const BreadCrumb = $(".global-breadcrumb");
 	if ($(window).width() > 1280) {
 		const widthHeader = $("header").outerWidth();
 		if (mainBanner.length >= 1) {
 			$("section").css("padding-left", widthHeader);
+			$("footer").css("padding-left", widthHeader);
 		} else if (pagesBanner.length >= 1) {
 			$("section").css("padding-left", widthHeader);
 			$("footer").css("padding-left", widthHeader);
+			BreadCrumb.css("padding-left", widthHeader);
 		} else {
 			$("section").css("padding-left", widthHeader);
 			$("footer").css("padding-left", widthHeader);
+			BreadCrumb.css("padding-left", widthHeader);
 		}
 	}
 	if ($(window).width() <= 1280) {
@@ -27,9 +31,20 @@ const checkLayoutBanner123 = () => {
 const slidePage = () => {
 	new Swiper(".banner-home .swiper-container", {
 		slidesPerView: 1,
+		autoplay: {
+			delay: 3000,
+		},
+		disableOnInteraction: true,
 		pagination: {
 			el: ".swiper-pagination",
 		},
+	});
+	var mySwiper = document.querySelector(".banner-home .swiper-container").swiper;
+	$(".banner-home .swiper-container").mouseenter(function () {
+		mySwiper.autoplay.stop();
+	});
+	$(".banner-home .swiper-container").mouseleave(function () {
+		mySwiper.autoplay.start();
 	});
 	new Swiper(".thuc-don-ct-2 .swiper-container", {
 		slidesPerView: 3,
@@ -316,6 +331,30 @@ const CheckActivePage = () => {
 		}
 	});
 };
+const checkProductDetail = () => {
+	if ($(".product-detail-page").length == 1) {
+		$("#page-banner").remove();
+		$(".global-breadcrumb").addClass("product-detail");
+	}
+};
+const hidenPagiPro = () => {
+	if ($(".thuc-don-ct").length == 1) {
+		$(".pagination").hide();
+	}
+};
+function checkClickDropdown() {
+	if ($(window).width() <= 1024) {
+		$('header .wrap-list-menu ul li a').click(function () {
+			if ($(this).hasClass('active')) {
+				return true;
+			} else {
+				$(this).closest('ul').find('a').removeClass('active')
+				$(this).addClass('active')
+			}
+			return false;
+		})
+	}
+}
 document.addEventListener("DOMContentLoaded", () => {
 	moveThucDon();
 	moveQuyTrinh();
@@ -324,7 +363,7 @@ document.addEventListener("DOMContentLoaded", () => {
 	checkMenuLayout();
 	mainSearch();
 	slidePage();
-	clickBuy();
+	// clickBuy();
 	tabAcordition();
 	moveNewsSpecial();
 	selectOption();
@@ -337,4 +376,7 @@ document.addEventListener("DOMContentLoaded", () => {
 		}
 	});
 	CheckActivePage();
+	hidenPagiPro();
+	checkProductDetail();
+	checkClickDropdown();
 });

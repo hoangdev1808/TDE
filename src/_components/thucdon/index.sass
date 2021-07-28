@@ -103,7 +103,7 @@
 					font-size: 18px
 					font-weight: 400
 					padding-top: 5px
-					transition: .3s all  ease-in-out
+					transition: .3s all ease-in-out
 					&:hover
 						color: $main-color
 				&.swiper-button-disabled
@@ -115,7 +115,7 @@
 					font-size: 18px
 					font-weight: 400
 					padding-top: 5px
-					transition: .3s all  ease-in-out
+					transition: .3s all ease-in-out
 					&:hover
 						color: $main-color
 				&.swiper-button-disabled
@@ -171,7 +171,7 @@
 						opacity: 0
 						left: 50%
 						transform: translateX(-50%)
-						transition: .3s all  ease-in-out
+						transition: .3s all ease-in-out
 				&+li
 					margin-left: 18px
 	.wrap-list-product
@@ -181,35 +181,50 @@
 	background-color: #ffffff
 	display: flex
 	flex-direction: column
-	align-items: center
-	padding-top: 30px
+	width: 100%
+	// align-items: center
+	padding-top: 0px
 	margin-bottom: 30px
-	transition: .3s all  ease-in-out
+	transition: .3s all ease-in-out
 	padding-bottom: 35px
 	&:hover
 		box-shadow: 0 0 8px rgba(0, 0, 0, 0.08)
 		border: 1px solid #000000
-	.img
-		display: block
-		width: auto
-		height: 200px
-		padding: 10px
+		strong
+			color: $main-color!important
 		img
-			width: 100%
-			height: 100%
-			object-fit: contain
+			transform: translate(-50%,-50%) scale(1.05)!important
+	.img
+		img
+			transition: .3s all ease-in-out
+		+center-image
+		// display: block
+		// width: auto
+		// height: 200px
+		// padding: 10px
+		// img
+		// 	width: 100%
+		// 	height: 100%
+		// 	object-fit: contain
 	.wrap-text
 		display: block
 		margin-top: 25 / 16 * 1rem
 		strong
 			color: #111111
-			font-size: 16px
+			font-size: 13px
 			font-weight: 700
 			font-family: Nunito
 			display: block
 			margin-top: -12px
 			margin-bottom: 20px
+			text-align: center
+			height: 35px
+			text-transform: uppercase
+			padding: 0 7px
+			transition: .3s all ease-in-out
+			+rgtext(2)
 		.price
+			height: 42px
 			del
 				display: block
 				text-align: center

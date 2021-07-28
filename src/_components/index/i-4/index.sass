@@ -1,8 +1,10 @@
-.index-4 
+.index-4
 	flex-direction: column
 	justify-content: center
 	width: 100%
 	background-color: #f5f5f5
+	[class*="Module"]
+		width: 100%
 	.wrap-box
 		width: 100%
 		display: flex
@@ -13,7 +15,7 @@
 				display: flex
 				flex-direction: row
 		.wrap-box-contact
-			background-image:  url('../assets/index/bg-i5.png')
+			background-image: url('../assets/index/bg-i5.png')
 			background-repeat: no-repeat
 			background-size: cover
 			background-position: center
@@ -31,30 +33,30 @@
 				display: flex
 				align-items: center
 				margin-bottom: 17px
-				p 
+				p
 					color: #111111
 					font-size: 24 / 16 * 1rem
 					font-weight: 700
 					font-family: Montserrat
 					margin-left: 15px
-			.text 
+			.text
 				color: #333333
 				font-size: 1rem
 				font-weight: 400
 				font-family: Nunito
 				line-height: 22px
 				+rgtext(4)
-			.hotline 
+			.hotline
 				margin-top: 18px
 				&:last-child
 					margin-top: 8px
-				p 
+				p
 					color: #111111
 					font-size: 14 / 16 * 1rem
 					font-weight: 400
 					font-family: Montserrat
 					letter-spacing: 0.7px
-				strong 
+				strong
 					color: $main-color
 					font-size: 18 / 16 * 1rem
 					font-weight: 700
@@ -68,7 +70,7 @@
 				z-index: 1
 				width: 100%
 				margin-left: -15px
-			&-left 
+			&-left
 				width: 48%
 				@media screen and ( max-width: 768px )
 					display: none
@@ -76,4 +78,4 @@
 				width: 100%
 				height: 100%
 				object-fit: cover
-				
+

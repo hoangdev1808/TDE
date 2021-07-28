@@ -2,35 +2,74 @@
 	.container
 		@media screen and ( min-width: 1366px )
 			max-width: 1143px!important
-	.section-title 
+	.section-title
 		color: #333333
 		font-size: 24px
 		font-weight: 700
 		font-family: Montserrat
+	.news-detail
+		background-color: #fff
+		padding: 30px !important
+		@media (max-width: 767.98px)
+			padding: 10px !important
+		.social-network-share
+			display: none
+		.bottom-wrapper-news-detail
+			margin-top: 5px
+		.card-title
+			padding-bottom: 10px
+			border-bottom: 1px solid rgb(211, 211, 211)
+			h1
+				color: #111
+				font-family: Montserrat
+				font-size: 1.875rem
+				font-weight: 800
+				@media (max-width: 767.98px)
+					font-size: 1.3rem
+					padding-top: 15px
+		.content_news-detail
+			p
+				margin-top: 10px
+				margin-bottom: 10px
+			ul
+				margin-top: 10px
+				margin-bottom: 10px
+			table
+				width: 100%
+				tr
+					td
+						border: 1px solid rgb(211, 211, 211)
+						padding-left: 15px
+						padding-right: 15px
+						@media (max-width: 767.98px)
+							padding-left: 5px
+							padding-right: 5px
+						ul
+							padding-left: 20px
 	.wrap-list
 		display: flex
 		justify-content: center
-		margin-bottom: 30 / 16 * 1rem		
-		ul 
+		margin-bottom: 30 / 16 * 1rem
+		ul
 			display: flex
 			padding: 2px 0px
 			@media screen and ( max-width: 992px )
 				overflow: auto
 				height: 50px
 				padding-top: 10px
-				&::-webkit-scrollbar 
+				&::-webkit-scrollbar
 					height: 2px
 					border-radius: 5px
 					padding-top: 10px
-				&::-webkit-scrollbar-thumb 
+				&::-webkit-scrollbar-thumb
 					background: $main-color
-			li 
+			li
 				list-style: none
 				&.active
 					a
 						background-color: $main-color
 						color: white
-				a 
+				a
 					height: 30px
 					min-width: 124px
 					box-shadow: 0 0 2px rgba(0, 0, 0, 0.28)
@@ -46,13 +85,13 @@
 					white-space: nowrap
 					align-items: center
 					justify-content: center
-					&:hover 
+					&:hover
 						background-color: $main-color
 						color: white
-				&+li 
+				&+li
 					margin-left: 12px
-	.wrap-acr 
-		.title-acr 
+	.wrap-acr
+		.title-acr
 			display: flex
 			align-items: center
 			justify-content: space-between
@@ -60,16 +99,16 @@
 			min-height: 50px
 			padding-right: 28px
 			background-color: #ffffff
-			transition: .3s all  ease-in-out
+			transition: .3s all ease-in-out
 			cursor: pointer
 			margin-bottom: 10px
 			@media screen and ( max-width: 575px )
 				padding-right: 8px
-			&.active 
+			&.active
 				background-color: $main-color
 				em
 					color: white
-				p 
+				p
 					color: white
 				&::after
 					content: 'expand_less'
@@ -80,23 +119,23 @@
 				font-size: 30 / 16 * 1rem
 				font-weight: 400
 				font-family: Material Icons
-				transition: .3s all  ease-in-out
-			p 
+				transition: .3s all ease-in-out
+			p
 				color: #333333
 				font-size: 18 / 16 * 1rem
 				font-weight: 500
 				font-family: Montserrat
-				span 
+				span
 					margin-right: 5px
 					&::after
 						content: '.'
-		.content-acr 
+		.content-acr
 			padding-left: 28 / 16 * 1rem
 			padding-right: 54 / 16 * 1rem
 			padding-top: 24 / 16 * 1rem
 			padding-bottom: 24 / 16 * 1rem
 			display: none
-			p 
+			p
 				text-align: justify
 				color: #333333
 				font-size: 18 / 16 * 1rem
@@ -105,26 +144,26 @@
 				line-height: 24px
 	.wrap-form-lh
 		margin-top: 53px
-		.form-row 
+		.form-row
 			margin-left: -15px
 			margin-right: -15px
 			.col-sm
 				padding: 0 15px
 		.form-group
 			margin-bottom: 30px
-			input 
+			input
 				width: 100%
 				height: 50px
 				background-color: #ffffff
 				border: 0
 				outline: 0
 				padding-left: 20px
-				&::placeholder 
+				&::placeholder
 					color: #999999
 					font-size: 18px
 					font-weight: 400
 					font-family: Nunito
-			.frm-btn 
+			.frm-btn
 				input
 					width: 224px
 					height: 36px
@@ -135,7 +174,7 @@
 					font-family: Nunito
 					padding-left: 0px
 					text-transform: uppercase
-			textarea 
+			textarea
 				width: 100%
 				outline: none
 				border: 0
@@ -143,7 +182,7 @@
 				background-color: #ffffff
 				padding-top: 20px
 				padding-left: 20px
-				&::placeholder 
+				&::placeholder
 					color: #999999
 					font-size: 18px
 					font-weight: 400
