@@ -178,7 +178,7 @@
 				<xsl:attribute name="title">
 					<xsl:value-of select="Title"></xsl:value-of>
 				</xsl:attribute>
-				<xsl:text disable-output-escaping="yes">xem thêm</xsl:text>
+				<xsl:value-of disable-output-escaping="yes" select="/ZoneList/ViewMoreText"></xsl:value-of>
 			</a>
 		</div>
 	</xsl:template>
@@ -253,7 +253,7 @@
 	</xsl:template>
 	<xsl:template match="News" mode="TIENICH">
 		<div class="col-lg-6">
-			<a class="box-img" href="">
+			<a class="box-img" href="javascript:void(0)">
 				<div class="img">
 					<img >
 						<xsl:attribute name="src">

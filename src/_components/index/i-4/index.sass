@@ -14,21 +14,28 @@
 				width: 100%
 				display: flex
 				flex-direction: row
+				@media (max-width: 575.98px)
+					flex-wrap: wrap
 		.wrap-box-contact
 			background-image: url('../assets/index/bg-i5.png')
 			background-repeat: no-repeat
 			background-size: cover
 			background-position: center
-			width: 332px
+			flex: 0 0 295px
+			margin-left: 0px
 			height: 360px
-			margin-left: -107px
 			padding-top: 43px
 			padding-left: 44px
 			z-index: 2
 			padding-right: 40px
-			flex: 0 0 332px
 			@media screen and ( max-width: 768px )
 				margin-left: 0px
+			@media (max-width: 575.98px)
+				flex: 0 0 100%
+				width: 100%
+				height: auto
+				padding-bottom: 30px
+				max-width: 100%
 			.title-hotline
 				display: flex
 				align-items: center
@@ -66,6 +73,11 @@
 		.img
 			width: auto
 			height: 360px
+			@media (max-width: 575.98px)
+				flex: 0 0 100%
+				width: 100%
+				height: 30vh
+				max-width: 100%
 			&-right
 				z-index: 1
 				width: 100%

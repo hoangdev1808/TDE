@@ -2,15 +2,15 @@
 	.section-title
 		margin-bottom: 0
 		text-align: left
-		* 
+		*
 			text-align: left
 			margin-bottom: 0
-	.intro 
+	.intro
 		display: flex
 		padding-bottom: (40/16)*1rem
 		padding-top: 56 / 16 * 1rem
 		flex-wrap: wrap
-		&-content 
+		&-content
 			@media screen and ( max-width: 1200px )
 				flex: 0 0 100%
 				display: flex
@@ -26,7 +26,7 @@
 				flex: 0 0 100%
 				padding-left: 0
 				padding-right: 0
-			.button-order 
+			.button-order
 				margin: 0!important
 			.content
 				padding: (20/16)*1rem 0 37 / 16 * 1rem
@@ -40,9 +40,9 @@
 		&-detail
 			.detail
 				padding: 15 / 16 *1rem
-			ul 
+			ul
 				padding: 0
-				li 
+				li
 					list-style: none
 					color: #333333
 					font-family: Nunito
@@ -50,7 +50,7 @@
 					font-weight: 400
 					line-height: 22px
 					display: flex
-					&+li 
+					&+li
 						margin-top: 25 / 16 * 1rem
 					&:last-child
 						margin-bottom: 10 / 16 * 1rem
@@ -63,7 +63,7 @@
 						font-weight: 400
 			&-header
 				display: flex
-				img 
+				img
 					height: 300px
 					display: block
 					width: auto
@@ -72,21 +72,25 @@
 						flex: 0 0 100%
 						display: flex
 						justify-content: center
-				.detail 
+				.detail
 					.title *
 						color: #111111
 						font-family: "Montserrat"
 						font-size: 30 / 16 * 1rem
 						font-weight: 800
 						margin-bottom: 15px
-					.content 
+						@media (max-width: 767.98px)
+							text-align: center
+							margin-top: 10px
+
+					.content
 						*
 							color: #333333
 							font-family: Nunito
 							font-size: 16px
 							font-weight: 400
 							line-height: 22px
-						p+p 
+						p+p
 							margin-top: 25 / 16 * 1rem
 				@media screen and (max-width: 768px)
 					display: block
@@ -96,10 +100,10 @@
 						.content
 							padding-bottom: 1rem
 			&-body
-				p 
+				p
 					color: #333333
 					font-family: Nunito
-					font-size: 1rem 
+					font-size: 1rem
 					font-weight: 400
 					display: flex
 					padding-left: 22px
@@ -110,7 +114,7 @@
 						padding-right: 10px
 						font-size: 1rem
 						font-weight: 400
-					&+p 
+					&+p
 						margin-top: 16 / 16 * 1rem
 				padding-left: 35 / 16 *1rem
 				@media screen and (max-width: 768px)
@@ -130,6 +134,8 @@
 					padding-right: (10/16)*1rem
 				&:last-child
 					padding-left: (36/16)*1rem
+					@media (max-width: 767.98px)
+						padding-left: 15px
 					.content:first-child
 						padding-top: 0!important
 	button.close

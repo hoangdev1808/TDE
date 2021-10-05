@@ -37,7 +37,7 @@
                     </div>
                     <div class="readmore">
                         <a>
-                            <xsl:attribute name="data-toggle">
+                            <!-- <xsl:attribute name="data-toggle">
                                 <xsl:text>modal</xsl:text>
                             </xsl:attribute>
                             <xsl:attribute name="data-target">
@@ -46,11 +46,17 @@
                             </xsl:attribute>
                             <xsl:attribute name="href">
                                 <xsl:text disable-output-escaping="yes">javscript: void(0);</xsl:text>
+                            </xsl:attribute> -->
+
+
+                            <xsl:attribute name="href">
+                                <xsl:value-of select="Url"></xsl:value-of>
                             </xsl:attribute>
+                      
                             <xsl:attribute name="title">
                                 <xsl:value-of select="Title"></xsl:value-of>
                             </xsl:attribute>
-                            <xsl:text disable-output-escaping="yes">Xem thêm</xsl:text>
+                            <xsl:value-of select="/NewsList/ViewMoreText" disable-output-escaping="yes"/>
                         </a>
                     </div>
                 </div>

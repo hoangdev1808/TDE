@@ -20,8 +20,8 @@
 									<xsl:attribute name="title">
 										<xsl:value-of select="Title"></xsl:value-of>
 									</xsl:attribute>
-									<img >
-										<xsl:attribute name="src">
+									<img class="lazyload">
+										<xsl:attribute name="data-src">
 											<xsl:value-of select="ProductImages[1]/ImageUrl"></xsl:value-of>
 										</xsl:attribute>
 										<xsl:attribute name="alt">
@@ -34,8 +34,8 @@
 						<div class="col-lg-6">
 							<div class="wrap-text">
 								<h2>
-									<xsl:value-of disable-output-escaping="yes" select="ProductId"></xsl:value-of>
-									<xsl:text disable-output-escaping="yes"> - </xsl:text>
+									<!-- <xsl:value-of disable-output-escaping="yes" select="ProductId"></xsl:value-of> -->
+									<!-- <xsl:text disable-output-escaping="yes"> - </xsl:text> -->
 									<xsl:value-of select="Title" disable-output-escaping="yes"></xsl:value-of>
 								</h2>
 								<xsl:value-of select="EditLink" disable-output-escaping="yes"></xsl:value-of>
@@ -44,7 +44,9 @@
 								</div>
 								<div class="wrap-des">
 									<div class="wrap-left">
-										<span>Bao gồm</span>
+										<span>
+											<xsl:value-of disable-output-escaping="yes" select="/ProductDetail/ConsistsOf"></xsl:value-of>
+										</span>
 									</div>
 									<div class="wrap-right">
 										<xsl:value-of select="BriefContent" disable-output-escaping="yes"></xsl:value-of>
@@ -56,7 +58,7 @@
 										<xsl:attribute name="title">
 											<xsl:value-of select="Title"></xsl:value-of>
 										</xsl:attribute>
-										<xsl:text disable-output-escaping="yes">Mua ngay</xsl:text>
+										<xsl:value-of disable-output-escaping="yes" select="/ProductDetail/BuyNowText"></xsl:value-of>
 									</a>
 									<div class="wrap-list-buy">
 										<div class="wrap-icon">
@@ -71,21 +73,21 @@
 			</div>
 			<div class="thuc-don-ct-2 section">
 				<div class="container">
-					<div class="section-title">Món ăn khác </div>
+					<div class="section-title"><xsl:value-of disable-output-escaping="yes" select="/ProductDetail/OtherDishText"></xsl:value-of></div>
 					<div class="wrap-slide">
 						<div class="swiper-container">
 							<div class="swiper-wrapper">
 								<xsl:apply-templates select="ProductOther"></xsl:apply-templates>
 							</div>
 						</div>
-						<div class="wrap-button-slide">
+						<!-- <div class="wrap-button-slide">
 							<div class="swiper-prev swipe-button-1">
 								<em class="material-icons">arrow_back</em>
 							</div>
 							<div class="swiper-next swipe-button-1">
 								<em class="material-icons">arrow_forward</em>
 							</div>
-						</div>
+						</div> -->
 					</div>
 				</div>
 			</div>
@@ -119,8 +121,8 @@
 					<xsl:value-of select="Title"></xsl:value-of>
 				</xsl:attribute>
 				<div class="img">
-					<img >
-						<xsl:attribute name="src">
+					<img class="lazyload">
+						<xsl:attribute name="data-src">
 							<xsl:value-of select="ImageUrl"></xsl:value-of>
 						</xsl:attribute>
 						<xsl:attribute name="alt">

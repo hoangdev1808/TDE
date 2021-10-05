@@ -1,0 +1,239 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="~/App_MasterPages/layout.Master.cs" Inherits="CanhCam.Web.layout" %>
+
+<!DOCTYPE html>
+<html id="Html1" runat="server">
+
+<head id="Head1" runat="server">
+	<title></title>
+	<portal:MetaContent ID="MetaContent" runat="server" />
+	<meta name="viewport"
+		content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<portal:StyleSheetCombiner ID="StyleSheetCombiner" runat="server" IncludejQueryUI="false"
+		JQueryUIThemeName="smoothness" />
+	<portal:Favicon ID="Favicon1" runat="server" />
+	<portal:ScriptLoader ID="ScriptLoader1" runat="server" IncludejQueryUICore="true" IncludeFancyBox="true" />
+	<portal:GoogleAnalyticsScript ID="GoogleAnalyticsScript1" runat="server" />
+
+	<link
+		href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800;900&amp;display=swap"
+		rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="/Data/Sites/5/skins/default/css/core.min.css">
+	<link rel="stylesheet" type="text/css" href="/Data/Sites/5/skins/default/css/main.min.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" />
+	<link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+	<link rel="stylesheet"
+		href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css">
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+
+	<!--*********************************************************************************************-->
+	<!-- Canh Cam - the best Web Solutions Provider - http://www.canhcam.vn                          -->
+	<!-- 156 Nguyen Van Thu, District 1, Ho Chi Minh City, Viet Nam.                                 -->
+	<!-- Phone: (+84) 8 38238364 – Fax: (+84) 8 38238365 - Email: info@canhcam.vn                    -->
+	<!-- Facebook: https://www.facebook.com/canhcam.vn                                               -->
+	<!--*********************************************************************************************-->
+</head>
+
+<body id="Body" runat="server" class="canhcam">
+	<portal:FacebookSdk ID="fbsdk" runat="server" />
+	<portal:LayoutDisplaySettings ID="LayoutDisplaySettings1" runat="server" />
+	<form id="frmMain" runat="server">
+		<asp:SiteMapDataSource ID="SiteMapData" runat="server" ShowStartingNode="false" />
+		<asp:SiteMapDataSource ID="PageMapDataSource" runat="server" ShowStartingNode="false" />
+		<asp:SiteMapDataSource ID="ChildPageSiteMapData" runat="server" ShowStartingNode="false" />
+		<asp:ScriptManager ID="ScriptManager1" EnablePageMethods="true" runat="server" />
+		<div class="ov-h" id="wrapper">
+			<header>
+				<div class="wrap-header">
+					<div class="menu-mobile">
+						<div class="wrap-right">
+							<div class="icon-search"> <em class="search-icon material-icons">search</em></div>
+							<div class="hambuger"> <span></span><span></span><span></span><span></span></div>
+						</div>
+					</div>
+					<div class="menu-desktop">
+						<div class="logo">
+							<portal:ModuleWrapper ID="mdl325" runat="server" ConfigureModuleId="325" />
+						</div>
+						<div class="wrap-list-menu">
+							<portal:ModuleWrapper ID="mdl329" runat="server" ConfigureModuleId="329" />
+						</div>
+						<div class="wrap-list-menu-icon">
+							<portal:ModuleWrapper ID="mdl326" runat="server" ConfigureModuleId="326" />
+						</div>
+						<div class="wrap-icon">
+							<div class="wrap-left"> <em class="search-icon material-icons">search</em>
+								<portal:ModuleWrapper ID="mdl327" runat="server" ConfigureModuleId="327" />
+							</div>
+							<div class="dive"></div>
+							<portal:ModuleWrapper ID="mdl328" runat="server" ConfigureModuleId="328" />
+						</div>
+					</div>
+				</div>
+				<div class="search-wrap">
+					<div class="search-middle">
+						<div class="close-btn">X</div>
+						<div class="wrap-button">
+							<portal:ModuleWrapper ID="mdl349" runat="server" ConfigureModuleId="349" />
+						</div>
+					</div>
+				</div>
+			</header>
+			<main>
+				<asp:Panel ID="divAlt1" runat="server" CssClass="altcontent1">
+					<asp:ContentPlaceHolder ID="altContent1" runat="server">
+					</asp:ContentPlaceHolder>
+				</asp:Panel>
+				<asp:Panel ID="divLeft" runat="server" CssClass="leftside" Visible="True" SkinID="pnlPlain">
+					<asp:ContentPlaceHolder ID="leftContent" runat="server">
+					</asp:ContentPlaceHolder>
+				</asp:Panel>
+				<asp:Panel ID="divCenter" runat="server" Visible="True" CssClass="center-rightandleftmargins"
+					SkinID="pnlPlain">
+					<asp:ContentPlaceHolder ID="mainContent" runat="server">
+					</asp:ContentPlaceHolder>
+				</asp:Panel>
+					<section class="banner-home" id="home-banner">
+						<portal:modulewrapper id="mdl358" runat="server" configuremoduleid="358" />
+						<div class="index-1 animation-bottom">
+							<div class="container">
+								<portal:modulewrapper id="mdl359" runat="server" configuremoduleid="359" />
+							</div>
+						</div>
+					</section>
+					<section class="index-2">
+						<div class="container-fluid animation-left">
+							<portal:modulewrapper id="mdl360" runat="server" configuremoduleid="360" />
+						</div>
+					</section>
+					<section class="index-3">
+						<div class="container">
+							<portal:modulewrapper id="mdl361" runat="server" configuremoduleid="361" />
+						</div>
+					</section>
+					<section class="index-4">
+							<portal:modulewrapper id="mdl362" runat="server" configuremoduleid="362" />
+						</div>
+					</section>
+
+				<asp:Panel ID="divRight" runat="server" Visible="True" CssClass="rightside" SkinID="pnlPlain">
+					<asp:ContentPlaceHolder ID="rightContent" runat="server">
+					</asp:ContentPlaceHolder>
+				</asp:Panel>
+			</main>
+			<footer>
+				<div class="container">
+					<div class="footer-container">
+						<div class="row">
+							<div class="col-lg-5 col-md-4 col-sm-6">
+								<div class="footer-card">
+									<portal:ModuleWrapper ID="mdl330" runat="server" ConfigureModuleId="330" />
+
+								</div>
+							</div>
+							<div class="col-lg-4 col-md-4 col-sm-6">
+								<div class="footer-card">
+									<portal:ModuleWrapper ID="mdl331" runat="server" ConfigureModuleId="331" />
+								</div>
+							</div>
+							<div class="col-lg-3 col-md-4 col-sm-6">
+								<div class="footer-card">
+									<portal:ModuleWrapper ID="mdl332" runat="server" ConfigureModuleId="332" />
+								</div>
+							</div>
+						</div>
+						<div class="footer-copyright">
+							<portal:ModuleWrapper ID="mdl333" runat="server" ConfigureModuleId="333" />
+
+						</div>
+					</div>
+				</div>
+			</footer>
+		</div>
+		<div id="overlay"></div>
+		<div id="phone-call"><a href="tel:0931771893">
+				<div class="phone-fixed is-animating"></div>
+			</a></div>
+		<portal:AutoHidePanel ID="ah1" CssClass="cmsadminpanel" runat="server">
+			<div class="row">
+				<div class="col-lg-12">
+					<nav>
+						<ul class="nav navbar-nav listmenu">
+							<portal:AdminMenuLink ID="lnkDashboard" IconCssClass="fa fa-key" RenderAsListItem="true"
+								runat="server" />
+							<portal:FileManagerLink ID="lnkFileManager" IconCssClass="fa fa-folder-open"
+								RenderAsListItem="true" runat="server" />
+							<portal:PageEditFeaturesLink ID="lnkPageContent" IconCssClass="fa fa-cog"
+								RenderAsListItem="true" runat="server" />
+							<portal:PageEditSettingsLink ID="lnkPageSettings" IconCssClass="fa fa-edit"
+								RenderAsListItem="true" runat="server" />
+							<portal:NewZoneLink ID="lnkNewZone" IconCssClass="fa fa-file" RenderAsListItem="true"
+								runat="server" />
+							<portal:ZoneEditSettingsLink ID="lnkZoneSettings" IconCssClass="fa fa-edit"
+								RenderAsListItem="true" runat="server" />
+							<li>
+								<div class="form-inline">
+									<div class="form-group">
+										<label class="sr-only">Mode</label>
+									</div>
+									<div class="form-group">
+										<asp:ContentPlaceHolder ID="pageEditContent" runat="server">
+										</asp:ContentPlaceHolder>
+									</div>
+								</div>
+							</li>
+						</ul>
+						<ul class="nav">
+							<li><a href="#" id="pullmenucms"><i class="fa fa-chevron-circle-right"></i></a></li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+			<script type="text/javascript">
+				$(document).ready(function () {
+					$("#pullmenucms").click(function (e) {
+						e.preventDefault();
+						if ($(this).parents('.cmsadminpanel').hasClass('toggled')) {
+							ShowToolbar();
+							Set_Cookie('toolbarOpenState', 'open');
+						} else {
+							HideToolbar();
+							Set_Cookie('toolbarOpenState', 'closed');
+						}
+					});
+					var openState = Get_Cookie('toolbarOpenState');
+					if (openState != null) {
+						if (openState == 'closed') {
+							HideToolbar();
+						}
+						if (openState == 'open') {
+							ShowToolbar();
+						}
+					}
+				});
+
+				function HideToolbar() {
+					$('.cmsadminpanel').addClass("toggled");
+					$('.fa-chevron-circle-right').addClass('fa-rotate-180');
+				}
+
+				function ShowToolbar() {
+					$('.cmsadminpanel').removeClass("toggled");
+					$('.fa-chevron-circle-right').removeClass('fa-rotate-180');
+				}
+			</script>
+		</portal:AutoHidePanel>
+		<portal:Woopra ID="woopra11" runat="server" />
+		<ul class="contact-tool">
+		<portal:ModuleWrapper ID="mdl366" runat="server" ConfigureModuleId="366" />
+		</ul>
+	</form>
+	<script src="/Data/Sites/5/skins/default/js/core.min.js"></script>
+	<script src="/Data/Sites/5/skins/default/js/main.min.js"></script>
+	<script src="/Data/Sites/5/skins/default/js/custom.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.js"></script>
+</body>
+
+</html>

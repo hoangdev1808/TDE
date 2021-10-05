@@ -6,12 +6,12 @@
 		<h3 class="section-title">
 			<xsl:value-of select="/NewsList/ModuleTitle" disable-output-escaping="yes"></xsl:value-of>
 		</h3>
-		<div class="row"> 
+		<div class="row">
 			<xsl:apply-templates select="/NewsList/News[1]" mode="bigbanner"></xsl:apply-templates>
 			<xsl:apply-templates select="/NewsList/News"></xsl:apply-templates>
 		</div>
 	</xsl:template>
-	
+
 	<xsl:template match="News" mode="bigbanner">
 		<div class="col-lg-8 col-md-12">
 			<div class="box-big-post">
@@ -21,7 +21,7 @@
 					</xsl:attribute>
 					<xsl:attribute name="target">
 						<xsl:value-of select="Target"></xsl:value-of>
-					</xsl:attribute>	  					
+					</xsl:attribute>
 					<div class="img">
 						<img>
 							<xsl:attribute name="src">
@@ -29,11 +29,13 @@
 							</xsl:attribute>
 							<xsl:attribute name="alt">
 								<xsl:value-of disable-output-escaping="yes" select="Title"></xsl:value-of>
-							</xsl:attribute>  						
+							</xsl:attribute>
 						</img>
 					</div>
 					<div class="box-text">
-						<p>BẢN TIN TVN</p>
+						<p>
+							<xsl:value-of disable-output-escaping="yes" select="/NewsList/TvnNews"></xsl:value-of>
+						</p>
 						<h3>
 							<xsl:value-of disable-output-escaping="yes" select="Title"></xsl:value-of>
 						</h3>
@@ -54,21 +56,21 @@
 						</xsl:attribute>
 						<xsl:attribute name="target">
 							<xsl:value-of select="Target"></xsl:value-of>
-						</xsl:attribute>						
-						<div class="img"> 
+						</xsl:attribute>
+						<div class="img">
 							<img>
 								<xsl:attribute name="src">
 									<xsl:value-of select="ImageUrl"></xsl:value-of>
 								</xsl:attribute>
 								<xsl:attribute name="alt">
 									<xsl:value-of disable-output-escaping="yes" select="Title"></xsl:value-of>
-								</xsl:attribute>  								
+								</xsl:attribute>
 							</img>
 						</div>
-						<div class="box-text"> 
-							<p>BẢN TIN TVN</p>
+						<div class="box-text">
+							<p><xsl:value-of disable-output-escaping="yes" select="/NewsList/TvnNews"></xsl:value-of></p>
 							<div class="mota">
-								<h3 class="lcl lcl-3"> 
+								<h3 class="lcl lcl-3">
 									<xsl:value-of disable-output-escaping="yes" select="Title"></xsl:value-of>
 								</h3>
 							</div>
@@ -77,7 +79,7 @@
 					</a>
 				</div>
 			</div>
-		</xsl:if>  
-	</xsl:template>	 	
+		</xsl:if>
+	</xsl:template>
 
 </xsl:stylesheet>

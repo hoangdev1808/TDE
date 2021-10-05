@@ -1,18 +1,21 @@
-.about-5 
-	.wrap-slide 
+.about-5
+	.wrap-slide
 		position: relative
-		.swiper-slide 
+		.swiper-slide
 			display: flex
 			align-items: center
 			justify-content: center
-		.img 
+		.swiper-container
+			@media (max-width: 575.98px)
+				padding: 0 30px !important
+		.img
 			width: auto
 			height: 160px
-			img 
+			img
 				width: 100%
 				height: 100%
 				object-fit: contain
-		.swiper-prev,.swiper-next 
+		.swiper-prev,.swiper-next
 			top: 50%
 			z-index: 99
 		.swiper-prev
@@ -23,3 +26,14 @@
 			margin-left: -40px
 			@media screen and ( max-width: 1500px )
 				margin-left: 15px
+		@media (max-width: 575.98px)
+			.swiper-prev
+				right: auto
+				left: 0
+				position: absolute
+				transform: translateY(-50%)
+			.swiper-next
+				left: auto
+				right: 0
+				position: absolute
+				transform: translateY(-50%)

@@ -27,7 +27,7 @@
                         <xsl:value-of disable-output-escaping="yes" select="FullUrl">
                         </xsl:value-of>
                       </xsl:attribute>
-                      <span class="mdi mdi-facebook"></span>
+                      <span class="fab fa-facebook-f"></span>
                     </a>
                     <a href="#">
                       <xsl:attribute name="href">

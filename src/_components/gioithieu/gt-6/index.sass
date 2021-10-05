@@ -1,8 +1,8 @@
-.about-6 
-	.steps-content 
+.about-6
+	.steps-content
 		background-color: #fff
 		padding: 15px 35px 35px 20px
-	.section-title 
+	.section-title
 		*
 			margin-bottom: -10px
 			@media screen and ( max-width: 575px )
@@ -11,17 +11,20 @@
 		@media screen and ( min-width: 1200px )
 			padding-left: 0px
 			padding-right: 0px
-	.wrap-slide 
+	.swiper-container
+		@media (max-width: 575.98px)
+			padding: 0 30px
+	.wrap-slide
 		position: relative
 		.wrap-box
-			.img 
+			.img
 				+img-ratio(180/335)
-			.steps-content 
+			.steps-content
 				height: 100px
-				background-color: #fff 
+				background-color: #fff
 				.font-weight-bold
 					+rgtext(3)
-		.wrap-button-slide 
+		.wrap-button-slide
 			justify-content: flex-end!important
 			display: flex
 			align-items: center
@@ -31,11 +34,26 @@
 				position: static
 				margin: 0!important
 				transform: translateY(0)
+				z-index: 99
 			.swiper-next
 				width: 32px
 				@media screen and ( max-width: 575px )
 					margin-left: 15px!important
+					left: auto
+					right: 0
+					position: absolute
+					transform: translateY(-50%)
+					display: flex
+					align-items: center
+					justify-content: center
 			.swiper-prev
 				width: 32px
 				@media screen and ( max-width: 575px )
 					margin-right: 15px!important
+					right: auto
+					left: 0
+					position: absolute
+					transform: translateY(-50%)
+					display: flex
+					align-items: center
+					justify-content: center

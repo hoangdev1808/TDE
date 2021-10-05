@@ -103,13 +103,11 @@
 								</div>
 								<div class="col-lg-4 col-md-4 col-sm-6">
 									<div class="footer-card">
-										<div class="title-footer">Liên kết nhanh1</div>
 										<portal:ModuleWrapper ID="mdl331" runat="server" ConfigureModuleId="331" />
 									</div>
 								</div>
 								<div class="col-lg-3 col-md-4 col-sm-6">
 									<div class="footer-card">
-										<div class="title-footer">Mạng xã hội</div>
 										<portal:ModuleWrapper ID="mdl332" runat="server" ConfigureModuleId="332" />
 									</div>
 								</div>
@@ -199,6 +197,7 @@
 		<script src="/Data/Sites/5/skins/default/js/core.min.js"></script>
 		<script src="/Data/Sites/5/skins/default/js/fullpage.js"></script>
 		<script src="/Data/Sites/5/skins/default/js/main.min.js"></script>
+		<script src="/Data/Sites/5/skins/default/js/ecommerce.js"></script>
 		<script src="/Data/Sites/5/skins/default/js/custom.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.js"></script>
 		<div id="fb-root"></div>

@@ -14,7 +14,7 @@
 		</div>
 	</xsl:template>
 	<xsl:template match="Product">
-		<div class="col-xl-4 col-md-6 col-xs-6">
+		<div class="col-xl-4 col-md-6 col-6">
 			<xsl:attribute name="href">
 				<xsl:value-of select="Url"></xsl:value-of>
 			</xsl:attribute>

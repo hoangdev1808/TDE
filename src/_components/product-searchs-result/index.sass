@@ -1,0 +1,52 @@
+.page-search-products
+	.searchcontrols
+		.form-group
+			flex: 1
+			margin-bottom: 0 !important
+			input
+				width: 100%
+				border: 1px solid $main-color
+				border-radius: 0
+		.seachpage-btn
+			background-color: $main-color
+			color: white
+			border-radius: 0
+	.search-product-wrapper
+		padding-top: 0px
+		padding-bottom: 30px
+	.searchsummary
+		margin-bottom: 20px
+	.wrap-product-sugget-search
+		height: 256px
+		margin-top: 30px
+		overflow: auto
+.productsearchbox
+	position: relative
+	.suggestsearch
+		position: absolute
+		top: 120%
+		left: 0
+		width: 100%
+		.wrap-product
+			padding-bottom: 0
+		.wrap-text
+			strong
+				margin-top: 0
+				margin-bottom: 0
+.wrap-product-sugget-search
+	height: 356px
+	padding-left: 0 !important
+	padding-right: 0 !important
+	overflow: auto
+	&::-webkit-scrollbar
+		width: 2px
+	&::-webkit-scrollbar-track
+		background: #fff
+	&::-webkit-scrollbar-thumb
+		background: $main-color
+	.row
+		@media (max-width: 575.98px)
+			margin-left: -2.5px
+			margin-right: -2.5px
+			[class*='col']
+				padding: 0 2.5px

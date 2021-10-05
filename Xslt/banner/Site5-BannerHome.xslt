@@ -14,6 +14,9 @@
 	<xsl:template match="Banner">
 		<div class="swiper-slide">
 			<a class="wrap-img">
+				<xsl:attribute name="target">
+					<xsl:value-of disable-output-escaping="yes" select="Target"></xsl:value-of>
+				</xsl:attribute>
 				<xsl:choose>
 					<xsl:when test="Url !=''">
 						<xsl:attribute name="href">

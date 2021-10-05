@@ -7,6 +7,7 @@
         "vendors/mapping.js",
         "vendors/mapping-listener.js",
         "bower_components/swiper/dist/js/swiper.min.js",
+        "src/plugins/lazysizes/lazysizes.min.js",
         "bower_components/fancybox/dist/jquery.fancybox.min.js",
         "bower_components/aos/dist/aos.js",
         "vendors/mapping-listener.js",

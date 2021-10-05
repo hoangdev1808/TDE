@@ -1,5 +1,8 @@
 .lienhe
 	padding-top: (55/16)*1rem
+	.contact-info-2
+		@media (max-width: 575.98px)
+			padding: 0 20px
 	.content-sub
 		color: #999999!important
 		font-size: (14/16)*1rem
@@ -13,24 +16,24 @@
 			font-family: "Montserrat"
 	.content
 		*
-		color: #333333
-		font-size: 1rem
-		font-weight: 400
-		font-family: Nunito
-		line-height: 22px
+			color: #333333
+			font-size: 1rem
+			font-weight: 400
+			font-family: Nunito
+			line-height: 22px
 		&-2
 			font-size: 1rem
-			color:#111111
+			color: #111111
 			line-height: (22/16)*1rem
-	.zoom-in 
+	.zoom-in
 		display: block
 		overflow: hidden
-		img 
-			transition: .3s all  ease-in-out
+		img
+			transition: .3s all ease-in-out
 		&:hover img
 			transform: scale(1.05)
-			transition: .3s all  ease-in-out
-		padding: (55/16)*1rem 0
+			transition: .3s all ease-in-out
+			padding: (55/16)*1rem 0
 	.contact
 		display: flex
 		justify-content: center
@@ -70,7 +73,7 @@
 			.contact-item
 				display: flex
 				align-items: center
-				.material-icons	
+				.material-icons
 					padding-right: (20/16)*1rem
 				&:first-child
 					padding: (20/16)*1rem 0
@@ -92,23 +95,23 @@
 					width: 100%
 					@media screen and (max-width: 1520px)
 						max-width: 100%
-					textarea 
-						color: #c5c5c5
+					textarea
+						color: #333
 						border: unset
 						border-bottom: 1px solid #ebebeb
 						padding-left: 0
-						font-weight: 200
+						font-weight: 400
 						padding-bottom: 5px
 						width: 100%
 						background-color: transparent
 						height: 35px
 					input
-						color: #c5c5c5
+						color: #333
 						border: unset
 						border-bottom: 1px solid #ebebeb
 						padding-left: 0
 						padding-bottom: 5px
-						font-weight: 200
+						font-weight: 400
 						width: 100%
 					.form-control
 						border-radius: unset
@@ -161,6 +164,11 @@
 				padding-bottom: 20px
 				margin-left: 0
 				margin-top: 21px
+			.contact-form-detail
+				.pt-2
+					*
+						font-size: 14px !important
+						font-weight: 600
 @media only screen and (max-width: 400px)
 	.lienhe
 		.contact-info

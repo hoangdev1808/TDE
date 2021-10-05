@@ -7,11 +7,11 @@
         <section class="block_recruitment-1">
             <div class="container">
                 <div class="block-title">
-                    <div class="head-title">
-                        <h1>Tuyển dụng</h1>
-                    </div>
+             
                     <div class="title-recruitment-1">
-                        <h2>vị trí tuyển dụng</h2>
+                        <h2>
+                            <xsl:value-of select="/NewsList/VacancyText" disable-output-escaping="yes"/>
+                        </h2>
                     </div>
                 </div>
                 <div class="row big-recruitment">
@@ -76,7 +76,7 @@
                                     <xsl:attribute name="title">
                                         <xsl:value-of select="Title"></xsl:value-of>
                                     </xsl:attribute>
-                                    <xsl:text disable-output-escaping="yes">Xem chi tiết</xsl:text>
+                                    <xsl:value-of select="/NewsList/DetailText" disable-output-escaping="yes"/>
                                 </a>
                             </div>
                         </li>
@@ -136,7 +136,7 @@
                                     <xsl:attribute name="title">
                                         <xsl:value-of select="Title"></xsl:value-of>
                                     </xsl:attribute>
-                                    <xsl:text disable-output-escaping="yes">Xem chi tiết</xsl:text>
+                                    <xsl:value-of select="/NewsList/DetailText" disable-output-escaping="yes"/>
                                 </a>
                             </div>
                         </li>

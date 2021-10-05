@@ -76,7 +76,8 @@
 							</xsl:attribute>
 							<xsl:attribute name="title">
 								<xsl:value-of select="Title" disable-output-escaping="yes"></xsl:value-of>
-							</xsl:attribute>Xem thêm
+							</xsl:attribute>          					
+							<xsl:value-of select="/NewsList/ViewMoreText" disable-output-escaping="yes"/>
 							<span class="ri-arrow-right-circle-fill"></span>
 						</a>
 					</div>

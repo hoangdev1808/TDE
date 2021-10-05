@@ -9,7 +9,7 @@
 		</div>
 	</xsl:template>
 	<xsl:template match="Product">
-		<div class="col-xl-3 col-md-6">
+		<div class="col-xl-3 col-6">
 			<div class="wrap-product">
 				<div class="img">
 					<a>
@@ -19,8 +19,8 @@
 						<xsl:attribute name="title">
 							<xsl:value-of select="Title"></xsl:value-of>
 						</xsl:attribute>
-						<img >
-							<xsl:attribute name="src">
+						<img class="lazyload">
+							<xsl:attribute name="data-src">
 								<xsl:value-of select="ImageUrl"></xsl:value-of>
 							</xsl:attribute>
 							<xsl:attribute name="alt">

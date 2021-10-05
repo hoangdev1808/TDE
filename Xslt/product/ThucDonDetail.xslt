@@ -12,23 +12,23 @@
 						<div class="card_img">
 							<div class="img">
 								<img src="./img/s-5/menun-detail.png" alt="">
-		                            <xsl:attribute name="src">
-		                                <xsl:value-of select="ProductImages[1]/ImageUrl"></xsl:value-of>
-		                            </xsl:attribute>
-		                            <xsl:attribute name="alt">
-		                                <xsl:value-of select="Title"></xsl:value-of>
-		                            </xsl:attribute>
-		                        </img>
-		                    </div>
+								<xsl:attribute name="src">
+									<xsl:value-of select="ProductImages[1]/ImageUrl"></xsl:value-of>
+								</xsl:attribute>
+								<xsl:attribute name="alt">
+									<xsl:value-of select="Title"></xsl:value-of>
+								</xsl:attribute>
+								</img>
+							</div>
 						</div>
 					</div>
 					<div class="col-xl-6 col-lg-6">
 						<div class="right-food">
 							<div class="name_food-detail">
 								<h2>
-		                            <xsl:value-of select="Title"></xsl:value-of>
-								<xsl:value-of select="EditLink" disable-output-escaping="yes"></xsl:value-of>
-		                        </h2>
+									<xsl:value-of select="Title"></xsl:value-of>
+									<xsl:value-of select="EditLink" disable-output-escaping="yes"></xsl:value-of>
+								</h2>
 							</div>
 							<div class="description_food">
 								<xsl:value-of select="BriefContent" disable-output-escaping="yes"></xsl:value-of>
@@ -37,28 +37,46 @@
 								<ul>
 									<li>
 										<div class="price">
-                							<p><xsl:value-of select="Price" disable-output-escaping="yes"></xsl:value-of></p>
+											<p>
+												<xsl:value-of select="Price" disable-output-escaping="yes">
+												</xsl:value-of>
+											</p>
 										</div>
 									</li>
 									<li>
 										<div class="discount">
-                    						<p><xsl:value-of select="OldPrice" disable-output-escaping="yes"></xsl:value-of></p>
+											<p>
+												<xsl:value-of select="OldPrice" disable-output-escaping="yes">
+												</xsl:value-of>
+											</p>
 										</div>
 									</li>
 									<xsl:if test="DiscountAmount != ''">
 										<li>
 											<div class="discount-zone">
 
-												<p>-<xsl:value-of select="DiscountAmount" disable-output-escaping="yes"></xsl:value-of>%</p>
+												<p>-<xsl:value-of select="DiscountAmount" disable-output-escaping="yes">
+													</xsl:value-of>%</p>
 											</div>
 										</li>
 									</xsl:if>
 								</ul>
 							</div>
 							<div class="icon-contact">
-								<a href="tel:+028 3943 1501">Liên hệ<i class="ri-phone-fill"></i></a>
-								<a href="/lien-he">Đặt hàng<i class="ri-shopping-cart-2-line"></i></a>
-								<a href="/he-thong-cua-hang">Xem địa chỉ gần nhất<i class="ri-map-pin-2-fill"></i></a>
+								<a href="tel:+028 3943 1501">
+									
+									<xsl:value-of disable-output-escaping="yes" select="/ProductDetail/ContactText"></xsl:value-of>
+									
+									<i class="ri-phone-fill"></i></a>
+								<a href="/lien-he">
+									
+										<xsl:value-of disable-output-escaping="yes" select="/ProductDetail/OrderText"></xsl:value-of>
+									<i class="ri-shopping-cart-2-line"></i></a>
+								<a href="/he-thong-cua-hang">
+									
+										<xsl:value-of disable-output-escaping="yes" select="/ProductDetail/DealerText"></xsl:value-of>
+									
+									<i class="ri-map-pin-2-fill"></i></a>
 							</div>
 							<xsl:if test="count(LinkShops) > 0">
 								<div class="link-website">
@@ -71,14 +89,14 @@
 								<a href="" target="_blank">
 									<xsl:attribute name="href">
 										<xsl:text>https://www.facebook.com/sharer/sharer.php?u=</xsl:text>
-										<xsl:value-of select="FullUrl"/>
+										<xsl:value-of select="FullUrl" />
 									</xsl:attribute>
 									<div class="icon"><i class="ri-facebook-fill"></i></div>
 								</a>
 								<a href="" target="_blank">
 									<xsl:attribute name="href">
 										<xsl:text>https://twitter.com/home?status=</xsl:text>
-										<xsl:value-of select="FullUrl"/>
+										<xsl:value-of select="FullUrl" />
 									</xsl:attribute>
 									<div class="icon"><i class="ri-twitter-fill"></i></div>
 								</a>
@@ -92,16 +110,21 @@
 			<div class="container">
 				<div class="block-title">
 					<div class="head-title-zone">
-						<h2>Món ăn khác</h2>
+						<h2>
+							<xsl:value-of disable-output-escaping="yes" select="/ProductDetail/OtherDishText"></xsl:value-of>
+						</h2>
 					</div>
 				</div>
 				<div class="menu-detail-swiper-wrapper">
-					<div class="nav-arrow-prev"><em class="ri-arrow-left-line"></em></div>
-					<div class="nav-arrow-next"><em class="ri-arrow-right-line"></em></div>
+
 					<div class="swiper-container menu-detail-slide">
 						<div class="swiper-wrapper">
-            				<xsl:apply-templates select="ProductOther" />
+							<xsl:apply-templates select="ProductOther" />
 						</div>
+					</div>
+					<div class="swipe-nav-wrap">
+						<div class="nav-arrow-prev"><em class="ri-arrow-left-line"></em></div>
+						<div class="nav-arrow-next"><em class="ri-arrow-right-line"></em></div>
 					</div>
 				</div>
 			</div>
@@ -130,30 +153,34 @@
 				<div class="card_img">
 					<div class="img">
 						<img src="./img/s-5/menun-detail.png" alt="">
-                            <xsl:attribute name="src">
-                                <xsl:value-of select="ImageUrl"></xsl:value-of>
-                            </xsl:attribute>
-                            <xsl:attribute name="alt">
-                                <xsl:value-of select="Title"></xsl:value-of>
-                            </xsl:attribute>
-                        </img>
-                    </div>
+						<xsl:attribute name="src">
+							<xsl:value-of select="ImageUrl"></xsl:value-of>
+						</xsl:attribute>
+						<xsl:attribute name="alt">
+							<xsl:value-of select="Title"></xsl:value-of>
+						</xsl:attribute>
+						</img>
+					</div>
 				</div>
 				<div class="content-other">
 					<div class="title-menu"><a href="">
-                            <xsl:attribute name="href">
-                                <xsl:value-of select="Url"></xsl:value-of>
-                            </xsl:attribute>
-                            <xsl:attribute name="title">
-                                <xsl:value-of select="Title"></xsl:value-of>
-                            </xsl:attribute>
-                            <xsl:value-of select="Title" disable-output-escaping="yes"></xsl:value-of>
-                        </a></div>
+							<xsl:attribute name="href">
+								<xsl:value-of select="Url"></xsl:value-of>
+							</xsl:attribute>
+							<xsl:attribute name="title">
+								<xsl:value-of select="Title"></xsl:value-of>
+							</xsl:attribute>
+							<xsl:value-of select="Title" disable-output-escaping="yes"></xsl:value-of>
+						</a></div>
 					<div class="discount-slide">
-                        <p><xsl:value-of select="OldPrice" disable-output-escaping="yes"></xsl:value-of></p>
+						<p>
+							<xsl:value-of select="OldPrice" disable-output-escaping="yes"></xsl:value-of>
+						</p>
 					</div>
 					<div class="price-slide">
-                    	<p><xsl:value-of select="Price" disable-output-escaping="yes"></xsl:value-of></p>
+						<p>
+							<xsl:value-of select="Price" disable-output-escaping="yes"></xsl:value-of>
+						</p>
 					</div>
 				</div>
 			</div>

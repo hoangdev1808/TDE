@@ -33,23 +33,27 @@ const slidePage = () => {
 		slidesPerView: 1,
 		autoplay: {
 			delay: 3000,
+			disableOnInteraction: false,
 		},
-		disableOnInteraction: true,
 		pagination: {
 			el: ".swiper-pagination",
 		},
 	});
-	var mySwiper = document.querySelector(".banner-home .swiper-container").swiper;
-	$(".banner-home .swiper-container").mouseenter(function () {
-		mySwiper.autoplay.stop();
-	});
-	$(".banner-home .swiper-container").mouseleave(function () {
-		mySwiper.autoplay.start();
-	});
+	if ($(".homepage").length == 1 && $(window).width() > 1024) {
+		var mySwiper = document.querySelector(
+			".banner-home .swiper-container"
+		).swiper;
+		$(".banner-home .swiper-container").mouseenter(function () {
+			mySwiper.autoplay.stop();
+		});
+		$(".banner-home .swiper-container").mouseleave(function () {
+			mySwiper.autoplay.start();
+		});
+	}
 	new Swiper(".thuc-don-ct-2 .swiper-container", {
 		slidesPerView: 3,
 		spaceBetween: 30,
-		loop: true,
+		lazy: true,
 		navigation: {
 			nextEl: ".swiper-next",
 			prevEl: ".swiper-prev",
@@ -60,8 +64,8 @@ const slidePage = () => {
 				spaceBetween: 20,
 			},
 			575: {
-				slidesPerView: 1,
-				spaceBetween: 20,
+				slidesPerView: 2,
+				spaceBetween: 10,
 			},
 		},
 	});
@@ -71,6 +75,9 @@ const slidePage = () => {
 		navigation: {
 			nextEl: ".history .swiper-next",
 			prevEl: ".history .swiper-prev",
+		},
+		autoplay: {
+			delay: 3000,
 		},
 		centeredSlides: true,
 		slidesPerView: 3,
@@ -89,6 +96,9 @@ const slidePage = () => {
 	});
 	new Swiper(".partner .swiper-container", {
 		loop: true,
+		autoplay: {
+			delay: 3000,
+		},
 		navigation: {
 			nextEl: ".partner .swiper-next",
 			prevEl: ".partner .swiper-prev",
@@ -98,19 +108,15 @@ const slidePage = () => {
 		breakpoints: {
 			640: {
 				slidesPerView: 2,
-				spaceBetween: 10,
+				spaceBetween: 30,
 			},
 			768: {
 				slidesPerView: 3,
 				spaceBetween: 20,
-				autoplay: {
-					delay: 3000,
-					disableOnInteraction: false,
-				},
 			},
 		},
 	});
-	new Swiper(".thucdon .swiper-container", {
+	var tagThucDon = new Swiper(".thucdon .swiper-container", {
 		navigation: {
 			nextEl: ".thucdon .button-next",
 			prevEl: ".thucdon .button-prev",
@@ -134,6 +140,17 @@ const slidePage = () => {
 			},
 		},
 	});
+	setTimeout(() => {
+		let slideIndexActive;
+		$(".thucdon .swiper-slide").each(function (index) {
+			$(this).attr('data-slide-index', index)
+			if ($(this).find("a").hasClass("active")) {
+				slideIndexActive = $(this).attr('data-slide-index')
+			}
+		});
+		console.log(slideIndexActive)
+		tagThucDon.slideTo(slideIndexActive)
+	}, 500);
 	new Swiper(".steps .swiper-container", {
 		navigation: {
 			nextEl: ".steps .swiper-next",
@@ -141,10 +158,14 @@ const slidePage = () => {
 		},
 		slidesPerView: 4,
 		spaceBetween: 25,
+		autoplay: {
+			delay: 4000,
+			disableOnInteraction: false,
+		},
 		breakpoints: {
 			576: {
 				slidesPerView: 1,
-				spaceBetween: 0,
+				spaceBetween: 30,
 			},
 			640: {
 				slidesPerView: 2,
@@ -344,16 +365,23 @@ const hidenPagiPro = () => {
 };
 function checkClickDropdown() {
 	if ($(window).width() <= 1024) {
-		$('header .wrap-list-menu ul li a').click(function () {
-			if ($(this).hasClass('active')) {
+		$("header .wrap-list-menu ul li a").click(function () {
+			if ($(this).hasClass("active")) {
 				return true;
 			} else {
-				$(this).closest('ul').find('a').removeClass('active')
-				$(this).addClass('active')
+				$(this).closest("ul").find("a").removeClass("active");
+				$(this).addClass("active");
 			}
 			return false;
-		})
+		});
 	}
+}
+function phantrang() {
+	$(".modulepager")
+		.find(".pagination")
+		.find("li>a.NextPage, li>a.LastPage, li>a.BackPage, li>a.FirstPage")
+		.parent()
+		.hide();
 }
 document.addEventListener("DOMContentLoaded", () => {
 	moveThucDon();
@@ -363,6 +391,7 @@ document.addEventListener("DOMContentLoaded", () => {
 	checkMenuLayout();
 	mainSearch();
 	slidePage();
+	phantrang();
 	// clickBuy();
 	tabAcordition();
 	moveNewsSpecial();

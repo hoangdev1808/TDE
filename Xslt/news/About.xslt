@@ -2,7 +2,6 @@
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
 	xmlns:msxsl="urn:schemas-microsoft-com:xslt" exclude-result-prefixes="msxsl">
 	<xsl:output method="html" indent="yes" />
-
 	<xsl:template match="/ZoneList">
 		<section class="block_about">
 			<div class="container">
@@ -33,12 +32,12 @@
 						<div class="card_img">
 							<div class="img">
 								<img>
-								<xsl:attribute name="src">
-									<xsl:value-of select="Zone[1]/News/ImageUrl"></xsl:value-of>
-								</xsl:attribute>
-								<xsl:attribute name="alt">
-									<xsl:value-of select="Zone[1]/News/Title"></xsl:value-of>
-								</xsl:attribute>
+									<xsl:attribute name="src">
+										<xsl:value-of select="Zone[1]/News/ImageUrl"></xsl:value-of>
+									</xsl:attribute>
+									<xsl:attribute name="alt">
+										<xsl:value-of select="Zone[1]/News/Title"></xsl:value-of>
+									</xsl:attribute>
 								</img>
 							</div>
 						</div>
@@ -55,11 +54,17 @@
 						</div>
 					</div>
 					<div class="about-swiper-wrapper">
-						<div class="nav-arrow-prev"><em class="lnr lnr-chevron-left"></em></div>
-						<div class="nav-arrow-next"><em class="lnr lnr-chevron-right"></em></div>
 						<div class="swiper-container">
 							<div class="swiper-wrapper">
 								<xsl:apply-templates select="Zone[2]/News" mode="ZoneNews-2"></xsl:apply-templates>
+							</div>
+						</div>
+						<div class="wrap-button-df">
+							<div class="nav-arrow-prev">
+								<em class="lnr lnr-chevron-left"></em>
+							</div>
+							<div class="nav-arrow-next">
+								<em class="lnr lnr-chevron-right"></em>
 							</div>
 						</div>
 					</div>
@@ -87,12 +92,12 @@
 						<div class="card_img">
 							<div class="img">
 								<img>
-								<xsl:attribute name="src">
-									<xsl:value-of select="Zone[3]/ImageUrl"></xsl:value-of>
-								</xsl:attribute>
-								<xsl:attribute name="alt">
-									<xsl:value-of select="Zone[3]/Title"></xsl:value-of>
-								</xsl:attribute>
+									<xsl:attribute name="src">
+										<xsl:value-of select="Zone[3]/ImageUrl"></xsl:value-of>
+									</xsl:attribute>
+									<xsl:attribute name="alt">
+										<xsl:value-of select="Zone[3]/Title"></xsl:value-of>
+									</xsl:attribute>
 								</img>
 							</div>
 						</div>
@@ -129,12 +134,12 @@
 						<div class="card_img">
 							<div class="img">
 								<img>
-								<xsl:attribute name="src">
-									<xsl:value-of select="Zone[5]/News/ImageUrl"></xsl:value-of>
-								</xsl:attribute>
-								<xsl:attribute name="alt">
-									<xsl:value-of select="Zone[5]/News/Title"></xsl:value-of>
-								</xsl:attribute>
+									<xsl:attribute name="src">
+										<xsl:value-of select="Zone[5]/News/ImageUrl"></xsl:value-of>
+									</xsl:attribute>
+									<xsl:attribute name="alt">
+										<xsl:value-of select="Zone[5]/News/Title"></xsl:value-of>
+									</xsl:attribute>
 								</img>
 							</div>
 						</div>
@@ -189,7 +194,6 @@
 			</div>
 		</section>
 	</xsl:template>
-
 	<xsl:template match="News" mode="ZoneNews-2">
 		<div class="swiper-slide">
 			<div class="wrapper">
@@ -203,7 +207,6 @@
 			</div>
 		</div>
 	</xsl:template>
-
 	<xsl:template match="News" mode="ZoneNews-3">
 		<li>
 			<div class="title_vm">
@@ -219,37 +222,34 @@
 			</div>
 		</li>
 	</xsl:template>
-
 	<xsl:template match="News" mode="ZoneNews-4">
 		<div class="swiper-slide">
 			<div class="wrapper">
 				<div class="img shine">
 					<img>
+						<xsl:attribute name="src">
+							<xsl:value-of select="ImageUrl"></xsl:value-of>
+						</xsl:attribute>
+						<xsl:attribute name="alt">
+							<xsl:value-of select="Title"></xsl:value-of>
+						</xsl:attribute>
+					</img>
+				</div>
+			</div>
+		</div>
+	</xsl:template>
+	<xsl:template match="News" mode="ZoneNews-6">
+		<li>
+			<div class="img_icon">
+				<img>
 					<xsl:attribute name="src">
 						<xsl:value-of select="ImageUrl"></xsl:value-of>
 					</xsl:attribute>
 					<xsl:attribute name="alt">
 						<xsl:value-of select="Title"></xsl:value-of>
 					</xsl:attribute>
-					</img>
-				</div>
-			</div>
-		</div>
-	</xsl:template>
-
-	<xsl:template match="News" mode="ZoneNews-6">
-		<li>
-			<div class="img_icon">
-				<img>
-				<xsl:attribute name="src">
-					<xsl:value-of select="ImageUrl"></xsl:value-of>
-				</xsl:attribute>
-				<xsl:attribute name="alt">
-					<xsl:value-of select="Title"></xsl:value-of>
-				</xsl:attribute>
 				</img>
 			</div>
 		</li>
 	</xsl:template>
-
 </xsl:stylesheet>

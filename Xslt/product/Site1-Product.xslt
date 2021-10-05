@@ -11,7 +11,9 @@
 			</div>
 		</div>
 		<div class="select-area">
-			<p>Chọn khu vực:</p>
+			<p>
+				<xsl:value-of select="SelectAreaText" />
+			</p>
 			<select name="Location" onchange="AjaxTokyo.loadProductByZone(this,-1);return false;">
 				<xsl:apply-templates select="Zone[Depth = 3]" mode="Sort"></xsl:apply-templates>
 			</select>
@@ -96,7 +98,7 @@
 								<xsl:attribute name="data-url">
 									<xsl:value-of select="./Url" />
 								</xsl:attribute>
-								Tất cả
+								<xsl:value-of select="/ZoneList/AllText" />
 
 
 							</a>

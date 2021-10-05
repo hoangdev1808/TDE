@@ -1,6 +1,6 @@
-.index-2 
+.index-2
 	background-color: #fff
-	.col-xl 
+	.col-xl
 		padding: 0
 	.wrap-box
 		position: relative
@@ -10,14 +10,14 @@
 		&:hover
 			.overlay
 				bottom: 0
-		.img 
+		.img
 			width: auto
 			height: 100%
-			img 
+			img
 				width: 100%
 				height: 100%
 				object-fit: cover
-		.title 
+		.title
 			position: absolute
 			bottom: 37px
 			max-width: 200px
@@ -31,7 +31,10 @@
 			font-family: "Montserrat"
 			line-height: 1.2
 			z-index: 10
-		.overlay 
+			@media (max-width: 767.98px)
+				font-size: 20 / 16 * 1rem
+				padding: 0 15px
+		.overlay
 			background-color: rgba(232, 36, 41, 0.85)
 			position: absolute
 			bottom: -100%

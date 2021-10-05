@@ -20,7 +20,7 @@
                 <xsl:attribute name="target">
                     <xsl:value-of select="Target"></xsl:value-of>
                 </xsl:attribute>
-                <xsl:text disable-output-escaping="yes">Xem thêm</xsl:text>
+                <xsl:value-of select="ViewMoreText" disable-output-escaping="yes"/>
             </a>
         </div>
     </xsl:template>

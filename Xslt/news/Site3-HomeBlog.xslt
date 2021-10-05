@@ -61,10 +61,7 @@
 							<xsl:attribute name="title">
 								<xsl:value-of select="News[1]/Title" disable-output-escaping="yes"></xsl:value-of>
 							</xsl:attribute>
-              Xem thêm
-            
-						
-						
+          					<xsl:value-of select="/NewsList/ViewMoreText" disable-output-escaping="yes"/>
 						</a>
 					</div>
 				</div>
@@ -128,9 +125,8 @@
 						</xsl:attribute>
 						<xsl:attribute name="title">
 							<xsl:value-of select="Title" disable-output-escaping="yes"></xsl:value-of>
-						</xsl:attribute>Xem thêm
-					
-					
+						</xsl:attribute>          					
+						<xsl:value-of select="/NewsList/ViewMoreText" disable-output-escaping="yes"/>
 					</a>
 				</div>
 			</div>

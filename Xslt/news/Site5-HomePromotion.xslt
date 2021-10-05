@@ -19,7 +19,7 @@
                 <xsl:attribute name="title">
                     <xsl:value-of select="Title"></xsl:value-of>
                 </xsl:attribute>
-                <xsl:text disable-output-escaping="yes">Xem tất cả</xsl:text>
+                <xsl:value-of disable-output-escaping="yes" select="/NewsList/ViewMoreAllText"></xsl:value-of>
             </a>
         </div>
     </xsl:template>
@@ -62,7 +62,7 @@
                         <xsl:attribute name="title">
                             <xsl:value-of select="Title"></xsl:value-of>
                         </xsl:attribute>
-                        <xsl:text disable-output-escaping="yes">Xem thêm</xsl:text>
+                        <xsl:value-of disable-output-escaping="yes" select="/NewsList/ReadMoreText"></xsl:value-of>
                     </a>
                 </div>
             </div>
@@ -106,7 +106,7 @@
                     <xsl:attribute name="title">
                         <xsl:value-of select="Title"></xsl:value-of>
                     </xsl:attribute>
-                    <xsl:text disable-output-escaping="yes">Xem thêm</xsl:text>
+                    <xsl:value-of disable-output-escaping="yes" select="/NewsList/ReadMoreText"></xsl:value-of>
                 </a>
             </div>
         </div>

@@ -113,7 +113,7 @@
                             <xsl:attribute name="title">
                                 <xsl:value-of select="Title"></xsl:value-of>
                             </xsl:attribute>
-                            <xsl:text disable-output-escaping="yes">Xem Theem</xsl:text>
+                            <xsl:text disable-output-escaping="yes">Xem Thêm</xsl:text>
                         </a>
                     </div>
                 </div>
