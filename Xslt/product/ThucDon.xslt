@@ -22,6 +22,32 @@
 				<xsl:value-of select="Title"></xsl:value-of>
 			</xsl:attribute>
 			<div class="card_img">
+				<xsl:if test="OldPrice != ''">
+					<div class="top-wrap">
+						<div class="discount-percent">
+							<xsl:variable name='price'>
+								<xsl:value-of select="substring-before(Price, ' ')"></xsl:value-of>
+							</xsl:variable>
+							<xsl:variable name='priceNumber'>
+								<xsl:value-of select="translate($price, '.', '')"></xsl:value-of>
+							</xsl:variable>
+							<xsl:variable name='oldprice'>
+								<xsl:value-of select="substring-before(OldPrice, ' ')"></xsl:value-of>
+							</xsl:variable>
+							<xsl:variable name='oldPriceNumber'>
+								<xsl:value-of select="translate($oldprice, '.', '')"></xsl:value-of>
+							</xsl:variable>
+							<xsl:variable name='percentage'>
+								<xsl:value-of select="100 - ($priceNumber div $oldPriceNumber)*100"></xsl:value-of>
+							</xsl:variable>
+							<span>
+								<xsl:text>-</xsl:text>
+								<xsl:value-of select="ceiling($percentage)"></xsl:value-of>
+								<xsl:text>%</xsl:text>
+							</span>
+						</div>
+					</div>
+				</xsl:if>
 				<div class="img">
 					<a>
 						<xsl:attribute name="href">
@@ -72,6 +98,9 @@
 							</div>
 						</li>
 					</ul>
+				</div>
+				<div class="sub-text">
+					<xsl:value-of disable-output-escaping="yes" select="SubTitle"></xsl:value-of>
 				</div>
 			</div>
 		</div>

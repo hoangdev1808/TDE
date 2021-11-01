@@ -53,6 +53,9 @@ const slidePage = () => {
 	new Swiper(".thuc-don-ct-2 .swiper-container", {
 		slidesPerView: 3,
 		spaceBetween: 30,
+		autoplay: {
+			delay: 4000,
+		},
 		lazy: true,
 		navigation: {
 			nextEl: ".swiper-next",
@@ -143,13 +146,13 @@ const slidePage = () => {
 	setTimeout(() => {
 		let slideIndexActive;
 		$(".thucdon .swiper-slide").each(function (index) {
-			$(this).attr('data-slide-index', index)
+			$(this).attr("data-slide-index", index);
 			if ($(this).find("a").hasClass("active")) {
-				slideIndexActive = $(this).attr('data-slide-index')
+				slideIndexActive = $(this).attr("data-slide-index");
 			}
 		});
-		console.log(slideIndexActive)
-		tagThucDon.slideTo(slideIndexActive)
+		console.log(slideIndexActive);
+		tagThucDon.slideTo(slideIndexActive);
 	}, 500);
 	new Swiper(".steps .swiper-container", {
 		navigation: {
@@ -258,7 +261,8 @@ const moveThucDon = () => {
 };
 const clickBuy = () => {
 	$(".button-order").click(function () {
-		$(".wrap-list-buy ").slideToggle();
+		$(".wrap-list-buy").slideToggle();
+		return false;
 	});
 };
 
@@ -383,7 +387,39 @@ function phantrang() {
 		.parent()
 		.hide();
 }
+/*==================== Check Device ====================*/
+/**
+ * Determine the mobile operating system.
+ * This function returns one of 'iOS', 'Android', 'Windows Phone', or 'unknown'.
+ *
+ * @returns {String}
+ */
+function getMobileOperatingSystem() {
+	let main = $(".thuc-don-ct");
+	let android = $(".thuc-don-ct .wrap-list-buy.ver-android");
+	let ios = $(".thuc-don-ct .wrap-list-buy.ver-ios");
+	//
+	var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+	// Windows Phone must come first because its UA also contains "Android"
+	if (/windows phone/i.test(userAgent)) {
+		ios.remove();
+		return "Windows Phone";
+	}
+	if (/android/i.test(userAgent)) {
+		ios.remove();
+		return "Android";
+	}
+	// iOS detection from: http://stackoverflow.com/a/9039885/177710
+	if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+		android.remove();
+		return "iOS";
+	}
+	ios.remove();
+	return "unknown";
+}
+/*==================== End Check Device ====================*/
 document.addEventListener("DOMContentLoaded", () => {
+	getMobileOperatingSystem();
 	moveThucDon();
 	moveQuyTrinh();
 	checkFullpage();
@@ -392,7 +428,7 @@ document.addEventListener("DOMContentLoaded", () => {
 	mainSearch();
 	slidePage();
 	phantrang();
-	// clickBuy();
+	clickBuy();
 	tabAcordition();
 	moveNewsSpecial();
 	selectOption();

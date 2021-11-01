@@ -55,6 +55,7 @@
 		</div>
 	</xsl:template>
 	<xsl:template match="Zone" mode="Child">
+
 		<li class="">
 			<xsl:if test="position() = 1">
 				<xsl:attribute name="class">
@@ -75,6 +76,9 @@
 				<xsl:value-of select="Title" />
 			</a>
 		</li>
+
+
+
 	</xsl:template>
 	<xsl:template match="Zone" mode="TabContent">
 		<xsl:variable name="CurrentZoneId" select="ZoneId" />
@@ -132,61 +136,5 @@
 			</a>
 		</li>
 	</xsl:template>
-	<!-- <xsl:template match="Product">
-		<div class="col">
-			<a>
-				<xsl:attribute name="href">
-					<xsl:value-of select="Url" />
-				</xsl:attribute>
-				<xsl:attribute name="title">
-					<xsl:value-of select="Title" />
-				</xsl:attribute>
-				<div class="food">
-					<div class="card_img">
-						<div class="img">
-							<img src="./img/s-5/food-1.png" alt="">
-							<xsl:attribute name="src">
-								<xsl:value-of select="ImageUrl" />
-							</xsl:attribute>
-							<xsl:attribute name="alt">
-								<xsl:value-of select="Title" />
-							</xsl:attribute>
-							</img>
-						</div>
-					</div>
-					<div class="desc-food">
-						<div class="code-name">
-							<xsl:value-of disable-output-escaping="yes" select="Code"></xsl:value-of>
-						</div>
-						<div class="code-name">
-							<xsl:value-of disable-output-escaping="yes" select="Code"></xsl:value-of>
-						</div>
-						<div class="name_food">
-							<a href="">
-								<xsl:attribute name="href">
-									<xsl:value-of select="Url" />
-								</xsl:attribute>
-								<xsl:attribute name="title">
-									<xsl:value-of select="Title" />
-								</xsl:attribute>
-								<xsl:value-of disable-output-escaping="yes" select="Code"></xsl:value-of>
-								<xsl:text disable-output-escaping="yes"> - </xsl:text>
-								<xsl:value-of select="Title" />
-							</a>
-						</div>
-						<div class="discount">
-							<p>
-								<xsl:value-of select="Price" />
-							</p>
-						</div>
-						<div class="price">
-							<p>
-								<xsl:value-of select="OldPrice" />
-							</p>
-						</div>
-					</div>
-				</div>
-			</a>
-		</div>
-	</xsl:template> -->
+
 </xsl:stylesheet>

@@ -10,6 +10,37 @@
 				<div class="row">
 					<div class="col-xl-6 col-lg-6">
 						<div class="card_img">
+							<xsl:if test="OldPrice !=''">
+
+								<div class="top-wrap">
+									<div class="discount">
+
+										<xsl:variable name='price'>
+											<xsl:value-of select="substring-before(Price, ' ')"></xsl:value-of>
+										</xsl:variable>
+										<xsl:variable name='priceNumber'>
+											<xsl:value-of select="translate($price, '.', '')"></xsl:value-of>
+										</xsl:variable>
+										<xsl:variable name='oldprice'>
+											<xsl:value-of select="substring-before(OldPrice, ' ')">
+											</xsl:value-of>
+										</xsl:variable>
+										<xsl:variable name='oldPriceNumber'>
+											<xsl:value-of select="translate($oldprice, '.', '')"></xsl:value-of>
+										</xsl:variable>
+										<xsl:variable name='percentage'>
+											<xsl:value-of select="100 - ($priceNumber div $oldPriceNumber)*100">
+											</xsl:value-of>
+										</xsl:variable>
+										<span>
+											<xsl:text>-</xsl:text>
+											<xsl:value-of select="ceiling($percentage)"></xsl:value-of>
+											<xsl:text>%</xsl:text>
+										</span>
+									</div>
+								</div>
+							</xsl:if>
+
 							<div class="img">
 								<img src="./img/s-5/menun-detail.png" alt="">
 								<xsl:attribute name="src">
@@ -63,20 +94,26 @@
 								</ul>
 							</div>
 							<div class="icon-contact">
-								<a href="tel:+028 3943 1501">
-									
-									<xsl:value-of disable-output-escaping="yes" select="/ProductDetail/ContactText"></xsl:value-of>
-									
-									<i class="ri-phone-fill"></i></a>
+								<a href="tel:+1900234504">
+
+									<xsl:value-of disable-output-escaping="yes" select="/ProductDetail/ContactText">
+									</xsl:value-of>
+
+									<i class="ri-phone-fill"></i>
+								</a>
 								<a href="/lien-he">
-									
-										<xsl:value-of disable-output-escaping="yes" select="/ProductDetail/OrderText"></xsl:value-of>
-									<i class="ri-shopping-cart-2-line"></i></a>
+
+									<xsl:value-of disable-output-escaping="yes" select="/ProductDetail/OrderText">
+									</xsl:value-of>
+									<i class="ri-shopping-cart-2-line"></i>
+								</a>
 								<a href="/he-thong-cua-hang">
-									
-										<xsl:value-of disable-output-escaping="yes" select="/ProductDetail/DealerText"></xsl:value-of>
-									
-									<i class="ri-map-pin-2-fill"></i></a>
+
+									<xsl:value-of disable-output-escaping="yes" select="/ProductDetail/DealerText">
+									</xsl:value-of>
+
+									<i class="ri-map-pin-2-fill"></i>
+								</a>
 							</div>
 							<xsl:if test="count(LinkShops) > 0">
 								<div class="link-website">
@@ -111,7 +148,8 @@
 				<div class="block-title">
 					<div class="head-title-zone">
 						<h2>
-							<xsl:value-of disable-output-escaping="yes" select="/ProductDetail/OtherDishText"></xsl:value-of>
+							<xsl:value-of disable-output-escaping="yes" select="/ProductDetail/OtherDishText">
+							</xsl:value-of>
 						</h2>
 					</div>
 				</div>
@@ -151,6 +189,32 @@
 		<div class="swiper-slide">
 			<div class="wrapper">
 				<div class="card_img">
+					<xsl:if test="OldPrice != ''">
+						<div class="top-wrap">
+							<div class="discount-percent">
+								<xsl:variable name='price'>
+									<xsl:value-of select="substring-before(Price, ' ')"></xsl:value-of>
+								</xsl:variable>
+								<xsl:variable name='priceNumber'>
+									<xsl:value-of select="translate($price, '.', '')"></xsl:value-of>
+								</xsl:variable>
+								<xsl:variable name='oldprice'>
+									<xsl:value-of select="substring-before(OldPrice, ' ')"></xsl:value-of>
+								</xsl:variable>
+								<xsl:variable name='oldPriceNumber'>
+									<xsl:value-of select="translate($oldprice, '.', '')"></xsl:value-of>
+								</xsl:variable>
+								<xsl:variable name='percentage'>
+									<xsl:value-of select="100 - ($priceNumber div $oldPriceNumber)*100"></xsl:value-of>
+								</xsl:variable>
+								<span>
+									<xsl:text>-</xsl:text>
+									<xsl:value-of select="ceiling($percentage)"></xsl:value-of>
+									<xsl:text>%</xsl:text>
+								</span>
+							</div>
+						</div>
+					</xsl:if>
 					<div class="img">
 						<img src="./img/s-5/menun-detail.png" alt="">
 						<xsl:attribute name="src">
@@ -181,6 +245,9 @@
 						<p>
 							<xsl:value-of select="Price" disable-output-escaping="yes"></xsl:value-of>
 						</p>
+					</div>
+					<div class="sub-text">
+						<xsl:value-of disable-output-escaping="yes" select="SubTitle"></xsl:value-of>
 					</div>
 				</div>
 			</div>

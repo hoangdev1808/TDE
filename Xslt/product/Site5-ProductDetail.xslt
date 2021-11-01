@@ -60,9 +60,36 @@
 										</xsl:attribute>
 										<xsl:value-of disable-output-escaping="yes" select="/ProductDetail/BuyNowText"></xsl:value-of>
 									</a>
-									<div class="wrap-list-buy">
+									<div class="wrap-list-buy ver-ios">
 										<div class="wrap-icon">
-											<xsl:apply-templates select="LinkShops"/>
+											<a href="https://apps.apple.com/vn/app/grab-si%C3%AAu-%E1%BB%A9ng-d%E1%BB%A5ng/id647268330?l=vi">
+												<img src="/Data/Sites/5/skins/default/assets/thucdon-ct/gf.png" alt=""/>
+											</a>
+											<a href="https://shopeefood.vn/ho-chi-minh/tokyo-deli-tran-hung-dao">
+												<img src="/Data/Sites/5/skins/default/assets/thucdon-ct/now.png" alt=""/>
+											</a>
+											<a href="https://apps.apple.com/vn/app/baemin-food-delivery-app/id1458845623">
+												<img src="/Data/Sites/5/skins/default/assets/thucdon-ct/bae.png" alt=""/>
+											</a>
+											<a href="https://apps.apple.com/vn/app/gojek/id944875099">
+												<img src="/Data/Sites/5/skins/default/assets/thucdon-ct/goj.png" alt=""/>
+											</a>
+										</div>
+									</div>
+									<div class="wrap-list-buy ver-android">
+										<div class="wrap-icon">
+											<a href="https://play.google.com/store/apps/details?id=com.grabtaxi.passenger">
+												<img src="/Data/Sites/5/skins/default/assets/thucdon-ct/gf.png" alt=""/>
+											</a>
+											<a href="https://shopeefood.vn/ho-chi-minh/tokyo-deli-tran-hung-dao">
+												<img src="/Data/Sites/5/skins/default/assets/thucdon-ct/now.png" alt=""/>
+											</a>
+											<a href="https://play.google.com/store/apps/details?id=com.woowahan.vn.baemin">
+												<img src="/Data/Sites/5/skins/default/assets/thucdon-ct/bae.png" alt=""/>
+											</a>
+											<a href="https://play.google.com/store/apps/details?id=com.gojek.app">
+												<img src="/Data/Sites/5/skins/default/assets/thucdon-ct/goj.png" alt=""/>
+											</a>
 										</div>
 									</div>
 								</div>
@@ -73,7 +100,9 @@
 			</div>
 			<div class="thuc-don-ct-2 section">
 				<div class="container">
-					<div class="section-title"><xsl:value-of disable-output-escaping="yes" select="/ProductDetail/OtherDishText"></xsl:value-of></div>
+					<div class="section-title">
+						<xsl:value-of disable-output-escaping="yes" select="/ProductDetail/OtherDishText"></xsl:value-of>
+					</div>
 					<div class="wrap-slide">
 						<div class="swiper-container">
 							<div class="swiper-wrapper">
